@@ -24,6 +24,8 @@ Ví dụ về các phần nên dịch (được khoanh đỏ):
 
 ![Phần cần dịch](http://i.imgur.com/6mUYo86.png)
 
+[Xem mẫu một bản dịch hợp lệ!](https://github.com/AutoIT-VN/HelpFile-Vietnamese/commit/26187be97110fcd0ce3c5fadc83e6dd3191249c8)
+
 ### Tác giả
 
 Dự án được xây dựng bởi [Nhóm lập trình AutoIt](https://www.facebook.com/groups/autoitscript/) và [đóng góp từ cộng đồng](https://github.com/AutoIT-VN/HelpFile-Vietnamese/graphs/contributors).

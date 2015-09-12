@@ -11,7 +11,7 @@ Nhằm hỗ trợ các bạn muốn học lập trình AutoIt nhưng yếu về 
 Nếu bạn có khả năng về tiếng Anh và muốn đóng góp cho dự án bằng cách tham gia dịch, bạn có thể:
 
 1. Fork dự án!
-2. Thực hiện dịch các tập tin TXT.
+2. Thực hiện dịch các tập tin TXT. Nếu chưa sử dụng GitHub bao giờ thì có thể [tham khảo video này](https://youtu.be/q7FY9Vq77lg).
 3. Gửi một `pull request` :D
 
 ### Lưu ý khi dịch

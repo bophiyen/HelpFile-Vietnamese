@@ -1,0 +1,28 @@
+###Keyword###
+While...WEnd
+
+###Description###
+Loop based on an expression.
+
+###Syntax###
+<strong>While</strong> &lt;expression&gt;
+	<em>statements</em>
+	...
+<strong>WEnd</strong>
+
+###Parameters###
+@@ParamTable@@
+expression
+	If the expression is true the following statements up to the WEnd statement are executed. This loop continues until the expression is false.
+@@End@@
+
+###Remarks###
+While...WEnd statements may be nested.
+The expression is tested before the loop is executed so the loop will be executed zero or more times.
+To create an infinite loop, you can use a non-zero number as the <em>expression</em>.
+
+###Related###
+ContinueLoop, ExitLoop
+
+###Example###
+@@IncludeExample@@

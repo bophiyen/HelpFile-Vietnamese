@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlEdit_SetRECTEx
+
+###Description###
+Sets the formatting rectangle of a multiline edit control
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_SetRECTEx ( $hWnd, $tRECT )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control ID/Handle to the control
+$tRECT
+	$tagRECT structure that contains formatting rectangle of an edit control
+@@End@@
+
+###ReturnValue###
+None.
+
+###Remarks###
+None.
+
+###Related###
+$tagRECT, _GUICtrlEdit_SetRECT
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,36 @@
+###User Defined Function###
+_SoundPos
+
+###Description###
+Returns the current position of the sound
+
+###Syntax###
+#include <Sound.au3>
+_SoundPos ( $aSndID [, $iMode = 1] )
+
+###Parameters###
+@@ParamTable@@
+$aSndID
+	Sound ID array as returned by <a href="_SoundOpen.htm">_SoundOpen()</a> or a file name
+$iMode
+	[optional] This flag determines which format the position of the sound is returned in
+		1 = (by default) hh:mm:ss where h = hours, m = minutes and s = seconds (default)
+		2 = milliseconds
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the sound position.
+Failure:	0 and sets the @error flag to non-zero.
+@error:	1 = $iMode is invalid
+	3 = Invalid Sound ID. Use return array from <a href="_SoundOpen.htm">_SoundOpen()</a> or a valid file name.
+@@End@@
+
+###Remarks###
+It is recommended to open a sound file with <a href="_SoundOpen.htm">_SoundOpen()</a> and pass the ID array rather than use the file name in this function. A VBR encoded file is very unlikely to return the correct position if the file name is passed directly to this function.
+
+###Related###
+_SoundLength, _SoundOpen
+
+###Example###
+@@IncludeExample@@

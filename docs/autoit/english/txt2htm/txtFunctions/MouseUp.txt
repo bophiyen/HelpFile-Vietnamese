@@ -1,0 +1,38 @@
+###Function###
+MouseUp
+
+###Description###
+Perform a mouse up event at the current mouse position.
+
+###Syntax###
+MouseUp ( "button" )
+
+###Parameters###
+@@ParamTable@@
+button
+	The button to click:
+		$MOUSE_CLICK_RIGHT ("right")
+		$MOUSE_CLICK_MIDDLE ("middle")
+		$MOUSE_CLICK_MAIN ("main")
+		$MOUSE_CLICK_MENU ("menu")
+		$MOUSE_CLICK_PRIMARY ("primary")
+		$MOUSE_CLICK_SECONDARY ("secondary")
+
+	Constants are defined in "AutoItConstants.au3".
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0, the button is not in the list.
+@@End@@
+
+###Remarks###
+See <a href="MouseClick.htm#remarks">MouseClick</a> remarks.
+User responsibility: For every <a href="MouseDown.htm">MouseDown()</a> there should eventually be a corresponding <a href="MouseUp.htm">MouseUp()</a> event.
+
+###Related###
+MouseClick, MouseClickDrag, MouseCoordMode (Option), MouseDown, MouseGetPos, MouseMove
+
+###Example###
+@@IncludeExample@@ MouseDown

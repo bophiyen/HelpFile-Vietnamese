@@ -1,0 +1,41 @@
+###Function###
+ProcessSetPriority
+
+###Description###
+Changes the priority of a process.
+
+###Syntax###
+ProcessSetPriority ( "process", priority )
+
+###Parameters###
+@@ParamTable@@
+process
+	The name or PID of the process to check.
+priority
+	A flag which determines what priority to set
+		$PROCESS_LOW (0) = Idle/Low
+		$PROCESS_BELOWNORMAL (1) = Below Normal
+		$PROCESS_NORMAL (2) = Normal
+		$PROCESS_ABOVENORMAL (3) = Above Normal
+		$PROCESS_HIGH (4) = High
+		$PROCESS_REALTIME (5) = Realtime (Use with caution, may make the system unstable)
+
+	Constants are define in "AutoItConstants.au3".
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 and sets the @error flag to non-zero.
+@error:	1.
+	2 if attempting to use an unsupported priority class.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+ProcessList
+
+###Example###
+@@IncludeExample@@

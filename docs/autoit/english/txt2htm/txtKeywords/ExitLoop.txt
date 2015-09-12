@@ -1,0 +1,26 @@
+###Keyword###
+ExitLoop
+
+###Description###
+Terminate a While/Do/For loop.
+
+###Syntax###
+<strong>ExitLoop</strong> [level]
+
+###Parameters###
+@@ParamTable@@
+level
+	[optional] The number of loop levels to exit from. The default is 1 (meaning the current loop).
+@@End@@
+
+###Remarks###
+A negative <em>level</em> or zero value has no effect.
+
+ExitLoop will break out of a While, Do or For loop.
+ExitLoop is useful when you would otherwise need to perform error checking in both the loop-test and the loop-body.
+
+###Related###
+ContinueLoop, Do, Exit, For, While
+
+###Example###
+@@IncludeExample@@

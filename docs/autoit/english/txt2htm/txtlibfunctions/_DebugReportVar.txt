@@ -1,0 +1,34 @@
+###User Defined Function###
+_DebugReportVar
+
+###Description###
+Writes to debugging session the content of a variable
+
+###Syntax###
+#include <Debug.au3>
+_DebugReportVar ( $sVarName, $vVar [, $bErrExt = False [, $iDebugLineNumber = @ScriptLineNumber]] )
+
+###Parameters###
+@@ParamTable@@
+$sVarName
+	string representing name of the variable or a comment
+$vVar
+	the variable to be reported
+$bErrExt
+	[optional] True if @error and @extended must also be displayed
+$iDebugLineNumber
+	[optional] can be used to overwrite the current calling line number. Default = @ScriptLineNumber
+@@End@@
+
+###ReturnValue###
+None.
+
+###Remarks###
+If no <a href="_DebugSetup.htm">_DebugSetup()</a> have been issued the function always returns.
+@error and @extended of the caller are preserved.
+
+###Related###
+_DebugSetup
+
+###Example###
+@@IncludeExample@@

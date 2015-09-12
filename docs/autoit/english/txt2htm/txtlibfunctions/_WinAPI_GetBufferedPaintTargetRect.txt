@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_GetBufferedPaintTargetRect
+
+###Description###
+Retrieves the target rectangle
+
+###Syntax###
+#include <WinAPITheme.au3>
+_WinAPI_GetBufferedPaintTargetRect ( $hBP )
+
+###Parameters###
+@@ParamTable@@
+$hBP
+	Handle of the buffered paint context.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	$tagRECT structure that contains the rectangle specified by <a href="_WinAPI_BeginBufferedPaint.htm">_WinAPI_BeginBufferedPaint()</a> function.
+Failure:	Sets the @error flag to non-zero, @extended flag may contain the HRESULT error code.
+@@End@@
+
+###Remarks###
+This function requires <strong>Windows Vista or later</strong>.
+
+###Related###
+_WinAPI_BeginBufferedPaint
+
+###See Also###
+@@MsdnLink@@ GetBufferedPaintTargetRect

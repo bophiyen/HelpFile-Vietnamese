@@ -1,0 +1,38 @@
+###User Defined Function###
+_WinAPI_ScaleWindowExt
+
+###Description###
+Modifies the window for a device context using the ratios formed by the specified multiplicands and divisors
+
+###Syntax###
+#include <WinAPIGdi.au3>
+_WinAPI_ScaleWindowExt ( $hDC, $iXNum, $iXDenom, $iYNum, $iYDenom )
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle to the device context.
+$iXNum
+	The amount by which to multiply the current horizontal extent.
+$iXDenom
+	The amount by which to divide the current horizontal extent.
+$iYNum
+	The amount by which to divide the current vertical extent.
+$iYDenom
+	The amount by which to divide the current vertical extent.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False
+@@End@@
+
+###Remarks###
+Call <a href="_WinAPI_GetExtended.htm">_WinAPI_GetExtended()</a> to retrieve a $tagSIZE structure containing the previous window extents.
+
+###Related###
+_WinAPI_GetExtended
+
+###See Also###
+@@MsdnLink@@ ScaleWindowExtEx

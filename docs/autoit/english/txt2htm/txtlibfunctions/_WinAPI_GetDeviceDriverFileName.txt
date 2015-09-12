@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_GetDeviceDriverFileName
+
+###Description###
+Retrieves the path available for the specified device driver
+
+###Syntax###
+#include <WinAPIProc.au3>
+_WinAPI_GetDeviceDriverFileName ( $pDriver )
+
+###Parameters###
+@@ParamTable@@
+$pDriver
+	The load address of the device driver. This value can be retrieved using the <a href="_WinAPI_EnumDeviceDrivers.htm">_WinAPI_EnumDeviceDrivers()</a> function.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The path to the device driver.
+Failure:	Empty string, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended error information.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ GetDeviceDriverFileName
+
+###Example###
+@@IncludeExample@@ _WinAPI_EnumDeviceDrivers

@@ -1,0 +1,32 @@
+###User Defined Function###
+_WinAPI_UnloadKeyboardLayout
+
+###Description###
+Unloads an input locale identifier
+
+###Syntax###
+#include <WinAPISys.au3>
+_WinAPI_UnloadKeyboardLayout ( $hLocale )
+
+###Parameters###
+@@ParamTable@@
+$hLocale
+	The input locale identifier to be unloaded.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False
+@@End@@
+
+###Remarks###
+<a href="_WinAPI_UnloadKeyboardLayout.htm">_WinAPI_UnloadKeyboardLayout()</a> cannot unload the system default input locale identifier if it is the only
+keyboard layout loaded. You must first load another input locale identifier before unloading the default input
+locale identifier.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ UnloadKeyboardLayout

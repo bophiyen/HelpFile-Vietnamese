@@ -1,0 +1,26 @@
+###Function###
+Sin
+
+###Description###
+Calculates the sine of a number.
+
+###Syntax###
+Sin ( expression )
+
+###Parameters###
+@@ParamTable@@
+expression
+	Value in radians.
+@@End@@
+
+###ReturnValue###
+Returns the trigonometric sine of the number.
+
+###Remarks###
+1° = pi / 180 radians.
+
+###Related###
+ACos, ASin, ATan, Cos, Tan
+
+###Example###
+@@IncludeExample@@

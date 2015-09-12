@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlDTP_GetRangeEx
+
+###Description###
+Retrieves the current minimum and maximum allowable system times
+
+###Syntax###
+#include <GuiDateTimePicker.au3>
+_GUICtrlDTP_GetRangeEx ( $hWnd )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle to the control
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	a $tagDTPRANGE structure.
+Failure:	0.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+$tagDTPRANGE, _GUICtrlDTP_SetRangeEx
+
+###Example###
+@@IncludeExample@@

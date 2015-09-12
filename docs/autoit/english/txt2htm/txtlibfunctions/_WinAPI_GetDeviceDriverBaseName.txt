@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_GetDeviceDriverBaseName
+
+###Description###
+Retrieves the base name of the specified device driver
+
+###Syntax###
+#include <WinAPIProc.au3>
+_WinAPI_GetDeviceDriverBaseName ( $pDriver )
+
+###Parameters###
+@@ParamTable@@
+$pDriver
+	The load address of the device driver. This value can be retrieved using the <a href="_WinAPI_EnumDeviceDrivers.htm">_WinAPI_EnumDeviceDrivers()</a> function.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The base name of the device driver.
+Failure:	Empty string, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended error information.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ GetDeviceDriverBaseName
+
+###Example###
+@@IncludeExample@@ _WinAPI_EnumDeviceDrivers

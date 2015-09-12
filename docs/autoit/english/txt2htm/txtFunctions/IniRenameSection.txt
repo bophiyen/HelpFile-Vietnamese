@@ -1,0 +1,41 @@
+###Function###
+IniRenameSection
+
+###Description###
+Renames a section in a standard format .ini file.
+
+###Syntax###
+IniRenameSection ( "filename", "section", "new section" [, flag = 0] )
+
+###Parameters###
+@@ParamTable@@
+filename
+	The filename of the .ini file.
+section
+	The section name in the .ini file.
+new section
+	The new section name.
+flag
+	[optional]
+		$FC_NOOVERWRITE(0) = (default) Fail if "new section" already exists.
+		$FC_OVERWRITE(1) = Overwrite "new section". This will erase any existing keys in "new section".
+
+	Constants are defined in FileConstants.au3.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	Non-zero.
+Failure:	0 and may sets the @error flag to non-zero, if renaming failed because the section already exists (only when flag = 0).
+@@End@@
+
+###Remarks###
+A standard ini file looks like:
+<em>[SectionName]
+Key=Value</em>
+
+###Related###
+IniDelete, IniRead, IniReadSection, IniReadSectionNames, IniWrite, IniWriteSection
+
+###Example###
+@@IncludeExample@@

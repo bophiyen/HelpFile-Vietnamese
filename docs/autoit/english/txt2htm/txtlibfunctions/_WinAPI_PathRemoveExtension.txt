@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_PathRemoveExtension
+
+###Description###
+Removes the file name extension from a path, if one is present
+
+###Syntax###
+#include <WinAPIShPath.au3>
+_WinAPI_PathRemoveExtension ( $sFilePath )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The path from which to remove the extension.
+@@End@@
+
+###ReturnValue###
+Returns the path without extension.
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ PathRemoveExtension
+
+###Example###
+@@IncludeExample@@

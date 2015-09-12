@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_ExpandEnvironmentStrings
+
+###Description###
+Expands environment variable strings and replaces them with their defined values
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_ExpandEnvironmentStrings ( $sString )
+
+###Parameters###
+@@ParamTable@@
+$sString
+	String to convert for environment variables
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	Converted string
+Failure:	Set the @error flag to non-zero, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended error information
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ ExpandEnvironmentStrings
+
+###Example###
+@@IncludeExample@@

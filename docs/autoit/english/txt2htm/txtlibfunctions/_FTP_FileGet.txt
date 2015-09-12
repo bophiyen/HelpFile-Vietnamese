@@ -1,0 +1,43 @@
+###User Defined Function###
+_FTP_FileGet
+
+###Description###
+Get file from a FTP server
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_FileGet ( $hFTPSession, $sRemoteFile, $sLocalFile [, $bFailIfExists = False [, $iFlagsAndAttributes = 0 [, $iFlags = $FTP_TRANSFER_TYPE_UNKNOWN [, $iContext = 0]]]] )
+
+###Parameters###
+@@ParamTable@@
+$hFTPSession
+	as returned by <a href="_FTP_Connect.htm">_FTP_Connect()</a>
+$sRemoteFile
+	The remote Location for the file.
+$sLocalFile
+	The local file.
+$bFailIfExists
+	[optional] True: do not overwrite existing (default = False).
+$iFlagsAndAttributes
+	[optional] File attributes for the new file.
+$iFlags
+	[optional] as in <a href="_FTP_FileOpen.htm">_FTP_FileOpen()</a>.
+$iContext
+	[optional] A variable that contains the application-defined value that associates this search with any application data.
+	This is only used if the application has already called <a href="_FTP_SetStatusCallback.htm">_FTP_SetStatusCallback()</a> to set up a status callback function.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 and sets the @error flag to non-zero.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_FTP_Connect, _FTP_FileOpen, _FTP_SetStatusCallback
+
+###See Also###
+@@MsdnLink@@ FtpGetFile

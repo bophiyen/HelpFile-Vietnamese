@@ -1,0 +1,44 @@
+###User Defined Function###
+_ArrayToClip
+
+###Description###
+Sends the contents of a 1D or 2D array to the clipboard, each element separated by a specified delimiter
+
+###Syntax###
+#include <Array.au3>
+_ArrayToClip ( Const ByRef $aArray [, $sDelim_Col = "|" [, $iStart_Row = -1 [, $iEnd_Row = -1 [, $sDelim_Row = @CRLF [, $iStart_Col = -1 [, $iEnd_Col = -1]]]]]] )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Array to copy to clipboard
+$sDelim_Col
+	[optional] Delimiter for elements of 1D array or columns of 2D array
+$iStart_Row
+	[optional] Index of array row to start copy
+$iEnd_Row
+	[optional] Index of array row to stop copy
+$sDelim_Row
+	[optional] Delimiter for rows of 2D array (2D only)
+$iStart_Col
+	[optional] Index of array column to start copy (2D only)
+$iEnd_Col
+	[optional] Index of array column to stop copy (2D only)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 and sets the @error flag to non-zero.
+@error:	-1 - <a href="../functions/ClipPut.htm">ClipPut()</a> failed
+	Other - See <a href="_ArrayToString.htm">_ArrayToString()</a> description for @error
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_ArrayToString
+
+###Example###
+@@IncludeExample@@

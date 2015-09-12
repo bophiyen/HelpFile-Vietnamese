@@ -1,0 +1,45 @@
+###User Defined Function###
+_ArraySwap
+
+###Description###
+Swaps elements of a 1D array and full or part rows/columns of a 2D array
+
+###Syntax###
+#include <Array.au3>
+_ArraySwap ( ByRef $aArray, $iIndex_1, $iIndex_2 [, $bCol = False [, $iStart = -1 [, $iEnd = -1]]] )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Array to modify
+$iIndex_1
+	Index of first element (1D) or row/column (2D) to swap
+$iIndex_2
+	Index of second element (1D) or row/column (2D) to swap
+$bCol
+	[optional] If True then for 2D array above parameters refer to rows; if False (default) above parameters refer to columns
+$iStart
+	[optional] Index in row/column to start swap (2D array only)
+$iEnd
+	[optional] Index in row/column to end swap (2D array only)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1
+Failure:	-1 and sets the @error flag to non-zero.
+@error:	1 - $aArray is not an array
+	2 - $aArray is not a 1D or 2D array
+	3 - $iIndex_1 or $iIndex_2 is outside array bounds
+	4 - $iStart or $iEnd outside array bounds
+	5 - $iStart is greater than $iEnd
+@@End@@
+
+###Remarks###
+Optional parameters ignored for 1D arrays.
+
+###Related###
+_ArrayReverse
+
+###Example###
+@@IncludeExample@@

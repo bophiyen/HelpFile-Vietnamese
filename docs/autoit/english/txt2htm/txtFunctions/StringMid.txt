@@ -1,0 +1,30 @@
+###Function###
+StringMid
+
+###Description###
+Extracts a number of characters from a string.
+
+###Syntax###
+StringMid ( "string", start [, count = -1] )
+
+###Parameters###
+@@ParamTable@@
+string
+	The string to evaluate.
+start
+	The character position to start. (1 = first character)
+count
+	[optional] The number of characters to extract. By default the entire remainder of the string.
+@@End@@
+
+###ReturnValue###
+Returns the extracted string.
+
+###Remarks###
+If <em>start</em> is out-of-bounds, an empty string is returned. If <em>start</em> is valid but count is out-of-bounds, the entire remainder of the string is returned.
+
+###Related###
+StringCompare, StringInStr, StringLeft, StringLen, StringLower, StringReplace, StringRight, StringSplit, StringTrimLeft, StringTrimRight, StringUpper
+
+###Example###
+@@IncludeExample@@

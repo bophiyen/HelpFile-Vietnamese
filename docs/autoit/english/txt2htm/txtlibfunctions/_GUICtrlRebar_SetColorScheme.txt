@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlRebar_SetColorScheme
+
+###Description###
+Sets the color scheme of a rebar control
+
+###Syntax###
+#include <GuiReBar.au3>
+_GUICtrlRebar_SetColorScheme ( $hWnd, $iBtnHighlight, $iBtnShadow )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle to the rebar control
+$iBtnHighlight
+	COLORREF value that represents the highlight color of the buttons
+$iBtnShadow
+	COLORREF value that represents the shadow color of the buttons
+@@End@@
+
+###ReturnValue###
+None.
+
+###Remarks###
+None.
+
+###Related###
+_GUICtrlRebar_GetColorScheme
+
+###Example###
+@@IncludeExample@@ _GUICtrlRebar_GetColorScheme

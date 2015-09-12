@@ -1,0 +1,96 @@
+###User Defined Function###
+_ArrayInsert
+
+###Description###
+Insert a new value at the specified position of a 1D or 2D array
+
+###Syntax###
+#include <Array.au3>
+_ArrayInsert ( ByRef $aArray, $vRange [, $vValue = "" [, $iStart = 0 [, $sDelim_Item = "|" [, $sDelim_Row = @CRLF [, $iForce = $ARRAYFILL_FORCE_DEFAULT]]]]] )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Array to modify
+$vRange
+	Position(s) at which to insert item(s) - see Remarks for format
+$vValue
+	[optional] Value(s) to add - can be a single variable, a delimited string or a 1D array
+$iStart
+	[optional] Column in which insert is to begin (2D array only)
+$sDelim_Item
+	[optional] Delimiter used if a string is to be split into items
+$sDelim_Row
+	[optional] Delimiter used if a string is to be split into rows (2D only)
+$iForce
+	[optional] Maintains default behaviour,
+		$ARRAYFILL_FORCE_DEFAULT (0)
+	Forces $vValue addition as a single item,
+		$ARRAYFILL_FORCE_SINGLEITEM (1)
+	Or forces datatype for all added items
+		$ARRAYFILL_FORCE_INT (2)
+		$ARRAYFILL_FORCE_NUMBER (3)
+		$ARRAYFILL_FORCE_PTR (4)
+		$ARRAYFILL_FORCE_HWND (5)
+		$ARRAYFILL_FORCE_STRING (6)
+	See Remarks for more details
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the new size of the array.
+Failure:	0 and sets the @error flag to non-zero.
+@error:	1 - $aArray is not an array
+	2 - $aArray is not a 1D or 2D array
+	3 - $vRange incorrectly formatted (incorrect character or unordered)
+	4 - $vRange is not a 1D array or has only 1 element
+	5 - $vRange limits outside array bounds
+	6 - $iStart outside array bounds (2D only)
+	7 - $vValue not 2D array (2D only)
+	8 - $vValue has too many columns to fit into $aArray
+@@End@@
+
+###Remarks###
+$vRange can be a string containing the rows above which a row is to to be inserted. It can be a single number or a range denoted by the first and last lines separated by a hyphen (-) - multiple items are separated by a semi-colon (;).
+
+$vRange can also be a 1D array containing the rows above which a row is to to be inserted with the count in the [0] element].
+
+In either case, the rows must be in ascending order but can be duplicated.
+
+If $vValue is a delimited string all items are inserted into the array as strings. This can be over-ridden by using the $hDataType parameter which forces the items into the required datatype. Note that all items in the delimited string are converted - if the items are of different datatypes then they must be passed as an array so that their specific datatype is conserved.
+
+
+Insertion mode depends on $vValue type, but using $iForce can affect this. Default behaviour is as follows:
+
+1D arrays:
+	Single item - inserts 1 element containing $vValue
+	$sDelim_Item delimited string - matches insertion lines to items in the string
+	0-based 1D array - matches insertion lines to elements in the array
+
+2D arrays:
+	Single item - inserts 1 row containing $vValue in the first column
+	$sDelim_Item delimited string - inserts 1 row at first insertion line, columns filled if enough items
+	$sDelim_Row delimited string - matches insertion lines to items in the string, only 1 column filled
+	Double-delimited string	- matches insertion lines to string split on $sDelim_Row, columns to string split on $sDelim_Item
+	0-based 2D array - matches insertion lines to rows in the array, columns to columns in the array
+
+An empty string ("") is added if there are insufficient items specified in $vValue. Excess items are ignored.
+
+Setting the $iForce parameter can change the default insertion behaviour or amend the datatype for added items. It can be set as follows:
+	- $ARRAYFILL_FORCE_DEFAULT (default):
+ - Items are split as described above. Single items and array elements retain their datatypes - delimited strings are added as strings.
+	- $ARRAYFILL_FORCE_SINGLEITEM:
+ - If $aArray is 1D, $vValue is inserted as a single element.
+ - if $aArray is 2D the parameter is ignored.
+	- $ARRAYFILL_FORCE_INT, $ARRAYFILL_FORCE_NUMBER, $ARRAYFILL_FORCE_PTR, $ARRAYFILL_FORCE_HWND, $ARRAYFILL_FORCE_STRING
+ - If $vValue is a single item, it is forced into the defined datatype - by default it would retain its existing datatype.
+ - If $vValue is a delimited string, all items are forced into the specified datatype - by default they would be inserted into the array as strings. If different datatypes are required for the items they must be passed as an array.
+ - If $vValue is an array, the parameter is ignored and the array elements are inserted retaining their existing datatypes.
+
+If $iForce is set to any other value it is ignored.
+
+###Related###
+_ArrayAdd, _ArrayDelete, _ArrayPop, _ArrayPush
+
+###Example###
+@@IncludeExample@@

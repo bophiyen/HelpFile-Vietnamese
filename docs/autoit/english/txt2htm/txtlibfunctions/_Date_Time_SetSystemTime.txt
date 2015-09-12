@@ -1,0 +1,30 @@
+###User Defined Function###
+_Date_Time_SetSystemTime
+
+###Description###
+Sets the current system time and date, expressed in UTC
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_SetSystemTime ( $tSYSTEMTIME )
+
+###Parameters###
+@@ParamTable@@
+$tSYSTEMTIME
+	a $tagSYSTEMTIME structure that contains the new system date and time or a pointer to it
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False
+@@End@@
+
+###Remarks###
+The SetLocalTime function enables the SE_SYSTEMTIME_NAME privilege before changing the local time
+
+###Related###
+$tagSYSTEMTIME, _Date_Time_GetSystemTime
+
+###Example###
+@@IncludeExample@@

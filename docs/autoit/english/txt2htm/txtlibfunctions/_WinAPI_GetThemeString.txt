@@ -1,0 +1,36 @@
+###User Defined Function###
+_WinAPI_GetThemeString
+
+###Description###
+Retrieves the value of a string property
+
+###Syntax###
+#include <WinAPITheme.au3>
+_WinAPI_GetThemeString ( $hTheme, $iPartID, $iStateID, $iPropID )
+
+###Parameters###
+@@ParamTable@@
+$hTheme
+	Handle to a window's specified theme data.
+$iPartID
+	The part that contains the string property.
+$iStateID
+	The state of the part.
+$iPropID
+	The property to retrieve ($TMT_*).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The retrieved string value.
+Failure:	Sets the @error flag to non-zero, @extended flag may contain the HRESULT error code.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ GetThemeString

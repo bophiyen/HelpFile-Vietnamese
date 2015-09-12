@@ -1,0 +1,35 @@
+###User Defined Function###
+_GDIPlus_FontPrivateAddMemoryFont
+
+###Description###
+Adds a font that is contained in system memory to a Microsoft® Windows® GDI+ font collection
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_FontPrivateAddMemoryFont ( $hFontCollection, $tFont )
+
+###Parameters###
+@@ParamTable@@
+$hFontCollection
+	 A handle to the font collection object
+$tFont
+	 A dll struct value filled with binary ttf font data
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False and sets the @error flag to non-zero, @extended may contain GPSTATUS error code ($GPID_ERR*).
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_GDIPlus_FontPrivateCreateCollection, _GDIPlus_FontPrivateCollectionDispose, _GDIPlus_FontCreate
+
+###See Also###
+@@MsdnLink@@ GdipPrivateAddMemoryFont
+
+###Example###
+@@IncludeExample@@

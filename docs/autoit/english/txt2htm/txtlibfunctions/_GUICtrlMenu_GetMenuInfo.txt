@@ -1,0 +1,33 @@
+###User Defined Function###
+_GUICtrlMenu_GetMenuInfo
+
+###Description###
+Retrieves information about a specified menu
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_GetMenuInfo ( $hMenu )
+
+###Parameters###
+@@ParamTable@@
+$hMenu
+	Handle of the menu
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	a $tagMENUINFO structure.
+Failure:	sets the @error flag to non-zero.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+$tagMENUINFO, _GUICtrlMenu_SetMenuInfo
+
+###See Also###
+@@MsdnLink@@ GetMenuInfo
+
+###Example###
+@@IncludeExample@@

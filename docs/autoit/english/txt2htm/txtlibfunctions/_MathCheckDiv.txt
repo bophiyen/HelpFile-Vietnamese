@@ -1,0 +1,34 @@
+###User Defined Function###
+_MathCheckDiv
+
+###Description###
+Checks if first number is divisible by the second number
+
+###Syntax###
+#include <Math.au3>
+_MathCheckDiv ( $iNum1 [, $iNum2 = 2] )
+
+###Parameters###
+@@ParamTable@@
+$iNum1
+	Integer value to check
+$iNum2
+	[optional] Integer value to divide by (default = 2)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	$MATH_ISNOTDIVISIBLE (1) for not divisible.
+	$MATH_ISDIVISIBLE (2) for divisible.
+Failure:	-1 and sets the @error flag to non-zero if non-integers are entered.
+Constants are defined in MathConstants.au3
+@@End@@
+
+###Remarks###
+This function by default checks if the first number is either odd or even, as the second value is default to 2.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

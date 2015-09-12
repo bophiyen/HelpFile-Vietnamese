@@ -1,0 +1,81 @@
+###User Defined Function###
+_ArrayAdd
+
+###Description###
+Adds a specified value at the end of an existing 1D or 2D array
+
+###Syntax###
+#include <Array.au3>
+_ArrayAdd ( ByRef $aArray, $vValue [, $iStart = 0 [, $sDelim_Item = "|" [, $sDelim_Row = @CRLF [, $iForce = $ARRAYFILL_FORCE_DEFAULT]]]] )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Array to modify
+$vValue
+	Value(s) to add - can be a single item, a delimited string or an array
+$iStart
+	[optional] Column in which addition is to begin (2D array only)
+$sDelim_Item
+	[optional] Delimiter used if a string is to be split into items
+$sDelim_Row
+	[optional] Delimiter used if a string is to be split into rows (2D only)
+$iForce
+	[optional] Maintains default behaviour,
+		ARRAYFILL_FORCE_DEFAULT (0)
+	Forces $vValue addition as a single item,
+		$ARRAYFILL_FORCE_SINGLEITEM (1)
+	Or forces datatype for all added items
+		$ARRAYFILL_FORCE_INT (2)
+		$ARRAYFILL_FORCE_NUMBER (3)
+		$ARRAYFILL_FORCE_PTR (4)
+		$ARRAYFILL_FORCE_HWND (5)
+		$ARRAYFILL_FORCE_STRING (6)
+	See Remarks for more details
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the index of last added item.
+Failure:	-1 and sets the @error flag to non-zero.
+@error:	1 - $aArray is not an array
+	2 - $aArray is not a 1 or 2 dimensional array
+	3 - $vValue has too many columns to fit into $aArray
+	4 - $iStart outside array bounds (2D only)
+	5 - Number of dimensions for $avArray and $vValue arrays do not match
+@@End@@
+
+###Remarks###
+Addition mode depends on $vValue type, but using $iForce can affect this. Default behaviour is as follows:
+
+1D arrays:
+	Single item - adds 1 element
+	$sDelim_Item delimited string - adds as many elements as items
+	0-based 1D array - adds as many elements as items
+
+2D arrays:
+	$sDelim_Item delimited string - adds 1 row, columns filled if enough items
+	$sDelim_Row delimited string - adds as many rows as items, only 1 column filled
+	$sDelim_Item & Row delimited string - adds rows and items, depending on split points
+	0-based 2D array - adds as many rows/columns as in array
+
+An empty string ("") is added if there are insufficient items specified in $vValue. Excess items are ignored.
+
+Setting the $iForce parameter can change the default insertion behaviour or amend the datatype for added items. It can be set as follows:
+	- $ARRAYFILL_FORCE_DEFAULT (default):
+ - Items are split as described above. Single items and array elements retain their datatypes - delimited strings are added as strings.
+	- $ARRAYFILL_FORCE_SINGLEITEM:
+ - If $aArray is 1D, $vValue is added as a single element.
+ - if $aArray is 2D the parameter is ignored.
+	- $ARRAYFILL_FORCE_INT, $ARRAYFILL_FORCE_NUMBER, $ARRAYFILL_FORCE_PTR, $ARRAYFILL_FORCE_HWND, $ARRAYFILL_FORCE_STRING
+ - If $vValue is a single item, it is forced into the defined datatype - by default it would retain its existing datatype.
+ - If $vValue is a delimited string, all items are forced into the specified datatype - by default they would be added to the array as strings. If different datatypes are required for the items they must be passed as an array.
+ - If $vValue is an array, the parameter is ignored and the array elements are added retaining their existing datatypes.
+
+If $iForce is set to any other value it is ignored.
+
+###Related###
+_ArrayConcatenate, _ArrayDelete, _ArrayInsert, _ArrayPop, _ArrayPush
+
+###Example###
+@@IncludeExample@@

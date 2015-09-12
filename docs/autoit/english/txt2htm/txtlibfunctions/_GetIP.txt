@@ -1,0 +1,29 @@
+###User Defined Function###
+_GetIP
+
+###Description###
+Get public IP address of a network/computer
+
+###Syntax###
+#include <Inet.au3>
+_GetIP (  )
+
+###Parameters###
+None.
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the public IP address. (See remarks.)
+Failure:	-1 and sets the @error to non-zero.
+@@End@@
+
+###Remarks###
+This only returns the public IP address of a computer or network (i.e. the public IP on the WAN link of your NAT router). The address is determined by accessing an external IP discovery web site. The sites used are http://checkip.dyndns.org, http://www.myexternalip.com/raw and http://www.bot.whatismyipaddress.com.
+
+To reduce overloading the IP discovery sites a 5 minute timer is used between each function call. If <a href="_GetIP.htm">_GetIP()</a> is used during this 5 minute period, the previous IP is returned and @extended set to 1.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

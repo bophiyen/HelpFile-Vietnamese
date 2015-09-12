@@ -1,0 +1,59 @@
+###User Defined Function###
+_WinAPI_VerQueryValue
+
+###Description###
+Retrieves the non-fixed (strings) version information from the specified version-information resource
+
+###Syntax###
+#include <WinAPIRes.au3>
+_WinAPI_VerQueryValue ( $pData [, $sValues = ''] )
+
+###Parameters###
+@@ParamTable@@
+$pData
+	A pointer to the buffer that contains the version-information resource returned by the
+	<a href="_WinAPI_GetFileVersionInfo.htm">_WinAPI_GetFileVersionInfo()</a> function.
+$sValues
+	[optional] The string containing the field names for which you want to get values. The names must be separated by a "|".
+	For example, "name1|name2|...|namei". If some fields do not exist, the corresponding array elements is an empty string.
+	If this parameter is not specified (empty string), uses the reserved names (12) in the following sequence:
+		$FV_COMMENTS ("Comments")
+		$FV_COMPANYNAME ("CompanyName")
+		$FV_FILEDESCRIPTION ("FileDescription")
+		$FV_FILEVERSION ("FileVersion")
+		$FV_INTERNALNAME ("InternalName")
+		$FV_LEGALCOPYRIGHT ("LegalCopyright")
+		$FV_LEGALTRADEMARKS ("LegalTrademarks")
+		$FV_ORIGINALFILENAME ("OriginalFilename")
+		$FV_PRODUCTNAME ("ProductName")
+		$FV_PRODUCTVERSION ("ProductVersion")
+		$FV_PRIVATEBUILD ("PrivateBuild")
+		$FV_SPECIALBUILD ("SpecialBuild")
+
+	Constants are defined in FileConstants.au3.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The 2D array of the string values that specified by $sValues parameter for each language.
+	The zeroth array element [0][0] contains the number of languages of the resource.
+	The array dimension (i) equal to the number specified parameters + 1.
+	The zeroth array element [n][0] contains the language identifier (ID).
+	[0][0] - Number of languages (n)
+	[0][i] - Unused
+	[n][0] - ID
+	[n][i] - Value
+Failure:	Sets the @error flag to non-zero.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ VerQueryValue
+
+###Example###
+@@IncludeExample@@

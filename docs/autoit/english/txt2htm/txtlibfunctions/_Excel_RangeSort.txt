@@ -1,0 +1,61 @@
+###User Defined Function###
+_Excel_RangeSort
+
+###Description###
+Sorts a cell range
+
+###Syntax###
+#include <Excel.au3>
+_Excel_RangeSort ( $oWorkbook, $vWorksheet, $vRange, $vKey1 [, $iOrder1 = $xlAscending [, $iSortText = $xlSortNormal [, $iHeader = $xlNo [, $bMatchcase = False [, $iOrientation = $xlSortRows [, $vKey2 = Default [, $iOrder2 = Default [, $vKey3 = Default [, $iOrder3 = Default]]]]]]]]] )
+
+###Parameters###
+@@ParamTable@@
+$oWorkbook
+	Excel workbook object
+$vWorksheet
+	Name, index or worksheet object to be sorted. If set to keyword Default the active sheet will be used
+$vRange
+	A range object, an A1 range or keyword Default to sort the whole worksheet (default = keyword Default)
+$vKey1
+	Specifies the first sort field, either as an A1 range or range object
+$iOrder1
+	[optional] Determines the sort order. Can be any of the XlSortOrder enumeration (default = $xlAscending)
+$iSortText
+	[optional] Specifies how to sort text in $vKey1, $vKey2 and $vKey3. Can be any of the XlSortDataOption enumeration (default = $xlSortNormal)
+$iHeader
+	[optional] Specifies whether the first row contains header information. Can be any of the XlYesNoGuess enumeration (default = $xlNo)
+$bMatchCase
+	[optional] True to perform a case-sensitive sort, False to perform non-case sensitive sort (default = False)
+$iOrientation
+	[optional] Specifies the sort orientation. Can be any of the XlSortOrientation enumeration (default = $xlSortColumns)
+$vKey2
+	[optional] See $vKey1
+$iOrder2
+	[optional] See $iOrder1
+$vKey3
+	[optional] See $vKey1
+$iOrder3
+	[optional] See $iOrder1
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	an object of the sorted range.
+Failure:	0 and sets @error.
+@error:	1 - $oWorkbook is not an object or not a workbook object
+	2 - $vWorksheet name or index are invalid or $vWorksheet is not a worksheet object. @extended is set to the COM error code
+	3 - $vRange is invalid. @extended is set to the COM error code
+	4 - $vKey1 is invalid. @extended is set to the COM error code
+	5 - $vKey2 is invalid. @extended is set to the COM error code
+	6 - $vKey3 is invalid. @extended is set to the COM error code
+	7 - Error returned by the Sort method. @extended is set to the COM error code
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

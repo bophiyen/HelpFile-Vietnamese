@@ -1,0 +1,32 @@
+###User Defined Function###
+_SoundResume
+
+###Description###
+Resume a paused sound
+
+###Syntax###
+#include <Sound.au3>
+_SoundResume ( $aSndID )
+
+###Parameters###
+@@ParamTable@@
+$aSndID
+	Sound ID array as returned by <a href="_SoundOpen.htm">_SoundOpen()</a> or a file name
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 and sets the @error flag to non-zero.
+@error:	1 = Pause Failed
+	3 = Invalid Sound ID. Use return array from <a href="_SoundOpen.htm">_SoundOpen()</a> or a valid file name.
+@@End@@
+
+###Remarks###
+<a href="_SoundPlay.htm">_SoundPlay()</a> will also resume playing after a sound has been paused in some cases.
+
+###Related###
+_SoundOpen, _SoundPause, _SoundPlay
+
+###Example###
+@@IncludeExample@@

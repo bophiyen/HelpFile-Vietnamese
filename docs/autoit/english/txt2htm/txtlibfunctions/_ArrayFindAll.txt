@@ -1,0 +1,48 @@
+###User Defined Function###
+_ArrayFindAll
+
+###Description###
+Find the indices of all ocurrences of a search query between two points in a 1D or 2D array using _ArraySearch()
+
+###Syntax###
+#include <Array.au3>
+_ArrayFindAll ( Const ByRef $aArray, $vValue [, $iStart = 0 [, $iEnd = 0 [, $iCase = 0 [, $iCompare = 0 [, $iSubItem = 0 [, $bRow = False]]]]]] )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	The array to search
+$vValue
+	What to search $aArray for
+$iStart
+	[optional] Index of array to start search
+$iEnd
+	[optional] Index of array to end search
+$iCase
+	[optional] If set to 1, search is case sensitive
+$iCompare
+	[optional]
+		0 Casting of variables to the same type (default), "string" = 0, "" = 0 or "0" = 0 match (If $iCase = 0)
+		1 executes a partial search
+		2 comparison match if variables have same type and same value
+		3 compares using a regular expression pattern provided as $vValue
+$iSubItem
+	[optional] Sub-index to search on in 2D arrays
+$bRow
+	[optional] If True then $iSubItem sets the row to search - False (default) searches columns
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	an array of all index numbers in array containing $vValue.
+Failure:	sets the @error flag to non-zero (see <a href="_ArraySearch.htm">_ArraySearch()</a> description for @error).
+@@End@@
+
+###Remarks###
+The values of $iCompare can not be combined together.
+
+###Related###
+_ArrayBinarySearch, _ArraySearch
+
+###Example###
+@@IncludeExample@@

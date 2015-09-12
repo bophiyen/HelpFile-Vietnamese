@@ -1,0 +1,60 @@
+###User Defined Function###
+_WinAPI_SetSystemCursor
+
+###Description###
+Enables an application to customize the system cursors
+
+###Syntax###
+#include <WinAPIRes.au3>
+_WinAPI_SetSystemCursor ( $hCursor, $iID [, $bCopy = False] )
+
+###Parameters###
+@@ParamTable@@
+$hCursor
+	Handle to a cursor.
+$iID
+	This parameter specifies the system cursor to replace with the contents of $hCursor,
+	and can be one of the following values.
+	$OCR_NORMAL
+	$OCR_IBEAM
+	$OCR_WAIT
+	$OCR_CROSS
+	$OCR_UP
+	$OCR_SIZE
+	$OCR_ICON
+	$OCR_SIZENWSE
+	$OCR_SIZENESW
+	$OCR_SIZEWE
+	$OCR_SIZENS
+	$OCR_SIZEALL
+	$OCR_ICOCUR
+	$OCR_NO
+	$OCR_HAND
+	$OCR_APPSTARTING
+	$OCR_HELP
+$bCopy
+	[optional] Specifies whether the cursor should be duplicated, valid values:
+		True	- The cursor is duplicated.
+		False - The cursor is not duplicated (Default).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False
+@@End@@
+
+###Remarks###
+The function replaces the contents of the system cursor specified by ID with the contents of the cursor handled
+by $hCursor. The system destroys $hCursor by calling the <a href="_WinAPI_DestroyCursor.htm">_WinAPI_DestroyCursor()</a> function. Therefore, $hCursor cannot
+be a cursor loaded using the <a href="_WinAPI_LoadCursor.htm">_WinAPI_LoadCursor()</a> function. To specify a cursor loaded from a resource, copy the
+cursor using the <a href="_WinAPI_CopyCursor.htm">_WinAPI_CopyCursor()</a> function, then pass the copy to <a href="_WinAPI_SetSystemCursor.htm">_WinAPI_SetSystemCursor()</a>.
+
+###Related###
+_WinAPI_CopyCursor, _WinAPI_DestroyCursor, _WinAPI_LoadCursor
+
+###See Also###
+@@MsdnLink@@ SetSystemCursor
+
+###Example###
+@@IncludeExample@@

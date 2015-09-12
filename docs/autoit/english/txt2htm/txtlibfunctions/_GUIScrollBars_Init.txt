@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUIScrollBars_Init
+
+###Description###
+Initialize the scrollbars for the window
+
+###Syntax###
+#include <GuiScrollBars.au3>
+_GUIScrollBars_Init ( $hWnd [, $iMaxH = -1 [, $iMaxV = -1]] )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle to the window
+$iMaxH
+	[optional] Max size of Horizontal scrollbar
+$iMaxV
+	[optional] Max size of Vertical scrollbar
+@@End@@
+
+###ReturnValue###
+None.
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@ _GUIScrollBars_SetScrollInfo

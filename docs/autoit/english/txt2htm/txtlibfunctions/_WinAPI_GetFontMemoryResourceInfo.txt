@@ -1,0 +1,55 @@
+###User Defined Function###
+_WinAPI_GetFontMemoryResourceInfo
+
+###Description###
+Reads out font information from a TTF loaded into the memory
+
+###Syntax###
+#include <GDIPlus.au3>
+_WinAPI_GetFontMemoryResourceInfo ( $pMemory [, $iFlag = 1] )
+
+###Parameters###
+@@ParamTable@@
+$pMemory
+	A pointer value the struct that contains the binary data of the TTF
+$iFlag
+	[optional] An integer value. Default is 1 (Font Family name). See remarks for others values
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	A string value of the font information.
+Failure:	0.
+@@End@@
+
+###Remarks###
+@@StandardTable1@@
+$iFlag	Meaning
+0	Copyright notice
+1	Font Family name. (Default)
+2	Font Subfamily name. Font style (italic, oblique) and weight (light, bold, black, etc.). A font with no particular differences in weight or style (e.g. medium weight, not italic) should have the string "Regular" stored in this position.
+3	Unique font identifier. Usually similar to 4 but with enough additional information to be globally unique. Often includes information from Id 8 and Id 0.
+4	Full font name. This should be a combination of strings 1 and 2. Exception: if the font is “Regular” as indicated in string 2, then use only the family name contained in string 1. This is the font name that Windows will expose to users.
+5	Version string. Must begin with the syntax ‘Version n.nn ‘ (upper case, lower case, or mixed, with a space following the number).
+6	Postscript name for the font.
+7	Trademark. Used to save any trademark notice/information for this font. Such information should be based on legal advice. This is distinctly separate from the copyright.
+8	Manufacturer Name.
+9	Designer. Name of the designer of the typeface.
+10	Description. Description of the typeface. Can contain revision information, usage recommendations, history, features, etc.
+11	URL Vendor. URL of font vendor (with protocol, e.g., http://, ftp://). If a unique serial number is embedded in the URL, it can be used to register the font.
+12	URL Designer. URL of typeface designer (with protocol, e.g., http://, ftp://).
+13	License description. Description of how the font may be legally used, or different example scenarios for licensed use. This field should be written in plain language, not legalese.
+14	License information URL. Where additional licensing information can be found.
+15	Reserved; Set to zero.
+16	Preferred Family (Windows only). In Windows, the Family name is displayed in the font menu. The Subfamily name is presented as the Style name. For historical reasons, font families have contained a maximum of four styles, but font designers may group more than four fonts to a single family. The Preferred Family and Preferred Subfamily IDs allow font designers to include the preferred family/subfamily groupings. These IDs are only present if they are different from IDs 1 and 2.
+17	Preferred Subfamily (Windows only). See above.
+18	Compatible Full (Mac OS only). On the Mac OS, the menu name is constructed using the FOND resource. This usually matches the Full Name. If you want the name of the font to appear differently than the Full Name, you can insert the Compatible Full Name here.
+19	Sample text. This can be the font name, or any other text that the designer thinks is the best sample text to show what the font looks like.
+20	PostScript CID findfont name.
+@@End@@
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@ _GDIPlus_FontPrivateAddMemoryFont

@@ -1,0 +1,43 @@
+###User Defined Function###
+_DateToMonth
+
+###Description###
+Returns the name of the month, based on the specified month
+
+###Syntax###
+#include <Date.au3>
+_DateToMonth ( $iMonNum [, $iFormat = 0] )
+
+###Parameters###
+@@ParamTable@@
+$iMonNum
+	Month number
+		1 = January
+		2 = February
+		3 = March
+		...
+		11 = November
+		12 = December
+$iFormat
+	[optional] Format:
+	$DMW_LOCALE_USER (0) - Long name of the month (Default)
+	$DMW_SHORTNAME (1) - Short name of the month e.g. Jan
+	$DMW_LOCALE_LONGNAME (2) - Long name of the month in the user's default language
+	$DMW_LOCALE_SHORTNAME (3) - Short name of the month in the user's default language
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	Month name
+Failure:	An empty string and sets @error to non-zero
+@error:	1 - Invalid month number.
+@@End@@
+
+###Remarks###
+The function returns month names in English or the user's default language.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

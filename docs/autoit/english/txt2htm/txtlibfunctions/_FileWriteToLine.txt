@@ -1,0 +1,44 @@
+###User Defined Function###
+_FileWriteToLine
+
+###Description###
+Writes text to a specific line in a file
+
+###Syntax###
+#include <File.au3>
+_FileWriteToLine ( $sFilePath, $iLine, $sText [, $bOverWrite = False] )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The file to write to
+$iLine
+	The line number to write to
+$sText
+	The text to write
+$bOverWrite
+	[optional]
+		True - will overwrite the old line
+		False - (default) will not overwrite
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 and sets the @error flag to non-zero.
+@error:	1 - File has fewer lines than $iLine
+	2 - File does not exist
+	3 - Error when opening file
+	4 - $iLine is invalid
+	5 - $iOverWrite is invalid
+	6 - $sText is invalid
+@@End@@
+
+###Remarks###
+If <a href="_FileWriteToLine.htm">_FileWriteToLine()</a> is called with $iOverWrite as 1 and $sText as "", it will delete the line.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

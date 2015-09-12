@@ -1,0 +1,61 @@
+###User Defined Function###
+_Excel_RangeCopyPaste
+
+###Description###
+Cuts or copies one or multiple cells, rows or columns to a range or from/to the clipboard
+
+###Syntax###
+#include <Excel.au3>
+_Excel_RangeCopyPaste ( $oWorksheet, $vSourceRange [, $vTargetRange = Default [, $bCut = False [, $iPaste = Default [, $iOperation = Default [, $bSkipBlanks = False [, $bTranspose = False]]]]]] )
+
+###Parameters###
+@@ParamTable@@
+$oWorksheet
+	Object of the source worksheet
+$vSourceRange
+	Source range to copy/cut from. Can be a range object or an A1 range.
+		If set to keyword Default then the range will be copied from the clipboard.
+$vTargetRange
+	[optional] Target range to copy/cut to. Can be a range object or an A1 range.
+		If set to keyword Default then the range will be copied to the clipboard (default = keyword Default)
+$bCut
+	[optional] If set to True the source range isn't copied but cut out (default = False)
+		This parameter is ignored when $vSourceRange is set to keyword Default.
+$iPaste
+	[optional] The part of the range to be pasted from the clipboard (formulas, formats ...). Must be a value of the XlPasteType enumeration
+		(default = keyword Default)
+$iOperation
+	[optional] The paste operation (add, divide, multiply ...). Must be a value of the XlPasteSpecialOperation enunmeration
+		(default = keyword Default)
+$bSkipBlanks
+	[optional] If set to True blank cells from the clipboard will not be pasted into the target range (default = False)
+$bTranspose
+	[optional] Set to True to transpose rows and columns when the range is pasted (default = False)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the object of the target range if $vTargetRange &lt;&gt; Default, else 1.
+Failure:	0 and sets @error.
+@error:	1 - $oWorksheet is not an object or not a worksheet object
+	2 - $vSourceRange is invalid. @extended is set to the COM error code
+	3 - $vTargetRange is invalid. @extended is set to the COM error code
+	4 - Error occurred when pasting cells. @extended is set to the COM error code
+	5 - Error occurred when cutting cells. @extended is set to the COM error code
+	6 - Error occurred when copying cells. @extended is set to the COM error code
+	7 - $vSourceRange and $vTargetRange can't be set to keyword Default at the same time
+@@End@@
+
+###Remarks###
+$vSourceRange and $vTargetRange can't be set to keyword Default at the same time.
+If $vSourceRange = Default then:
+* the range will be copied from the clipboard using the PasteSpecial method
+* $bCut will be ignored
+* $iPaste, $iOperation, $bSkipBlanks and $bTranspose will be honored
+If $vSourceRange and $vTargetRange are specified parameters $iPaste, $iOperation, $bSkipBlanks and $bTranspose are ignored
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,37 @@
+###User Defined Function###
+_WinAPI_ShellGetSpecialFolderPath
+
+###Description###
+Retrieves the path of a special folder
+
+###Syntax###
+#include <WinAPIShellEx.au3>
+_WinAPI_ShellGetSpecialFolderPath ( $iCSIDL [, $bCreate = False] )
+
+###Parameters###
+@@ParamTable@@
+$iCSIDL
+	The CSIDL ($iCSIDL_*) that identifies the folder of interest.
+$bCreate
+	[optional] Specifies whether the folder should be created if it does not already exist, valid values:
+	True	- The folder is created.
+	False - The folder is not created (Default).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The full path of a special folder.
+Failure:	Empty string and sets the @error flag to non-zero.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ SHGetSpecialFolderPath
+
+###Example###
+@@IncludeExample@@

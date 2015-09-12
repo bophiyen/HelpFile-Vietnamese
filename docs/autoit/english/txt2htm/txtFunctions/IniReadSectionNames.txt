@@ -1,0 +1,33 @@
+###Function###
+IniReadSectionNames
+
+###Description###
+Reads all sections in a standard format .ini file.
+
+###Syntax###
+IniReadSectionNames ( "filename" )
+
+###Parameters###
+@@ParamTable@@
+filename
+	The filename of the .ini file.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	an array of all section names in the INI file.
+Failure:	sets the @error flag to non-zero
+@@End@@
+
+###Remarks###
+A standard ini file looks like:
+<em>[SectionName]
+Key=Value</em>
+
+The number of elements returned will be in $aArray[0]. If an @error occurs, no array is returned.
+
+###Related###
+IniDelete, IniRead, IniReadSection, IniRenameSection, IniWrite, IniWriteSection
+
+###Example###
+@@IncludeExample@@

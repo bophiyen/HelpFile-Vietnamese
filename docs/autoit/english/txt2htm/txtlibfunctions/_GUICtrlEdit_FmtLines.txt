@@ -1,0 +1,38 @@
+###User Defined Function###
+_GUICtrlEdit_FmtLines
+
+###Description###
+Determines whether an edit control includes soft line-break characters
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_FmtLines ( $hWnd [, $bSoftBreak = False] )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control ID/Handle to the control
+$bSoftBreak
+	[optional] Specifies whether soft line-break characters are to be inserted:
+		True - Inserts the characters
+		False - Removes them
+@@End@@
+
+###ReturnValue###
+Returns identical to the $bSoftBreak parameter.
+
+###Remarks###
+A soft line break consists of two carriage returns and a line feed and is inserted at the end of a line that is broken because of wordwrapping.
+
+This function affects only the text returned by the <a href="_GUICtrlEdit_GetText.htm">_GUICtrlEdit_GetText()</a> function.
+
+It has no effect on the display of the text within the edit control.
+
+The <a href="_GUICtrlEdit_FmtLines.htm">_GUICtrlEdit_FmtLines()</a> function does not affect a line that ends with a hard line break.
+A hard line break consists of one carriage return and a line feed.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

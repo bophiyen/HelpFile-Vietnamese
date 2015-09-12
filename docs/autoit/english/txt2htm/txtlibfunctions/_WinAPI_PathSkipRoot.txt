@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_PathSkipRoot
+
+###Description###
+Parses a path, ignoring the drive letter or Universal Naming Convention (UNC) server/share path elements
+
+###Syntax###
+#include <WinAPIShPath.au3>
+_WinAPI_PathSkipRoot ( $sFilePath )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The path to parse.
+@@End@@
+
+###ReturnValue###
+Returns the string contains only subpath that follows the root (drive letter or UNC server/share).
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ PathSkipRoot
+
+###Example###
+@@IncludeExample@@

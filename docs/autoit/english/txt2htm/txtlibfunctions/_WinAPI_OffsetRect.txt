@@ -1,0 +1,34 @@
+###User Defined Function###
+_WinAPI_OffsetRect
+
+###Description###
+Moves the specified rectangle by the specified offsets
+
+###Syntax###
+#include <WinAPIGdi.au3>
+_WinAPI_OffsetRect ( ByRef $tRECT, $iDX, $iDY )
+
+###Parameters###
+@@ParamTable@@
+$tRECT
+	$tagRECT structure that to be moved.
+$iDX
+	The amount to move the rectangle left (negative value) or right.
+$iDY
+	The amount to move the rectangle up (negative value) or down.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ OffsetRect

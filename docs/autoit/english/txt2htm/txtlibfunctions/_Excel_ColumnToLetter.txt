@@ -1,0 +1,31 @@
+###User Defined Function###
+_Excel_ColumnToLetter
+
+###Description###
+Converts the column number to letter(s)
+
+###Syntax###
+#include <Excel.au3>
+_Excel_ColumnToLetter ( $iColumn )
+
+###Parameters###
+@@ParamTable@@
+$iColumn
+	The column number which you want to turn into letter(s)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the column letter(s).
+Failure:	"" and sets @error.
+@error:	1 - $iColumn is not a number
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_Excel_ColumnToNumber
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,31 @@
+###User Defined Function###
+_GUICtrlTab_SetUnicodeFormat
+
+###Description###
+Sets the Unicode character format flag for the control
+
+###Syntax###
+#include <GuiTab.au3>
+_GUICtrlTab_SetUnicodeFormat ( $hWnd, $bUnicode )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control ID/Handle to the control
+$bUnicode
+	Unicode character flag:
+		True - Control uses Unicode characters
+		False - Control uses ANSI characters
+@@End@@
+
+###ReturnValue###
+Returns the previous character format flag setting.
+
+###Remarks###
+None.
+
+###Related###
+_GUICtrlTab_GetUnicodeFormat
+
+###Example###
+@@IncludeExample@@

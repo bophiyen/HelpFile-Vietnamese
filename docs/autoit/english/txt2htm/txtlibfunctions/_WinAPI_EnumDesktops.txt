@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinAPI_EnumDesktops
+
+###Description###
+Enumerates all desktops associated with the specified window station of the calling process
+
+###Syntax###
+#include <WinAPISys.au3>
+_WinAPI_EnumDesktops ( $hStation )
+
+###Parameters###
+@@ParamTable@@
+$hStation
+	Handle to the window station whose desktops are to be enumerated. This handle must have the
+	$WINSTA_ENUMDESKTOPS access right.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The array of the desktop names. The zeroth array element contains the number of desktop.
+Failure:	Sets the @error flag to non-zero.
+@@End@@
+
+###Remarks###
+The <a href="_WinAPI_EnumDesktops.htm">_WinAPI_EnumDesktops()</a> enumerates only those desktops for which the calling process has the
+$DESKTOP_ENUMERATE access right.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ EnumDesktops
+
+###Example###
+@@IncludeExample@@

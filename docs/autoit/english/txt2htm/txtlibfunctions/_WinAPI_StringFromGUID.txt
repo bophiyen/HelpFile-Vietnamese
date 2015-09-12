@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_StringFromGUID
+
+###Description###
+Converts a binary GUID to string form
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_StringFromGUID ( $tGUID )
+
+###Parameters###
+@@ParamTable@@
+$tGUID
+	A $tagGUID structure or a pointer to it
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	GUID in string form
+Failure:	Empty string
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+$tagGUID, _WinAPI_GUIDFromString, _WinAPI_GUIDFromStringEx
+
+###See Also###
+@@MsdnLink@@ StringFromGUID2

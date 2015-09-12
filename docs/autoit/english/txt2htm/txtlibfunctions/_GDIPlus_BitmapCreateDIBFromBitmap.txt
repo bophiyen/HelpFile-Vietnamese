@@ -1,0 +1,33 @@
+###User Defined Function###
+_GDIPlus_BitmapCreateDIBFromBitmap
+
+###Description###
+Creates a DIB Section
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_BitmapCreateDIBFromBitmap ( $hBitmap )
+
+###Parameters###
+@@ParamTable@@
+$hBitmap
+	A handle to a GDI+ bitmap
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	A handle to a DIB bitmap section.
+Failure:	0.
+@@End@@
+
+###Remarks###
+After you are done with the object, call _WinAPI_DeleteObject() to release the object resources.
+
+###Related###
+_WinAPI_DeleteObject
+
+###See Also###
+@@MsdnLink@@ CreateDIBSection
+
+###Example###
+@@IncludeExample@@

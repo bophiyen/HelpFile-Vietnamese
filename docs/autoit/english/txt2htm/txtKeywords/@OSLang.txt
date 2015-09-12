@@ -1,0 +1,20 @@
+###Macro###
+@OSLang
+
+###Description###
+Retrieve the language value of the current running OS.
+
+###Syntax###
+@OSLang
+
+###Parameters###
+None.
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

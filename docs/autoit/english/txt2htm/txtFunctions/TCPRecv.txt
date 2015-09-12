@@ -1,0 +1,43 @@
+###Function###
+TCPRecv
+
+###Description###
+Receives data from a connected socket.
+
+###Syntax###
+TCPRecv ( mainsocket, maxlen [, flag = 0] )
+
+###Parameters###
+@@ParamTable@@
+mainsocket
+	The connected socket identifier (SocketID) as returned by a <a href="TCPAccept.htm">TCPAccept()</a> or a <a href="TCPConnect.htm">TCPConnect()</a> function.
+maxlen
+	max # of characters to receive.
+flag
+	[optional] Forces the function to return binary data if set to 1 (default is 0, and will auto detect between binary/string).
+		$TCP_DATA_DEFAULT (0) - (Default) will auto detect between binary/string
+		$TCP_DATA_BINARY (1) - return binary data
+
+	Constants are defined in "AutoItConstants.au3".
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the binary/string sent by the connected socket.
+Failure:	"" and sets the @error flag to non-zero.
+@error:	-1 invalid socket.
+	-2 not connected.
+	Windows API WSAGetError return value (see <a href="http://msdn.microsoft.com/en-us/library/ms740668.aspx">MSDN</a>).
+@extended:	1 no byte received.
+@@End@@
+
+###Remarks###
+For backwards compatibility reasons this function will try to return strings by default. If null (0x00) characters are received then the return value will be a binary type.
+To force the function to always return binary data (the most sensible option) then use the "flag" parameter set to 1.
+If Unicode strings need to be transmitted they must be encoded/decoded with <a href="StringToBinary.htm">StringToBinary()</a>/<a href="BinaryToString.htm">BinaryToString()</a>.
+
+###Related###
+BinaryLen, BinaryMid, BinaryToString, TCPAccept, TCPConnect, TCPSend, TCPStartup, TCPTimeout (Option)
+
+###Example###
+@@IncludeExample@@

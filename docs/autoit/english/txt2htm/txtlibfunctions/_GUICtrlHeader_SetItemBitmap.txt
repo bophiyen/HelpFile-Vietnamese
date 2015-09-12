@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlHeader_SetItemBitmap
+
+###Description###
+Sets the item bitmap handle
+
+###Syntax###
+#include <GuiHeader.au3>
+_GUICtrlHeader_SetItemBitmap ( $hWnd, $iIndex, $hBitmap )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle to the control
+$iIndex
+	0-based item index
+$hBitmap
+	Item bitmap handle
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False.
+@@End@@
+
+###Remarks###
+After calling this function, make sure you call <a href="_GUICtrlHeader_SetItemDisplay.htm">_GUICtrlHeader_SetItemDisplay()</a> to set the items display information.
+
+###Related###
+_GUICtrlHeader_GetItemBitmap, _GUICtrlHeader_SetItemDisplay
+
+###Example###
+@@IncludeExample@@

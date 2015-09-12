@@ -1,0 +1,26 @@
+###Function###
+StringUpper
+
+###Description###
+Converts a string to uppercase.
+
+###Syntax###
+StringUpper ( "string" )
+
+###Parameters###
+@@ParamTable@@
+string
+	The string to convert.
+@@End@@
+
+###ReturnValue###
+Returns the string converted to uppercase.
+
+###Remarks###
+None.
+
+###Related###
+StringCompare, StringInStr, StringIsAlNum, StringIsAlpha, StringIsASCII, StringIsLower, StringIsSpace, StringIsUpper, StringIsXDigit, StringLeft, StringLen, StringLower, StringMid, StringReplace, StringRight, StringSplit, StringTrimLeft, StringTrimRight
+
+###Example###
+@@IncludeExample@@

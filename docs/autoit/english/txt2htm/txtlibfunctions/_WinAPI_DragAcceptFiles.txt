@@ -1,0 +1,34 @@
+###User Defined Function###
+_WinAPI_DragAcceptFiles
+
+###Description###
+Registers whether a window accepts dropped files
+
+###Syntax###
+#include <WinAPISys.au3>
+_WinAPI_DragAcceptFiles ( $hWnd [, $bAccept = True] )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle to the window that is registering whether it will accept dropped files.
+$bAccept
+	[optional] Specifies whether a window accepts dropped files, valid values:
+		True	- Accept dropped files (Default).
+		False - Discontinue accepting dropped files.
+@@End@@
+
+###ReturnValue###
+None.
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ DragAcceptFiles
+
+###Example###
+@@IncludeExample@@

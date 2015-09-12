@@ -1,0 +1,41 @@
+###User Defined Function###
+_WinAPI_ReadFile
+
+###Description###
+Reads data from a file
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_ReadFile ( $hFile, $pBuffer, $iToRead, ByRef $iRead [, $tOverlapped = 0] )
+
+###Parameters###
+@@ParamTable@@
+$hFile
+	Handle to the file to be read
+$pBuffer
+	Pointer to the buffer that receives the data read from a file
+$iToRead
+	Maximum number of bytes to read
+$iRead
+	Number of bytes read
+$tOverlapped
+	[optional] A $tagOVERLAPPED structure or a pointer to it
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended error information
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+$tagOVERLAPPED, _WinAPI_CloseHandle, _WinAPI_CreateFile, _WinAPI_FlushFileBuffers, _WinAPI_GetFileSizeEx, _WinAPI_SetEndOfFile, _WinAPI_SetFilePointer, _WinAPI_WriteFile
+
+###See Also###
+@@MsdnLink@@ ReadFile
+
+###Example###
+@@IncludeExample@@ _WinAPI_CreateFile

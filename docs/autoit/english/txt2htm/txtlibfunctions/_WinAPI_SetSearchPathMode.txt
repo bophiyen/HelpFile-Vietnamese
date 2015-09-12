@@ -1,0 +1,46 @@
+###User Defined Function###
+_WinAPI_SetSearchPathMode
+
+###Description###
+Sets the per-process mode that the _WinAPI_SearchPath() function uses when locating files
+
+###Syntax###
+#include <WinAPIFiles.au3>
+_WinAPI_SetSearchPathMode ( $iFlags )
+
+###Parameters###
+@@ParamTable@@
+$iFlags
+	The search mode to use. This parameter can be one of the following values.
+		$BASE_SEARCH_PATH_ENABLE_SAFE_SEARCHMODE
+		$BASE_SEARCH_PATH_DISABLE_SAFE_SEARCHMODE
+
+	Optionaly, $BASE_SEARCH_PATH_ENABLE_SAFE_SEARCHMODE can be combined with the following flag to make this
+	mode permanent for the current process.
+		$BASE_SEARCH_PATH_DISABLE_SAFE_SEARCHMODE cannot be combined with this flag.
+		$BASE_SEARCH_PATH_PERMANENT
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False
+@@End@@
+
+###Remarks###
+After the <a href="_WinAPI_SetSearchPathMode.htm">_WinAPI_SetSearchPathMode()</a> function has been successfully called for the current process, the
+setting in the system registry is ignored in favor of the mode most recently set successfully.
+
+If the function has been successfully called for the current process with the $BASE_SEARCH_PATH_PERMANENT flag
+set, safe mode is set permanently for the calling process. Any subsequent calls to <a href="_WinAPI_SetSearchPathMode.htm">_WinAPI_SetSearchPathMode()</a>
+from within that process that attempt to change the search mode will fail with ERROR_ACCESS_DENIED (5).
+
+The <a href="_WinAPI_SetSearchPathMode.htm">_WinAPI_SetSearchPathMode()</a> function does not modify the system registry.
+
+This function requires <strong>Windows 7 or later</strong>.
+
+###Related###
+_WinAPI_SearchPath
+
+###See Also###
+@@MsdnLink@@ SetSearchPathMode

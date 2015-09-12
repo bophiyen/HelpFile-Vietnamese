@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlRebar_SetBarInfo
+
+###Description###
+Sets the characteristics of a rebar control
+
+###Syntax###
+#include <GuiReBar.au3>
+_GUICtrlRebar_SetBarInfo ( $hWnd, $hIml )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle to the rebar control
+$hIml
+	Handle to the Image list
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False.
+@@End@@
+
+###Remarks###
+Currently, rebar controls support only image list handle.
+
+###Related###
+_GUICtrlRebar_GetBarInfo
+
+###Example###
+@@IncludeExample@@ _GUICtrlRebar_GetBarInfo

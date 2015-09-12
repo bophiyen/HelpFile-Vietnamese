@@ -1,0 +1,31 @@
+###User Defined Function###
+_WinAPI_RemoveDirectory
+
+###Description###
+Deletes an existing empty directory
+
+###Syntax###
+#include <WinAPIFiles.au3>
+_WinAPI_RemoveDirectory ( $sDirPath )
+
+###Parameters###
+@@ParamTable@@
+$sDirPath
+	The path of the empty directory to be removed.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended error information.
+@@End@@
+
+###Remarks###
+The <a href="_WinAPI_RemoveDirectory.htm">_WinAPI_RemoveDirectory()</a> function marks a directory for deletion on close. Therefore, the directory is
+not removed until the last handle to the directory is closed.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ RemoveDirectory

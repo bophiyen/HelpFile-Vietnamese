@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinAPI_PathCompactPathEx
+
+###Description###
+Truncates a path to fit within a certain number of characters by replacing path components with ellipses
+
+###Syntax###
+#include <WinAPIShPath.au3>
+_WinAPI_PathCompactPathEx ( $sFilePath, $iMax )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The path to be modified.
+$iMax
+	The maximum number of characters to be contained in the modified path.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The modified path.
+Failure:	The original $sFilePath parameter and sets the @error flag to non-zero.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ PathCompactPathEx
+
+###Example###
+@@IncludeExample@@

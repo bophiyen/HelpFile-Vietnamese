@@ -1,0 +1,41 @@
+###User Defined Function###
+_ArrayDelete
+
+###Description###
+Deletes the specified element(s) from the specified 1D or 2D array
+
+###Syntax###
+#include <Array.au3>
+_ArrayDelete ( ByRef $aArray, $vRange )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Array to modify
+$vRange
+	Element(s) to delete - either a single index, a range string or a 1D array with a count in the [0] element (see example for details)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the new size of the array (see remarks)
+Failure:	-1 and sets the @error flag to non-zero.
+@error:	1 - $aArray is not an array
+	2 - $aArray is not a 1D or 2D array
+	3 - $vRange is not a valid range string
+	4 - $vRange is not a 1D array or has only 1 element
+	5 - $vRange content is outside array bounds
+@@End@@
+
+###Remarks###
+$vRange can be a string containing the rows which are to be deleted. It can be a single number or a range denoted by the first and last lines separated by a hyphen (-) - multiple items are separated by a semi-colon (;).
+
+$vRange can also be a 1D array listing all rows to be deleted with the count in the [0] element].
+
+In either case, the rows need not be in ascending order and can be duplicated.
+
+###Related###
+_ArrayAdd, _ArrayInsert
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,40 @@
+###Function###
+MouseGetCursor
+
+###Description###
+Returns the cursor ID Number for the current Mouse Cursor.
+
+###Syntax###
+MouseGetCursor (  )
+
+###Parameters###
+None.
+
+###ReturnValue###
+Returns a cursor ID Number:
+	-1 = UNKNOWN (@error can be set if the handle to the cursor cannot be found)
+	 0 = HAND
+	 1 = APPSTARTING
+	 2 = ARROW
+	 3 = CROSS
+	 4 = HELP
+	 5 = IBEAM
+	 6 = ICON (Obsolete for applications marked version 4.0 or later)
+	 7 = NO
+	 8 = SIZE (Obsolete for applications marked version 4.0 or later)
+	 9 = SIZEALL
+	10 = SIZENESW
+	11 = SIZENS
+	12 = SIZENWSE
+	13 = SIZEWE
+	14 = UPARROW
+	15 = WAIT
+
+###Remarks###
+None.
+
+###Related###
+MouseGetPos
+
+###Example###
+@@IncludeExample@@

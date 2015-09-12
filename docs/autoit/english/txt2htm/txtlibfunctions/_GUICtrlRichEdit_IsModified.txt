@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlRichEdit_IsModified
+
+###Description###
+Retrieves the state of a rich edit control's modification flag
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_IsModified ( $hWnd )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle to the control
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True or False.
+Failure:	sets the @error flag to non-zero.
+@error:	101 - $hWnd is not a handle
+@@End@@
+
+###Remarks###
+The system automatically sets the modification flag to False when the control is created.
+If the control's text is changed, either by the user or programmatically, the system sets the flag to True Call <a href="_GUICtrlRichEdit_SetModified.htm">_GUICtrlRichEdit_SetModified()</a> to set or clear the flag.
+
+###Related###
+_GUICtrlRichEdit_GetText, _GUICtrlRichEdit_SetModified
+
+###See Also###
+@@MsdnLink@@ EM_GETMODIFY
+
+###Example###
+@@IncludeExample@@

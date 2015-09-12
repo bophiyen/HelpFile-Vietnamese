@@ -1,0 +1,23 @@
+###Structure Name###
+$tagGETIPAddress
+
+###Description###
+Contains information for all 4 fields of the IP Address control
+
+###Syntax###
+Global Const $tagGETIPAddress = "byte Field4;byte Field3;byte Field2;byte Field1"
+
+###Fields###
+@@ParamTable@@
+Field4
+	contains bits 0 through 7
+Field3
+	contains bits 8 through 15
+Field2
+	contains bits 16 through 23
+Field1
+	contains bits 24 through 31
+@@End@@
+
+###Remarks###
+None.

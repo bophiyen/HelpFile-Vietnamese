@@ -1,0 +1,26 @@
+###Keyword###
+With...EndWith
+
+###Description###
+Used to reduce long references to dot-accessible type of variables.
+
+###Syntax###
+<strong>With</strong> &lt;expression&gt;
+	<em>statements</em>
+	...
+<strong>EndWith</strong>
+
+###Parameters###
+@@ParamTable@@
+expression
+	Must be an object type expression
+@@End@@
+
+###Remarks###
+With...EndWith statements may be nested.
+
+###Related###
+<a href="ForInNext.htm">For...In...Next</a>
+
+###Example###
+@@IncludeExample@@

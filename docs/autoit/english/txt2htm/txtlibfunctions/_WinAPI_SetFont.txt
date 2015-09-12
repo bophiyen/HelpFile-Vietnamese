@@ -1,0 +1,28 @@
+###User Defined Function###
+_WinAPI_SetFont
+
+###Description###
+Sets a window font
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SetFont ( $hWnd, $hFont [, $bRedraw = True] )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Window handle
+$hFont
+	Font handle
+$bRedraw
+	[optional] True to redraw the control
+@@End@@
+
+###ReturnValue###
+None.
+
+###Remarks###
+None.
+
+###Related###
+None.

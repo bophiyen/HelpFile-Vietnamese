@@ -1,0 +1,28 @@
+###User Defined Function###
+_GUICtrlEdit_GetRECTEx
+
+###Description###
+Retrieves the formatting rectangle of an edit control
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_GetRECTEx ( $hWnd )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control ID/Handle to the control
+@@End@@
+
+###ReturnValue###
+Returns a $tagRECT structure that recieves formatting rectangle of an edit control.
+
+###Remarks###
+Under certain conditions, <a href="_GUICtrlEdit_GetRECT.htm">_GUICtrlEdit_GetRECT()</a> might not return the exact values that
+<a href="_GUICtrlEdit_SetRECTEx.htm">_GUICtrlEdit_SetRECTEx()</a> set—it will be approximately correct, but it can be off by a few pixels.
+
+###Related###
+$tagRECT, _GUICtrlEdit_GetRECT
+
+###Example###
+@@IncludeExample@@

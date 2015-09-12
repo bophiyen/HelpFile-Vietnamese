@@ -1,0 +1,33 @@
+###Function###
+DllStructGetPtr
+
+###Description###
+Returns the pointer to the struct or an element in the struct.
+
+###Syntax###
+DllStructGetPtr ( Struct [, Element] )
+
+###Parameters###
+@@ParamTable@@
+Struct
+	The struct returned by <a href="DllStructCreate.htm">DllStructCreate()</a>.
+Element
+	[optional] The element of the struct whose pointer you need, starting at 1 or the element name as defined in <a href="DllStructCreate.htm">DllStructCreate()</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The pointer to the struct.
+Failure:	0.
+@error:	1 = Struct not a valid struct returned by <a href="DllStructCreate.htm">DllStructCreate()</a>.
+	2 = Element out of range.
+@@End@@
+
+###Remarks###
+Used in <a href="DllCall.htm">DllCall()</a>.
+
+###Related###
+DllCall, DllStructCreate
+
+###Example###
+@@IncludeExample@@

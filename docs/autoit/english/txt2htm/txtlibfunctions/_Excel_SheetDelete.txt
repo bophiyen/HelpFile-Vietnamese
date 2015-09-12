@@ -1,0 +1,35 @@
+###User Defined Function###
+_Excel_SheetDelete
+
+###Description###
+Deletes the specified sheet by object, string name or by number
+
+###Syntax###
+#include <Excel.au3>
+_Excel_SheetDelete ( $oWorkbook [, $vSheet = Default] )
+
+###Parameters###
+@@ParamTable@@
+$oWorkbook
+	A workbook object
+$vSheet
+	[optional] The sheet to delete, either by object, string name or number (default = keyword Default = active Worksheet)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 and sets @error.
+@error:	1 - $oWorkbook is not an object or not a workbook object
+	2 - Specified sheet does not exist. @extended is set to the COM error code
+	3 - Error occurred when deleting the sheet. @extended is set to the COM error code
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_Excel_SheetAdd
+
+###Example###
+@@IncludeExample@@

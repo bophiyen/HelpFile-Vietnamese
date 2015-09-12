@@ -1,0 +1,27 @@
+###User Defined Function###
+_WinAPI_RectIsEmpty
+
+###Description###
+Determins whether a rectangle is empty
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_RectIsEmpty ( ByRef $tRECT )
+
+###Parameters###
+@@ParamTable@@
+$tRECT
+	$tagRect structure
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	Rectangle is empty (all values are zero)
+False:	Rectangle is not empty
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+$tagRect

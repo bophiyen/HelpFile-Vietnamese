@@ -1,0 +1,40 @@
+###User Defined Function###
+_WinAPI_DwmDefWindowProc
+
+###Description###
+Default window procedure for Desktop Window Manager (DWM) hit testing within the non-client area
+
+###Syntax###
+#include <WinAPIGdi.au3>
+_WinAPI_DwmDefWindowProc ( $hWnd, $iMsg, $wParam, $lParam )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	A handle to the window procedure that received the message.
+$iMsg
+	The message.
+$wParam
+	Additional message-specific information. The content of this parameter depends on the message.
+$lParam
+	Additional message-specific information. The content of this parameter depends on the message.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The result of the hit test.
+Failure:	0 and sets the @error flag to non-zero.
+@@End@@
+
+###Remarks###
+When creating custom frames that include the standard caption buttons, WM_NCHITTEST and other non-client hit test messages should first be passed to <a href="_WinAPI_DwmDefWindowProc.htm">_WinAPI_DwmDefWindowProc()</a>.
+This enables the DWM to provide hit testing for the captions buttons.
+If <a href="_WinAPI_DwmDefWindowProc.htm">_WinAPI_DwmDefWindowProc()</a> does not handle the non-client hit test messages, further processing of these messages might be neccessary.
+
+This function requires <strong>Windows Vista or later</strong>.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ DwmDefWindowProc

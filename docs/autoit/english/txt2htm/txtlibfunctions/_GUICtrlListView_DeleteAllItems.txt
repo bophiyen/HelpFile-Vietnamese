@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlListView_DeleteAllItems
+
+###Description###
+Removes all items from a list-view control
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_DeleteAllItems ( $hWnd )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control ID/Control ID/Handle to the control
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False.
+@@End@@
+
+###Remarks###
+Deleting all items from a native-created ListView can take some time - it is recommended to enclose this command in a _GUICtrlListView_Begin/EndUpdate pairing if this is the case.
+
+###Related###
+_GUICtrlListView_DeleteItem, _GUICtrlListView_DeleteItemsSelected
+
+###Example###
+@@IncludeExample@@

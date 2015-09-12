@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_PathFindExtension
+
+###Description###
+Searches a path for an extension
+
+###Syntax###
+#include <WinAPIShPath.au3>
+_WinAPI_PathFindExtension ( $sFilePath )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The path to search, including the extension being searched for.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The string that contains the extension.
+Failure:	Empty string.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ PathFindExtension

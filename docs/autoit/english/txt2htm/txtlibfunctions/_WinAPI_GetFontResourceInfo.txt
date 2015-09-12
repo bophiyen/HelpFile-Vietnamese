@@ -1,0 +1,38 @@
+###User Defined Function###
+_WinAPI_GetFontResourceInfo
+
+###Description###
+Retrieves the fontname from the specified font resource file
+
+###Syntax###
+#include <WinAPIGdi.au3>
+_WinAPI_GetFontResourceInfo ( $sFont [, $bForce = False [, $iFlag = Default]] )
+
+###Parameters###
+@@ParamTable@@
+$sFont
+	String that names a font resource file.
+	To retrieve a fontname whose information comes from several resource files, they must be separated by a "|" .
+	For example, abcxxxxx.pfm | abcxxxxx.pfb.
+$bForce
+	[optional] Specifies whether adds a file to the font table, valid values:
+		True - Forced add the specified file to the system font table and remove it after retrieving the fontname.
+		False - Don't add and remove (Default).
+$iFlag
+	[optional] An integer value. See <a href="_WinAPI_GetFontMemoryResourceInfo.htm">_WinAPI_GetFontMemoryResourceInfo()</a> for value definition.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The name of the font or Font information according to $iFlag.
+Failure:	Empty string and sets the @error flag to non-zero, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended error information.
+@@End@@
+
+###Remarks###
+not documented in MSDN
+
+###Related##
+None.
+
+###Example###
+@@IncludeExample@@

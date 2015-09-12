@@ -1,0 +1,29 @@
+###Function###
+IsBinary
+
+###Description###
+Checks if a variable or expression is a binary type.
+
+###Syntax###
+IsBinary ( expression )
+
+###Parameters###
+@@ParamTable@@
+expression
+	The variable or expression to check.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 if expression is not binary type.
+@@End@@
+
+###Remarks###
+See <a href="../intro/lang_datatypes.htm">language datatypes</a> for a detailed description.
+
+###Related###
+Binary, BinaryToString, IsArray, IsBool, IsFloat, IsHWnd, IsInt, IsNumber, IsString, StringToBinary, VarGetType
+
+###Example###
+@@IncludeExample@@

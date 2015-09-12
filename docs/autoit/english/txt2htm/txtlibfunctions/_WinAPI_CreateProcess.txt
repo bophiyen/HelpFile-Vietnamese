@@ -1,0 +1,48 @@
+###User Defined Function###
+_WinAPI_CreateProcess
+
+###Description###
+Creates a new process and its primary thread
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CreateProcess ( $sAppName, $sCommand, $tSecurity, $tThread, $bInherit, $iFlags, $pEnviron, $sDir, $tStartupInfo, $tProcess )
+
+###Parameters###
+@@ParamTable@@
+$sAppName
+	The name of the module to be executed
+$sCommand
+	The command line to be executed
+$tSecurity
+	a $tagSECURITY_ATTRIBUTES structure or a pointer to it that determines whether the returned handle to the new process can be inherited by child processes.
+$tThread
+	a $tagSECURITY_ATTRIBUTES structure or a pointer to it that determines whether the returned handle to the new thread can be inherited by child processes.
+$bInherit
+	If True, each inheritable handle in the calling process is inherited by the new process
+$iFlags
+	Flags that control the priority class and creation of the process
+$pEnviron
+	Pointer to the environment block for the new process
+$sDir
+	The full path to the current directory for the process
+$tStartupInfo
+	a $tagSTARTUPINFO structure or a pointer to it
+$tProcess
+	a $tagPROCESS_INFORMATION structure or a pointer to it
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended error information
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+$tagPROCESS_INFORMATION, $tagSECURITY_ATTRIBUTES, $tagSTARTUPINFO
+
+###See Also###
+@@MsdnLink@@ CreateProcess

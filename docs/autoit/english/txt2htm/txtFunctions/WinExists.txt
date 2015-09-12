@@ -1,0 +1,31 @@
+###Function###
+WinExists
+
+###Description###
+Checks to see if a specified window exists.
+
+###Syntax###
+WinExists ( "title" [, "text"] )
+
+###Parameters###
+@@ParamTable@@
+title
+	The title/hWnd/class of the window to check. See <a href="../intro/windowsadvanced.htm">Title special definition</a>.
+text
+	[optional] The text of the window to check. Default is an empty string. See <a href="../intro/windowsbasic.htm#specialtext">Text special definition</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 if the window is not found.
+@@End@@
+
+###Remarks###
+<a href="WinExists.htm">WinExists()</a> will return 1 even if the window is hidden.
+
+###Related###
+ProcessExists, WinActive, WinClose, WinTitleMatchMode (Option), WinWait, WinWaitActive, WinWaitClose, WinWaitNotActive
+
+###Example###
+@@IncludeExample@@

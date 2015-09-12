@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlToolbar_GetButtonRectEx
+
+###Description###
+Retrieves the bounding rectangle for a specified toolbar button
+
+###Syntax###
+#include <GuiToolbar.au3>
+_GUICtrlToolbar_GetButtonRectEx ( $hWnd, $iCommandID )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+@@End@@
+
+###ReturnValue###
+Returns a $tagRECT structure.
+
+###Remarks###
+None.
+
+###Related###
+$tagRECT, _GUICtrlToolbar_GetButtonRect
+
+###Example###
+@@IncludeExample@@

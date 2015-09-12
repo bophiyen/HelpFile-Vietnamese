@@ -1,0 +1,37 @@
+###User Defined Function###
+_WinAPI_SelectClipPath
+
+###Description###
+Selects the current path as a clipping region, combining the new region with any existing clipping region
+
+###Syntax###
+#include <WinAPIGdi.au3>
+_WinAPI_SelectClipPath ( $hDC [, $iMode = 5] )
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle to the device context of the path.
+$iMode
+	[optional] The way to use the path. This parameter can be one of the following values.
+	$RGN_AND
+	$RGN_COPY (Default)
+	$RGN_DIFF
+	$RGN_OR
+	$RGN_XOR
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended error information.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ SelectClipPath

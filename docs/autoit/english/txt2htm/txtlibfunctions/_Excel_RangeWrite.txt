@@ -1,0 +1,53 @@
+###User Defined Function###
+_Excel_RangeWrite
+
+###Description###
+Writes value(s) or formula(s) to a cell or a cell range on the specified workbook and worksheet
+
+###Syntax###
+#include <Excel.au3>
+_Excel_RangeWrite ( $oWorkbook, $vWorksheet, $vValue [, $vRange = "A1" [, $bValue = True [, $bForceFunc = False]]] )
+
+###Parameters###
+@@ParamTable@@
+$oWorkbook
+	Excel workbook object
+$vWorksheet
+	Name, index or worksheet object to be written to. If set to keyword Default the active sheet will be used
+$vValue
+	Can be a string, a 1D or 2D zero based array containing the data to be written to the worksheet
+$vRange
+	[optional] Either an A1 range or a range object (default = "A1")
+$bValue
+	[optional] If True the $vValue will be written to the value property. If False $vValue will be written to the formula property (default = True)
+$bForceFunc
+	[optional] True forces to use the _ArrayTranspose function instead of the Excel transpose method (default = False).
+		See the Remarks section for details.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the object of the range the data has been written to.
+Failure:	0 and sets @error.
+@error:	1 - $oWorkbook is not an object or not a workbook object
+	2 - $vWorksheet name or index are invalid or $vWorksheet is not a worksheet object. @extended is set to the COM error code
+	3 - $vRange is invalid. @extended is set to the COM error code
+	4 - Error occurred when writing a single cell. @extended is set to the COM error code
+	5 - Error occurred when writing data using the _ArrayTranspose function. @extended is set to the COM error code
+	6 - Error occurred when writing data using the transpose method. @extended is set to the COM error code
+@@End@@
+
+###Remarks###
+If $vRange is a single cell and $vValue is an array then $vRange is extended to hold the full array.
+This "expanded" range is then returned by the function.
+If $vRange is not a single cell and $vValue is an array and $vValue &gt; $vRange then the array gets truncated.
+If $vRange is not a single cell and $vValue is an array and $vValue &lt; $vRange then the exceeding cells get #NV.
+
+The Excel transpose method has an undocumented limit on the number of cells or rows it can transpose (dependant on the Excel version).
+The Excel transpose method doesn't support cells with more than 255 characters. Set $bForceFunc = True to bypass this limitation(s).
+
+###Related###
+_Excel_RangeRead
+
+###Example###
+@@IncludeExample@@

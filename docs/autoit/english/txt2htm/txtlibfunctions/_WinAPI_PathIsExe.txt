@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_PathIsExe
+
+###Description###
+Determines whether a file is an executable by examining the file extension
+
+###Syntax###
+#include <WinAPIShPath.au3>
+_WinAPI_PathIsExe ( $sFilePath )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The path to be searched.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	the file extension is .cmd, .bat, .pif, .scf, .exe, .com, or .scr.
+False:	no the file extension.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ PathIsExe
+
+###Example###
+@@IncludeExample@@

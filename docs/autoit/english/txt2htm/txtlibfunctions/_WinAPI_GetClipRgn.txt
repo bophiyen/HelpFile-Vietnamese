@@ -1,0 +1,31 @@
+###User Defined Function###
+_WinAPI_GetClipRgn
+
+###Description###
+Retrieves a handle identifying the current application-defined clipping region
+
+###Syntax###
+#include <WinAPIGdi.au3>
+_WinAPI_GetClipRgn ( $hDC )
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle to the device context.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	Handle to a copy of the current clipping region.
+Failure:	0.
+@@End@@
+
+###Remarks###
+An application-defined clipping region is a clipping region identified by the <a href="_WinAPI_SelectClipRgn.htm">_WinAPI_SelectClipRgn()</a> function.
+It is not a clipping region created when the application calls the <a href="_WinAPI_BeginPaint.htm">_WinAPI_BeginPaint()</a>.
+
+###Related###
+_WinAPI_BeginPaint, _WinAPI_SelectClipRgn
+
+###See Also###
+@@MsdnLink@@ GetClipRgn

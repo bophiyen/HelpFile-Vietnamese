@@ -1,0 +1,32 @@
+###User Defined Function###
+_GUICtrlToolbar_SetStyleList
+
+###Description###
+Sets whether the control has button text to the right of the bitmap
+
+###Syntax###
+#include <GuiToolbar.au3>
+_GUICtrlToolbar_SetStyleList ( $hWnd, $bState )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle to the control
+$bState
+	True to set, false to unset
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_GUICtrlToolbar_GetStyleList
+
+###Example###
+@@IncludeExample@@ _GUICtrlToolbar_GetStyleList

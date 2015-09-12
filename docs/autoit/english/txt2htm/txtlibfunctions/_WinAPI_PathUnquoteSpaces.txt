@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_PathUnquoteSpaces
+
+###Description###
+Removes quotes from the beginning and end of a path
+
+###Syntax###
+#include <WinAPIShPath.au3>
+_WinAPI_PathUnquoteSpaces ( $sFilePath )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The path.
+@@End@@
+
+###ReturnValue###
+Returns the path with beginning and ending quotation marks removed.
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ PathUnquoteSpaces
+
+###Example###
+@@IncludeExample@@

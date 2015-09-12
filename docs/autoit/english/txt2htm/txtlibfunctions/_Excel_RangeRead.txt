@@ -1,0 +1,54 @@
+###User Defined Function###
+_Excel_RangeRead
+
+###Description###
+Reads the value, formula or displayed text from a cell or range of cells of the specified workbook and worksheet
+
+###Syntax###
+#include <Excel.au3>
+_Excel_RangeRead ( $oWorkbook [, $vWorksheet = Default [, $vRange = Default [, $iReturn = 1 [, $bForceFunc = False]]]] )
+
+###Parameters###
+@@ParamTable@@
+$oWorkbook
+	Excel workbook object
+$vWorksheet
+	[optional] Name, index or worksheet object to be read. If set to keyword Default the active sheet will be used (default = keyword Default)
+$vRange
+	[optional] Either a range object or an A1 range. If set to Default all used cells will be processed (default = keyword Default)
+$iReturn
+	[optional] What to return from the specified cell:
+		1 - Value (default)
+		2 - Formula
+		3 - The displayed text
+		4 - Value2. The only difference between Value and Value2 is that the Value2 property doesn’t use the Currency and Date data types
+$bForceFunc
+	[optional] True forces to use the _ArrayTranspose function instead of the Excel transpose method (default = False).
+		See the Remarks section for details.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the data from the specified cell(s). A string for a cell, a zero-based array for a range of cells.
+Failure:	0 and sets @error.
+@error:	1 - $oWorkbook is not an object or not a workbook object
+	2 - $vWorksheet name or index are invalid or $vWorksheet is not a worksheet object. @extended is set to the COM error code
+	3 - $vRange is invalid. @extended is set to the COM error code
+	4 - Parameter $iReturn is invalid. Has to be &gt;= 1 and &lt;= 4
+	5 - Error occurred when reading data using the transpose method. @extended is set to the COM error code
+	6 - Maximum size of an AutoIt array exceeded (2^24 = 16,777,216 elements)
+	7 - Error occurred when reading data using the _ArrayTranspose function. @extended is set to the COM error code
+	8 - $iReturn = 3 can only return a single cell. $vRange specified > 1 cell.
+@@End@@
+
+###Remarks###
+The Excel transpose method has an undocumented limit on the number of cells it can transpose (depends on the Excel version).
+If you transpose > 65535 cells then $bForceFunc is forced to True.
+The Excel transpose method doesn't support cells with more than 255 characters. Set $bForceFunc = True to bypass this limitation(s).
+$iReturn = 3 only allows to get the displayed text of a single cell. That's an Excel limitation.
+
+###Related###
+_Excel_RangeWrite
+
+###Example###
+@@IncludeExample@@

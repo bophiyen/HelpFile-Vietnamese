@@ -1,0 +1,41 @@
+###User Defined Function###
+_WinAPI_GetAsyncKeyState
+
+###Description###
+Determines whether a key is up or down at the time the function is called
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_GetAsyncKeyState ( $iKey )
+
+###Parameters###
+@@ParamTable@@
+$iKey
+	Key to test for
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	If the most significant bit is set the key is down, and if the least significant bit is set, the key was pressed after the previous call to <a href="_WinAPI_GetAsyncKeyState.htm">_WinAPI_GetAsyncKeyState()</a>. However, you should not rely on this last behavior; for more information, see the Remarks.
+Failure:	The return value is zero if the key isn't down, or for the following cases:
+	The current desktop is not the active desktop
+	The foreground thread belongs to another process and the desktop does not allow the hook or the journal record.
+@@End@@
+
+###Remarks###
+The constants to use for $iKey can be found in WinAPIvkeysConstants.au3
+
+The GetAsyncKeyState function works with mouse buttons. However, it checks on the state of the physical mouse buttons, not on the logical mouse buttons that the physical buttons are mapped to. For example, the call _WinAPI_GetAsyncKeyState($VK_LBUTTON) always returns the state of the left physical mouse button, regardless of whether it is mapped to the left or right logical mouse button. You can determine the system's current mapping of physical mouse buttons to logical mouse buttons by calling <a href="_WinAPI_GetSystemMetrics.htm">_WinAPI_GetSystemMetrics</a>($SM_SWAPBUTTON), which returns TRUE if the mouse buttons have been swapped.
+
+Although the least significant bit of the return value indicates whether the key has been pressed since the last query, due to the pre-emptive multitasking nature of Windows, another application can call GetAsyncKeyState and receive the "recently pressed" bit instead of your application. The behavior of the least significant bit of the return value is retained strictly for compatibility with 16-bit Windows applications (which are non-preemptive) and should not be relied upon.
+
+You can use the virtual-key code constants $VK_SHIFT, $VK_CONTROL, and $VK_MENU as values for the vKey parameter. This gives the state of the SHIFT, CTRL, or ALT keys without distinguishing between left and right.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ GetAsyncKeyState
+
+###Example###
+@@IncludeExample@@

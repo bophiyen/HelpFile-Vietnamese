@@ -1,0 +1,35 @@
+###User Defined Function###
+_ArrayColInsert
+
+###Description###
+Inserts a specified column into a 1D or 2D array
+
+###Syntax###
+#include <Array.au3>
+_ArrayColInsert ( ByRef $aArray, $iColumn )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Array to modify
+$iColumn
+	Column to insert - if array is 1D it is automatically converted to 2D
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the number of columns remaining.
+Failure:	-1 and sets the @error flag to non-zero.
+@error:	1 - $aArray is not an array
+	2 - $aArray is not a 1D or 2D array
+	3 - $iColumn is less than 0 or greater than upper array bound plus 1
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_ArrayColDelete
+
+###Example###
+@@IncludeExample@@

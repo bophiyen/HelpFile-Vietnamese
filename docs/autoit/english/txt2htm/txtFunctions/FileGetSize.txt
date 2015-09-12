@@ -1,0 +1,30 @@
+###Function###
+FileGetSize
+
+###Description###
+Returns the size of a file in bytes.
+
+###Syntax###
+FileGetSize ( "filename" )
+
+###Parameters###
+@@ParamTable@@
+filename
+	Filename to check.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the size of the file in bytes.
+Failure:	0 and sets the @error flag to non-zero.
+@@End@@
+
+###Remarks###
+Does not work on directories.
+Divide result by 1024 to get kilobyte equivalent, or divide by 1048576 to get megabyte equivalent.
+
+###Related###
+DriveSpaceTotal, FileGetAttrib, FileGetTime, FileGetVersion
+
+###Example###
+@@IncludeExample@@

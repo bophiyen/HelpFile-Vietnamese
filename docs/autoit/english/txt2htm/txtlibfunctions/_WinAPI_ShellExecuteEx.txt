@@ -1,0 +1,34 @@
+###User Defined Function###
+_WinAPI_ShellExecuteEx
+
+###Description###
+Performs an operation on a specified file
+
+###Syntax###
+#include <WinAPIShellEx.au3>
+_WinAPI_ShellExecuteEx ( ByRef $tSHEXINFO )
+
+###Parameters###
+@@ParamTable@@
+$tSHEXINFO
+	$tagSHELLEXECUTEINFO structure that contains and receives information about the application being executed.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False.
+@@End@@
+
+###Remarks###
+$SE_ERR_* constants require #include <APIShellExConstants.au3>
+If the function succeeds, it sets the "hInstApp" member of the $tagSHELLEXECUTEINFO structure to a value greater than 32,
+If the function fails, "hInstApp" is set to one of the $SE_ERR_* constants that best indicates the cause of the failure.
+The $SE_ERR_* error values are provided for compatibility with <a href="_WinAPI_ShellExecute.htm">_WinAPI_ShellExecute()</a>. To retrieve more accurate
+error information, use <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a>.
+
+###Related###
+_WinAPI_ShellExecute
+
+###See Also###
+@@MsdnLink@@ ShellExecuteEx

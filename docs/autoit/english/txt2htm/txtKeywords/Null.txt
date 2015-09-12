@@ -1,0 +1,22 @@
+###Keyword###
+Null
+
+###Description###
+Keyword value to use in function call.
+
+###Syntax###
+	$var = <strong>Null</strong>
+
+###Parameters###
+None.
+
+###Remarks###
+Use this keyword to trigger specific operations of functions that accept it as parameter.
+Null evaluates only to Null, still in mathematical operations this keyword has value of 0, and as string it has no value (empty string).
+COM method will receive Null as VT_NULL VARIANT. <a href="../functions/DllCall.htm">DllCall's</a> <em>wstr</em> and <em>str</em> types will be set to NULL (pointers).
+
+###Related###
+Default, IsKeyword
+
+###Example###
+@@IncludeExample@@

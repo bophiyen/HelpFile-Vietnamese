@@ -1,0 +1,33 @@
+###User Defined Function###
+_Array1DToHistogram
+
+###Description###
+Transform a 1D array to Histogram
+
+###Syntax###
+#include <Array.au3>
+_Array1DToHistogram ( $aArray [, $iSizing = 100] )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Array to transform
+$iSizing
+	[optional] Allows to zoom the histogram. Default = 100 percent
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the array transformed.
+Failure:	sets the @error flag to non-zero.
+@error:	1 - $aArray is not a 1D array
+@@End@@
+
+###Remarks###
+Right alignment of negative values is not perfect due to non fixed font usage.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

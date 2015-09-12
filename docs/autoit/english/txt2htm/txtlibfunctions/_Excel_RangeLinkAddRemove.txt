@@ -1,0 +1,49 @@
+###User Defined Function###
+_Excel_RangeLinkAddRemove
+
+###Description###
+Adds or removes a hyperlink to/from a specified range
+
+###Syntax###
+#include <Excel.au3>
+_Excel_RangeLinkAddRemove ( $oWorkbook, $vWorksheet, $vRange, $sAddress [, $sSubAddress = Default [, $sScreenTip = Default [, $sTextToDisplay = Default]]] )
+
+###Parameters###
+@@ParamTable@@
+$oWorkbook
+	Excel workbook object
+$vWorksheet
+	Name, index or worksheet object to be used. If set to keyword Default the active sheet will be used
+$vRange
+	Either a range object or an A1 range to be set to a hyperlink
+$sAddress
+	The address for the specified link. The address can be an E-mail address, an Internet
+		address or a file name. "" removes an existing hyperlink
+$sSubAddress
+	[optional] The name of a location within the destination file, such as a bookmark, named range
+		or slide number (default = keyword Default = None)
+$sScreenTip
+	[optional] The text that appears as a ScreenTip when the mouse pointer is positioned over the
+		specified hyperlink (default = keyword Default = Uses value of $sAddress)
+$sTextToDisplay
+	[optional] The text to be displayed for the hyperlink (default = keyword Default = None)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	a hyperlinks object when a link is set or 1 when a link is removed.
+Failure:	0 and sets @error.
+@error:	1 - $oWorkbook is not an object or not a workbook object
+	2 - $vWorksheet name or index are invalid or $vWorksheet is not a worksheet object. @extended is set to the COM error code
+	3 - $vRange is invalid. @extended is set to the COM error code
+	4 - Error occurred when adding/removing the hyperlink. @extended is set to the COM error code
+@@End@@
+
+###Remarks###
+Looks like Excel only writes the $sTextToDisplay to the upper left cell of a range (if the cell is empty). The remaining cells of the range remain untouced.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,26 @@
+###Function###
+StringLen
+
+###Description###
+Returns the number of characters in a string.
+
+###Syntax###
+StringLen ( "string" )
+
+###Parameters###
+@@ParamTable@@
+string
+	The string to evaluate.
+@@End@@
+
+###ReturnValue###
+Returns the length of the string.
+
+###Remarks###
+A numeric expression is automatically evaluated and converted to a string.
+
+###Related###
+StringCompare, StringInStr, StringLeft, StringLower, StringMid, StringReplace, StringRight, StringSplit, StringTrimLeft, StringTrimRight, StringUpper
+
+###Example###
+@@IncludeExample@@

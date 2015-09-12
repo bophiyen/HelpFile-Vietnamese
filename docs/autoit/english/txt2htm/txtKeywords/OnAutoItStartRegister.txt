@@ -1,0 +1,23 @@
+###Keyword###
+#OnAutoItStartRegister
+
+###Description###
+Registers a function to be called when AutoIt starts.
+
+###Syntax###
+<strong>#OnAutoItStartRegister</strong> "function"
+
+###Parameters###
+@@ParamTable@@
+function
+	The name of the user function to call.
+@@End@@
+
+###Remarks###
+The function cannot reference any variables defined in an <a href="include.htm">#include</a>.
+
+###Related###
+OnAutoItExitRegister
+
+###Example###
+@@IncludeExample@@

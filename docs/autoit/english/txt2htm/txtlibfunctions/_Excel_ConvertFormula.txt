@@ -1,0 +1,43 @@
+###User Defined Function###
+_Excel_ConvertFormula
+
+###Description###
+Converts cell references in a formula between A1 and R1C1 reference styles, relative and absolute reference type, or both
+
+###Syntax###
+#include <Excel.au3>
+_Excel_ConvertFormula ( $oExcel, $sFormula, $iFromStyle [, $iToStyle = Default [, $iToAbsolute = Default [, $vRelativeTo = Default]]] )
+
+###Parameters###
+@@ParamTable@@
+$oExcel
+	Excel application object
+$sFormula
+	String containing the formula to convert
+$iFromStyle
+	The reference style of the formula. Can be any of the XlReferenceStyle enumeration
+$iToStyle
+	[optional] A XlReferenceStyle enumeration specifying the reference style to be returned. If omitted, the reference style isn't changed
+$iToAbsolute
+	[optional] A XlReferenceType which specifies the converted reference type. If this argument is omitted, the reference type isn't changed
+$vRelativeTo
+	[optional] A Range object or a A1 range that contains one cell. Relative references relate to this cell. If omitted A1 is used
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the converted formula as a string.
+Failure:	"" and sets @error.
+@error:	1 - $oExcel is not an object or not an application object
+	2 - $vRelativeTo is not an object or a valid A1 range
+@@End@@
+
+###Remarks###
+R1C1 references are language dependant.
+In English: "R10C5" (row 10 column 5), in German: "Z10S5" (Zeile 10 Spalte 5)
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

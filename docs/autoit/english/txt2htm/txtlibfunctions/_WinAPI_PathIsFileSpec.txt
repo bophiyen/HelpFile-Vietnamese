@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_PathIsFileSpec
+
+###Description###
+Searches a path for any path-delimiting characters
+
+###Syntax###
+#include <WinAPIShPath.au3>
+_WinAPI_PathIsFileSpec ( $sFilePath )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The path to be searched.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	there are no path-delimiting characters (":" or "\") within the path.
+False:	there are path-delimiting characters.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ PathIsFileSpec

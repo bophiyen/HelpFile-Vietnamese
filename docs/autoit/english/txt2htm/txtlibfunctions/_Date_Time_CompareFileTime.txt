@@ -1,0 +1,32 @@
+###User Defined Function###
+_Date_Time_CompareFileTime
+
+###Description###
+Compares two file times
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_CompareFileTime ( $tFileTime1, $tFileTime2 )
+
+###Parameters###
+@@ParamTable@@
+$tFileTime1
+	first $tagFILETIME structure or a pointer to it
+$tFileTime2
+	second $tagFILETIME structure or a pointer to it
+@@End@@
+
+###ReturnValue###
+Returns one of the following values:
+	-1 - First file time is earlier than second file time
+	 0 - First file time is equal to second file time
+	 1 - First file time is later than second file time
+
+###Remarks###
+None.
+
+###Related###
+$tagFILETIME
+
+###Example###
+@@IncludeExample@@ _Date_Time_DOSDateTimeToFileTime

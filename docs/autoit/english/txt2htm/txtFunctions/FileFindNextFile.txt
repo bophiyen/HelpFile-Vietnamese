@@ -1,0 +1,38 @@
+###Function###
+FileFindNextFile
+
+###Description###
+Returns the next filename defined by the search handle.
+
+###Syntax###
+FileFindNextFile ( search [, flag = 0])
+
+###Parameters###
+@@ParamTable@@
+search
+	The search handle, as returned by <a href="FileFindFirstFile.htm">FileFindFirstFile()</a>.
+flag
+	[optional] this flag determines whether to return detailed file attribute information in @extended.
+		0 = (default) use @extended to return 1 or 0 if search item is a directory.
+		1 = Return a string in @extended in the same format as <a href="FileGetAttrib.htm">FileGetAttrib()</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	a filename according to a previous call to <a href="FileFindFirstFile.htm">FileFindFirstFile()</a>, @extended set as per the flag option.
+Failure:	sets the @error flag to 1 if no more files/directories match the search.
+@@End@@
+
+###Remarks###
+A previous call to <a href="FileFindFirstFile.htm">FileFindFirstFile()</a> is necessary to setup the search and get a search handle. Every subsequent call to <a href="FileFindNextFile.htm">FileFindNextFile()</a> will return the next file found according to the search handle supplied to <a href="FileFindFirstFile.htm">FileFindFirstFile()</a>. When @error = 1, no more files found matching the original search handle.
+
+When you have finished searching with the FileFind... functions you must call <a href="FileClose.htm">FileClose()</a> to release the search handle.
+
+Due to the underlying Windows API used (FindFirstFile), this function actually searches both the long and short filenames when looking for matches. If you get unexepected results
+then verfiy that it's not the short filename that is being matched.
+
+###Related###
+FileClose, FileFindFirstFile
+
+###Example###
+@@IncludeExample@@ FileFindFirstFile

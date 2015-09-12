@@ -1,0 +1,28 @@
+###Structure Name###
+$tagNMTVITEMCHANGE
+
+###Description###
+Contains information on a treeview item change, sent with $TVN_ITEMCHANGED and $TVN_ITEMCHANGING notifications
+
+###Syntax###
+Global Const $tagNMTVITEMCHANGE = $tagNMHDR & ";uint Changed;handle hItem;uint StateNew;uint StateOld;lparam lParam;"
+
+###Fields###
+@@ParamTable@@
+$tagNMHDR
+	Contains information about a notification message
+Changed
+	Specifies the attribute. Changed must always have the following value:
+		TVIF_STATE - The change is the state attribute.
+hItem
+	Handle to the changed tree-view item.
+StateNew
+	Flag that specifies the new item state.
+StateOld
+	Flag that specifies the item's previous state.
+lParam
+	Reserved for application specific data. For example, a value to associate with the item.
+@@End@@
+
+###Remarks###
+This notification is only present on Windows Vista and later.

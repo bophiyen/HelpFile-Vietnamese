@@ -1,0 +1,47 @@
+###Function###
+FileSetTime
+
+###Description###
+Sets the timestamp of one of more files.
+
+###Syntax###
+FileSetTime ( "file pattern", "time" [, type = 0 [, recurse = 0]] )
+
+###Parameters###
+@@ParamTable@@
+file pattern
+	The path of the file(s) to set, e.g. C:\*.au3, C:\Dir. (* and ? wildcards accepted - See Remarks)
+time
+	The new time to set in the format "YYYYMMDDHHMMSS" (Year, month, day, hours (24hr clock), seconds). If the time is blank "" then the current time is used.
+type
+	[optional] The timestamp to change:
+		$FT_MODIFIED (0) = Last modified (default)
+		$FT_CREATED (1) = Created
+		$FT_ACCESSED (2) = Last accessed
+
+	Constants are defined in FileConstants.au3
+recurse
+	[optional]
+		$FT_NONRECURSIVE (0) - no recursion (Default).
+		$FT_RECURSIVE (1) - directories are recursed into.
+
+	Constants are defined in FileConstants.au3
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 if error changing timestamp(s).
+@@End@@
+
+###Remarks###
+See <a href="FileFindFirstFile.htm">FileFindFirstFile()</a> for a discussion about wildcards.
+
+Using a date earlier than 1980-01-01 will have no effect.
+Trying to change a timestamp on read-only files will result in an error.
+
+###Related###
+FileGetAttrib, FileGetTime, FileSetAttrib
+
+###Example###
+@@IncludeExample@@

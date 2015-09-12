@@ -1,0 +1,32 @@
+###User Defined Function###
+_WinAPI_PtInRect
+
+###Description###
+Determines whether the specified point lies within the specified rectangle
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_PtInRect ( ByRef $tRECT, ByRef $tPoint )
+
+###Parameters###
+@@ParamTable@@
+$tRECT
+	$tagRECT structure that contains the specified rectangle
+$tPoint
+	$tagPOINT structure that contains the specified point
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	point lies within the rectangle
+False:	point does not lie within the rectangle
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+$tagPOINT, $tagRECT
+
+###See Also###
+@@MsdnLink@@ PtInRect

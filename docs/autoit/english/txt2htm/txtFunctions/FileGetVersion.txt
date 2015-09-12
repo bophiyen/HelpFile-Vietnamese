@@ -1,0 +1,49 @@
+###Function###
+FileGetVersion
+
+###Description###
+Returns version information stored in a file.
+
+###Syntax###
+FileGetVersion ( "filename" [, "stringname"] )
+
+###Parameters###
+@@ParamTable@@
+filename
+	Filename.
+stringname
+	[optional] Name of the string field to be retrieved from the header version file info:
+		$FV_COMMENTS ("Comments")
+		$FV_COMPANYNAME ("CompanyName")
+		$FV_FILEDESCRIPTION ("FileDescription")
+		$FV_FILEVERSION ("FileVersion")
+		$FV_INTERNALNAME ("InternalName")
+		$FV_LEGALCOPYRIGHT ("LegalCopyright")
+		$FV_LEGALTRADEMARKS ("LegalTrademarks")
+		$FV_ORIGINALFILENAME ("OriginalFilename")
+		$FV_PRODUCTNAME ("ProductName")
+		$FV_PRODUCTVERSION ("ProductVersion")
+		$FV_PRIVATEBUILD ("PrivateBuild")
+		$FV_SPECIALBUILD ("SpecialBuild")
+
+	Constants are defined in FileConstants.au3.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The version number ("#.#.#.#" format) - or the content of the specified string field.
+Failure:	"0.0.0.0" if no version information (or other error) or "" if string field not filled - @error flag set to 1.
+@@End@@
+
+###Remarks###
+Another special "stringname" is "DefaultLangCodepage" can be used to retrieve the default language and codepage.
+
+The language and codepage can be used if needed to differentiate the "stringname" i.e. "080904b0\Comments" (see MSDN StringFileInfo in <a href="http://msdn.microsoft.com/query/dev10.query?appId=Dev10IDEF1&l=EN-US&k=k(VerQueryValue);k(DevLang-C);k(TargetOS-WINDOWS)&rd=true">VerQueryValue</a> function).
+
+To get the version number of an AutoIt compiled script it is better to use the @AutoItVersion macro.
+
+###Related###
+FileGetSize, FileGetTime
+
+###Example###
+@@IncludeExample@@

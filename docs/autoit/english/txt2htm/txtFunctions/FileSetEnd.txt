@@ -1,0 +1,29 @@
+###Function###
+FileSetEnd
+
+###Description###
+Sets the end of the file at the current file position.
+
+###Syntax###
+FileSetEnd ( "filehandle" )
+
+###Parameters###
+@@ParamTable@@
+filehandle
+	The handle of a file, as returned by a previous call to <a href="FileOpen.htm">FileOpen()</a>.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True if the operation succeeded.
+Failure:	False.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+FileFlush, FileGetPos, FileOpen, FileRead, FileReadLine, FileSetPos, FileWrite, FileWriteLine
+
+###Example###
+@@IncludeExample@@

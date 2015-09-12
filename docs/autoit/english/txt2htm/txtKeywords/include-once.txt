@@ -1,0 +1,22 @@
+###Keyword###
+#include-once
+
+###Description###
+Specifies that the current file should only be included once.
+
+###Syntax###
+<strong>#include-once</strong>
+
+###Parameters###
+None.
+
+###Remarks###
+It is quite common to have the same "#include <filename.au3>" line in several of the files included included in a script. If the same file were to be included several times, it is quite likely that this would generate a "Duplicate function" or "Cannot redeclare a Const" error. So when writing a script intended for use as an include file, add <strong>#include-once</strong> to prevent that file from being included more than once. Note that the <strong>#include-once</strong> line must be placed at the top of the script and before any other #include lines.
+
+It is not recommended to add a <strong>#include-once</strong> line to scripts which are not intended to be used as include files within other scripts.
+
+###Related###
+<a href="include.htm">#include</a>
+
+###Example###
+@@IncludeExample@@

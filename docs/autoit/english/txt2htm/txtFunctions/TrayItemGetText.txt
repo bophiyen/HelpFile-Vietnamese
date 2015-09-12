@@ -1,0 +1,29 @@
+###Function###
+TrayItemGetText
+
+###Description###
+Gets the itemtext of a tray menu/item control.
+
+###Syntax###
+TrayItemGetText ( controlID )
+
+###Parameters###
+@@ParamTable@@
+controlID
+	The control identifier (controlID) as returned by a <a href="../functions/TrayCreateItem.htm">TrayCreateItem</a> or <a href="../functions/TrayCreateMenu.htm">TrayCreateMenu</a> function.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The itemtext of the tray menu/item control.
+Failure:	0.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+TrayItemGetHandle, TrayItemSetText
+
+###Example###
+@@IncludeExample@@

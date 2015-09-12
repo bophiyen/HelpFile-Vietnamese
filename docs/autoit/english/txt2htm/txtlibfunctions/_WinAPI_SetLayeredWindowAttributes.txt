@@ -1,0 +1,41 @@
+###User Defined Function###
+_WinAPI_SetLayeredWindowAttributes
+
+###Description###
+Sets Layered Window Attributes
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_SetLayeredWindowAttributes ( $hWnd, $iTransColor [, $iTransGUI = 255 [, $iFlags = 0x03 [, $bColorRef = False]]] )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle of GUI to work on
+$iTransColor
+	Transparent color
+$iTransGUI
+	[optional] Set Transparancy of GUI
+$iFlags
+	[optional] Flags.
+$bColorRef
+	[optional] If True, $iTransColor is a COLORREF( 0x00bbggrr ), else an RGB-Color
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended error information
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_WinAPI_GetLastError, _WinAPI_GetLayeredWindowAttributes
+
+###See Also###
+@@MsdnLink@@ SetLayeredWindowAttributes
+
+###Example###
+@@IncludeExample@@ _WinAPI_GetLayeredWindowAttributes

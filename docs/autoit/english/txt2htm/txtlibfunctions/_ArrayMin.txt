@@ -1,0 +1,40 @@
+###User Defined Function###
+_ArrayMin
+
+###Description###
+Returns the lowest value held in a 1D or 2D array
+
+###Syntax###
+#include <Array.au3>
+_ArrayMin ( Const ByRef $aArray [, $iCompNumeric = 0 [, $iStart = -1 [, $iEnd = -1 [, $iSubItem = 0]]]] )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Array to search
+$iCompNumeric
+	[optional] Comparison method:
+		0 - compare alphanumerically
+		1 - compare numerically
+$iStart
+	[optional] Index of array to start search
+$iEnd
+	[optional] Index of array to end search
+$iSubItem
+	[optional] Column of array to search
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the minimum value in the array.
+Failure:	sets the @error flag to non-zero (see <a href="_ArrayMinIndex.htm">_ArrayMinIndex()</a> description for @error).
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_ArrayMax, _ArrayMaxIndex, _ArrayMinIndex, _ArrayUnique
+
+###Example###
+@@IncludeExample@@

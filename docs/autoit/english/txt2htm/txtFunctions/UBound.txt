@@ -1,0 +1,40 @@
+###Function###
+UBound
+
+###Description###
+Returns the size of array dimensions or the number of keys in a map.
+
+###Syntax###
+UBound ( Variable [, Dimension = 1] )
+
+###Parameters###
+@@ParamTable@@
+Variable
+	An array or map variable
+Dimension
+	[optional] For an array - Which dimension size to return:
+		$UBOUND_DIMENSIONS (0) = Number of subscripts in the array
+		$UBOUND_ROWS (1) = Number of rows in the array (default)
+		$UBOUND_COLUMNS (2) = Number of columns in the array
+	For arrays with more than 2 dimensions, just use the corresponding integer
+	For a map - this parameter is ignored and the number of keys is returned
+
+	Constants are defined in AutoItConstants.au3.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the size of the array dimension or the number of keys within a map.
+Failure:	0 and sets the @error flag to non-zero.
+@error:	1 = Array: Variable is not an array or map
+	2 = Dimension is invalid
+@@End@@
+
+###Remarks###
+Remember that for arrays the value returned is one greater than the index of the last element in the dimension as the count starts at [0].
+
+###Related###
+<a href="../keywords/Dim.htm">Global/Local</a>, <a href="../keywords/ReDim.htm">ReDim</a>, IsArray
+
+###Example###
+@@IncludeExample@@

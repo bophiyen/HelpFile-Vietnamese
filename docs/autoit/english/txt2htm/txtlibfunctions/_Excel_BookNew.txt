@@ -1,0 +1,36 @@
+###User Defined Function###
+_Excel_BookNew
+
+###Description###
+Creates a new workbook
+
+###Syntax###
+#include <Excel.au3>
+_Excel_BookNew ( $oExcel [, $iSheets = Default] )
+
+###Parameters###
+@@ParamTable@@
+$oExcel
+	Excel application object where you want to create the new workbook
+$iSheets
+	[optional] Number of sheets to create in the new workbook (default = keyword Default = Excel default value). Maximum is 255
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	 a new workbook object.
+Failure:	0 and sets @error.
+@error:	1 - $oExcel is not an object or not an application object
+	2 - Error setting SheetsInNewWorkbook to $iSheets. @extended is set to the COM error code
+	3 - Error returned by method Workbooks.Add. @extended is set to the COM error code
+	4 - Parameter $iSheets < 1 or > 255
+@@End@@
+
+###Remarks###
+There seems to be a limit for property SheetsInNewWorkbook of 255.
+
+###Related###
+_Excel_BookAttach, _Excel_BookClose, _Excel_BookOpen, _Excel_BookOpenText
+
+###Example###
+@@IncludeExample@@

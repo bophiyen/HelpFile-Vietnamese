@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_AttachConsole
+
+###Description###
+Attaches the calling process to the console of the specified process
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_AttachConsole ( [$iPID = -1] )
+
+###Parameters###
+@@ParamTable@@
+$iPID
+	[optional] Identifier of the process. Set to -1 to attach to the current process.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ AttachConsole

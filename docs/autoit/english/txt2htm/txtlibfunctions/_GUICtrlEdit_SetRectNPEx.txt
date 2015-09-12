@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlEdit_SetRectNPEx
+
+###Description###
+Sets the formatting rectangle of a multiline edit control
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_SetRectNPEx ( $hWnd, $tRECT )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control ID/Handle to the control
+$tRECT
+	$tagRECT structure that contains formatting rectangle of an edit control
+@@End@@
+
+###ReturnValue###
+None.
+
+###Remarks###
+The <a href="_GUICtrlEdit_SetRectNPEx.htm">_GUICtrlEdit_SetRectNPEx()</a> is identical to the <a href="_GUICtrlEdit_SetRECTEx.htm">_GUICtrlEdit_SetRECTEx()</a>, except that <a href="_GUICtrlEdit_SetRectNPEx.htm">_GUICtrlEdit_SetRectNPEx()</a> does not redraw the edit control window.
+
+###Related###
+$tagRECT, _GUICtrlEdit_SetRECTNP
+
+###Example###
+@@IncludeExample@@

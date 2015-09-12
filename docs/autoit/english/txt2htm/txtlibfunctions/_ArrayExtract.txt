@@ -1,0 +1,44 @@
+###User Defined Function###
+_ArrayExtract
+
+###Description###
+Extracts an array from the specified element(s) of a 1D or 2D array
+
+###Syntax###
+#include <Array.au3>
+_ArrayExtract ( Const ByRef $aArray [, $iStart_Row = -1 [, $iEnd_Row = -1 [, $iStart_Col = -1 [, $iEnd_Col = -1]]]] )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Array from which extraction should occur
+$iStart_Row
+	[optional] First row of the extracted array
+$iEnd_Row
+	[optional] Last row of the extracted array
+$iStart_Col
+	[optional] First column of the extracted array (2D only)
+$iEnd_Col
+	[optional] Last column of the extracted array (2D only)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1
+Failure:	-1 and sets the @error flag to non-zero.
+@error:	1 - $aArray is not an array
+	2 - $aArray is not a 1D or 2D array
+	3 - $iStart_Row or $iEnd_Row outside array bounds
+	4 - $iStart_Row greater then $iEnd_Row
+	5 - $iStart_Col or $iEnd_Col outside array bounds
+	6 - $iStart_Col greater then $iEnd_Col
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_ArrayAdd, _ArrayInsert
+
+###Example###
+@@IncludeExample@@

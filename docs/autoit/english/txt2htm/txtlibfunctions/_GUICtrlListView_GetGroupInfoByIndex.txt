@@ -1,0 +1,35 @@
+###User Defined Function###
+_GUICtrlListView_GetGroupInfoByIndex
+
+###Description###
+Retrieves group information
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_GetGroupInfoByIndex ( $hWnd, $iIndex )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control ID/Handle to the control
+$iIndex
+	0-based index that specifies the group whose information is retrieved
+@@End@@
+
+###ReturnValue###
+Returns an array with the following format:
+	[0] - Header text
+	[1] - Header alignment:
+		0 - Left
+		1 - Center
+		2 - Right
+	[2] - Group ID
+
+###Remarks###
+<strong>Windows Vista or later</strong>
+
+###Related###
+_GUICtrlListView_GetGroupInfo, _GUICtrlListView_SetGroupInfo
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlListView_EnsureVisible
+
+###Description###
+Ensures that a list-view item is either entirely or partially visible
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_EnsureVisible ( $hWnd, $iIndex [, $bPartialOK = False] )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control ID/Handle to the control
+$iIndex
+	Index of the list-view item
+$bPartialOK
+	[optional] Value specifying whether the item must be entirely visible
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False.
+@@End@@
+
+###Remarks###
+If $bPartialOK parameter is True, no scrolling occurs if the item is at least partially visible.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

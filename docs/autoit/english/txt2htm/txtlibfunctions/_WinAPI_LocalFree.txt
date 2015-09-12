@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_LocalFree
+
+###Description###
+Frees the specified local memory object and invalidates its handle
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_LocalFree ( $hMemory )
+
+###Parameters###
+@@ParamTable@@
+$hMemory
+	A handle to the local memory object
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended error information
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ LocalFree

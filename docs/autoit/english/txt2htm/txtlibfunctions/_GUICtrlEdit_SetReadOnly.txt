@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlEdit_SetReadOnly
+
+###Description###
+Sets or removes the read-only style ($ES_READONLY)
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_SetReadOnly ( $hWnd, $bReadOnly )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control ID/Handle to the control
+$bReadOnly
+	Following values:
+		True - Sets the $ES_READONLY style
+		False - Removes the $ES_READONLY style
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

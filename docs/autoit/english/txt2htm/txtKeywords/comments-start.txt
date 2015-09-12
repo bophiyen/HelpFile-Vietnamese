@@ -1,0 +1,25 @@
+###Keyword###
+#comments-start
+
+###Description###
+Specify that an entire section of script should be commented out.
+
+###Syntax###
+<strong>#comments-start</strong>
+...
+...
+<strong>#comments-end</strong>
+
+###Parameters###
+None.
+
+###Remarks###
+The #comments-start and #comments-end directives can be nested.
+You can also use the abbreviated keywords <strong>#cs</strong> and <strong>#ce</strong>.
+Additionally, the directives themselves can be commented out!
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

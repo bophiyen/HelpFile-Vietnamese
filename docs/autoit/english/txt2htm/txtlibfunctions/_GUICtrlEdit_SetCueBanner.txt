@@ -1,0 +1,37 @@
+###User Defined Function###
+_GUICtrlEdit_SetCueBanner
+
+###Description###
+Sets the cue banner text that is displayed for the edit control
+
+###Syntax###
+#include <GuiEdit.au3>
+_GUICtrlEdit_SetCueBanner ( $hWnd, $sText [, $bOnFocus = False] )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control ID/Handle to the control
+$sText
+	String that contains the text
+$bOnFocus
+	[optional] True - if the cue banner should show even when the edit control has focus.
+	False (Default) - the cue banner disappears when the user clicks in the control.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False.
+@@End@@
+
+###Remarks###
+The cue banner is text that is displayed in the edit control when there is no selection.
+
+<strong>Windows Vista or later</strong>.
+
+###Related###
+_GUICtrlEdit_GetCueBanner
+
+###Example###
+@@IncludeExample@@ _GUICtrlEdit_GetCueBanner

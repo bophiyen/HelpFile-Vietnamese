@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_PathUnExpandEnvStrings
+
+###Description###
+Replaces folder names in a fully-qualified path with their associated environment string
+
+###Syntax###
+#include <WinAPIShPath.au3>
+_WinAPI_PathUnExpandEnvStrings ( $sFilePath )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The path to be unexpanded.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The unexpanded string.
+Failure:	Empty string.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ PathUnExpandEnvStrings
+
+###Example###
+@@IncludeExample@@

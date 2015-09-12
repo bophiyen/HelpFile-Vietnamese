@@ -1,0 +1,26 @@
+###Function###
+Exp
+
+###Description###
+Calculates e to the power of a number.
+
+###Syntax###
+Exp ( expression )
+
+###Parameters###
+@@ParamTable@@
+expression
+	Any valid numeric expression.
+@@End@@
+
+###ReturnValue###
+Returns <em><strong>e</strong></em> raised to the power of <em>expression</em>.
+
+###Remarks###
+<em><strong>e</strong></em> is the base of the natural logarithm and is approximately 2.71828182845905
+
+###Related###
+Log
+
+###Example###
+@@IncludeExample@@

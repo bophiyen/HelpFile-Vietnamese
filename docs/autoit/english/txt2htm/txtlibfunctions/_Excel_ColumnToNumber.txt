@@ -1,0 +1,31 @@
+###User Defined Function###
+_Excel_ColumnToNumber
+
+###Description###
+Converts the column letter(s) to a number
+
+###Syntax###
+#include <Excel.au3>
+_Excel_ColumnToNumber ( $sColumn )
+
+###Parameters###
+@@ParamTable@@
+$sColumn
+	The column letter(s) which you want to turn into a number (e.g. "ZZ" to 702)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the column number.
+Failure:	0 and sets @error.
+@error:	1 - $sColumn is not a valid string
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_Excel_ColumnToLetter
+
+###Example###
+@@IncludeExample@@

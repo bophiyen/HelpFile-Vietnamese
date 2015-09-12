@@ -1,0 +1,43 @@
+###User Defined Function###
+_WinAPI_LockResource
+
+###Description###
+Locks the specified resource in memory
+
+###Syntax###
+#include <WinAPIRes.au3>
+_WinAPI_LockResource ( $hData )
+
+###Parameters###
+@@ParamTable@@
+$hData
+	Handle to the resource to be locked. The <a href="_WinAPI_LoadResource.htm">_WinAPI_LoadResource()</a> function returns this handle. Do not
+	pass any value as a parameter other than a successful return value from the LoadResource function.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	Pointer to the first byte of the resource.
+Failure:	0.
+@@End@@
+
+###Remarks###
+The pointer returned by this function is valid until the module containing the resource is unloaded. It is not
+necessary to unlock resources because the system automatically deletes them when the process that created
+them terminates.
+
+Do not try to lock a resource by using the handle returned by the <a href="_WinAPI_FindResource.htm">_WinAPI_FindResource()</a> or <a href="_WinAPI_FindResourceEx.htm">_WinAPI_FindResourceEx()</a>
+function. Such a handle points to random data.
+
+Note <a href="_WinAPI_LockResource.htm">_WinAPI_LockResource()</a> does not actually lock memory; it is just used to obtain a pointer to the memory
+containing the resource data. The name of the function comes from versions prior to Windows XP, when it was
+used to lock a global memory block allocated by <a href="_WinAPI_LoadResource.htm">_WinAPI_LoadResource()</a>.
+
+###Related###
+_WinAPI_FindResource, _WinAPI_FindResourceEx, _WinAPI_LoadResource, _WinAPI_UnlockFile
+
+###See Also###
+@@MsdnLink@@ LockResource
+
+###Example###
+@@IncludeExample@@ _WinAPI_LoadResource

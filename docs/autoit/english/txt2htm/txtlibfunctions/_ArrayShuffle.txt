@@ -1,0 +1,41 @@
+###User Defined Function###
+_ArrayShuffle
+
+###Description###
+Shuffles selected rows of 1D or 2D arrays - can be limited to a specific column in 2D arrays
+
+###Syntax###
+#include <Array.au3>
+_ArrayShuffle ( ByRef $aArray [, $iStart_Row = 0 [, $iEnd_Row = 0 [, $iCol = -1]]] )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Array to modify
+$iStart_Row
+	[optional] Start row for shuffle - default first
+$iEnd_Row
+	[optional] End row for shuffle - default last
+$iCol
+	[optional] Specific column to shuffle (2D only)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	-1 and sets the @error flag to non-zero.
+@error:	1 - $aArray is not an array
+	2 - $aArray is not a 1D or 2D array
+	3 - $iStart or $iEnd outside array bounds
+	4 - $iStart greater than $iEnd
+	5 - $iColumn is outside array bounds
+@@End@@
+
+###Remarks###
+The function uses the Fisher-Yates shuffle algorithm.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

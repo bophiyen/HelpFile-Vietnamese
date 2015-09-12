@@ -1,0 +1,26 @@
+###User Defined Function###
+_WinAPI_MakeQWord
+
+###Description###
+Returns a QWORD value from two int values
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_MakeQWord ( $iLoDWORD, $iHiDWORD )
+
+###Parameters###
+@@ParamTable@@
+$iLoDWORD
+	Low DWORD (int)
+$iHiDWORD
+	Hi DWORD (int)
+@@End@@
+
+###ReturnValue###
+Returns a QWORD (int64) value
+
+###Remarks###
+None.
+
+###Related###
+None.

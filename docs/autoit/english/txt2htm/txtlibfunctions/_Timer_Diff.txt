@@ -1,0 +1,27 @@
+###User Defined Function###
+_Timer_Diff
+
+###Description###
+Returns the difference in time from a previous call to _Timer_Init
+
+###Syntax###
+#include <Timers.au3>
+_Timer_Diff ( $iTimeStamp )
+
+###Parameters###
+@@ParamTable@@
+$iTimeStamp
+	Timestamp returned from a previous call to <a href="_Timer_Init.htm">_Timer_Init()</a>.
+@@End@@
+
+###ReturnValue###
+Returns the time difference (in milliseconds) from a previous call to <a href="_Timer_Init.htm">_Timer_Init()</a>.
+
+###Remarks###
+None.
+
+###Related###
+_Timer_Init
+
+###Example###
+@@IncludeExample@@

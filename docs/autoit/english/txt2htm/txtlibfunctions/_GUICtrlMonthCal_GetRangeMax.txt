@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetRangeMax
+
+###Description###
+Retrieves the upper limit date range
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetRangeMax ( $hWnd )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control ID/Handle to the control
+@@End@@
+
+###ReturnValue###
+Return a $tagSYSTEMTIME structure.
+
+###Remarks###
+None.
+
+###Related###
+$tagSYSTEMTIME, _GUICtrlMonthCal_GetRange, _GUICtrlMonthCal_GetRangeMaxStr, _GUICtrlMonthCal_GetRangeMin
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,48 @@
+###User Defined Function###
+_ArrayToString
+
+###Description###
+Places the elements of a 1D or 2D array into a single string, separated by the specified delimiters
+
+###Syntax###
+#include <Array.au3>
+_ArrayToString ( Const ByRef $aArray [, $sDelim_Col = "|" [, $iStart_Row = -1 [, $iEnd_Row = -1 [, $sDelim_Row = @CRLF [, $iStart_Col = -1 [, $iEnd_Col = -1]]]]]] )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Array to convert to a string
+$sDelim_Col
+	[optional] Delimiter for elements of 1D array or columns of 2D array
+$iStart_Row
+	[optional] Index of array row to start copy
+$iEnd_Row
+	[optional] Index of array row to stop copy
+$sDelim_Row
+	[optional] Delimiter for rows of 2D array (2D only)
+$iStart_Col
+	[optional] Index of array column to start copy (2D only)
+$iEnd_Col
+	[optional] Index of array column to stop copy (2D only)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	a string which combined selected elements separated by the delimiters.
+Failure:	sets the @error flag to non-zero.
+@error:	1 - $aArray is not an array
+	2 - $aArray is not a 1D or 2D array
+	3 - $iStart_Row or $iEnd_Row outside array bounds
+	4 - $iStart_Row greater then $iEnd_Row
+	5 - $iStart_Col or $iEnd_Col outside array bounds
+	6 - $iStart_Col greater then $iEnd_Col
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_ArrayToClip
+
+###Example###
+@@IncludeExample@@

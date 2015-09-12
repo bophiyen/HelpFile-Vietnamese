@@ -1,0 +1,41 @@
+###User Defined Function###
+_GUICtrlMenu_CreatePopup
+
+###Description###
+Creates a drop down menu, submenu, or shortcut menu
+
+###Syntax###
+#include <GuiMenu.au3>
+_GUICtrlMenu_CreatePopup ( [$iStyle = $MNS_CHECKORBMP] )
+
+###Parameters###
+@@ParamTable@@
+$iStyle
+	[optional] Style of the menu. It can be one or more of the following values:
+		$MNS_AUTODISMISS - Menu automatically ends when mouse is outside the menu for 10 seconds
+		$MNS_CHECKORBMP - The same space is reserved for the check mark and the bitmap (default)
+		$MNS_DRAGDROP	- Menu items are OLE drop targets or drag sources
+		$MNS_MODELESS	- Menu is modeless
+		$MNS_NOCHECK	 - No space is reserved to the left of an item for a check mark
+		$MNS_NOTIFYBYPOS - Menu owner receives a WM_MENUCOMMAND message instead of a WM_COMMAND message for selections
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The handle to the newly created menu.
+Failure:	0.
+@@End@@
+
+###Remarks###
+Menu resources that are assigned to a window are freed automatically. If the menu is not assigned to a window, an application must free system resources associated with the menu before closing.
+An application frees menu resources by calling the <a href="_GUICtrlMenu_DestroyMenu.htm">_GUICtrlMenu_DestroyMenu()</a> function.
+$MNS_NOTIFYBYPOS is a menu header style and has no effect when applied to individual sub menus
+
+###Related###
+_GUICtrlMenu_CreateMenu, _GUICtrlMenu_DestroyMenu
+
+###See Also###
+@@MsdnLink@@ CreatePopupMenu
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,44 @@
+###User Defined Function###
+_WinAPI_CallWindowProc
+
+###Description###
+Passes the hook information to the next hook procedure in the current hook chain
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CallWindowProc ( $pPrevWndFunc, $hWnd, $iMsg, $wParam, $lParam )
+
+###Parameters###
+@@ParamTable@@
+$pPrevWndFunc
+	Pointer to the previous window procedure.
+	If this value is obtained by calling the <a href="_WinAPI_GetWindowLong.htm">_WinAPI_GetWindowLong()</a> function with the $iIndex parameter set to $GWL_WNDPROC or $DWL_DLGPROC, it is actually either the address of a window or dialog box procedure, or a special internal value meaningful only to <a href="_WinAPI_CallWindowProc.htm">_WinAPI_CallWindowProc()</a>.
+$hWnd
+	Handle to the window procedure to receive the message
+$iMsg
+	Specifies the message
+$wParam
+	Specifies additional message-specific information. The contents of this parameter depend on the value of the Msg parameter
+$lParam
+	Specifies additional message-specific information. The contents of this parameter depend on the value of the Msg parameter
+@@End@@
+
+###ReturnValue###
+Returns the return value specifies the result of the message processing and depends on the message sent
+
+###Remarks###
+Use the <a href="_WinAPI_CallWindowProc.htm">_WinAPI_CallWindowProc()</a> function for window subclassing. Usually, all windows with the same class share one window procedure.
+A subclass is a window or set of windows with the same class whose messages are intercepted and processed by another window procedure (or procedures) before being passed to the window procedure of the class.
+
+The <a href="_WinAPI_SetWindowLong.htm">_WinAPI_SetWindowLong()</a> function creates the subclass by changing the window procedure associated with a particular window, causing the system to call the new window procedure instead of the previous one.
+An application must pass any messages not processed by the new window procedure to the previous window procedure by calling <a href="_WinAPI_CallWindowProc.htm">_WinAPI_CallWindowProc()</a>.
+This allows the application to create a chain of window procedures.
+
+###Related###
+_WinAPI_SetWindowLong
+
+###See Also###
+@@MsdnLink@@ CallWindowProc
+
+###Example###
+@@IncludeExample@@

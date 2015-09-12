@@ -1,0 +1,41 @@
+###Function###
+DllStructGetData
+
+###Description###
+Returns the data of an element of the struct.
+
+###Syntax###
+DllStructGetData ( Struct, Element [, index = Default] )
+
+###Parameters###
+@@ParamTable@@
+Struct
+	The struct returned by <a href="DllStructCreate.htm">DllStructCreate()</a>.
+Element
+	Which element of the struct you want to access, starting at 1 or the element name as defined in <a href="DllStructCreate.htm">DllStructCreate()</a>.
+index
+	[optional] For elements that are an array this specifies the 1-based index to retrieve. If omitted or the <a href="../keywords/Default.htm">Default keyword</a> then the entire array is retrieved (Useful for quickly retrieving strings). <strong>Not used for non-array elements.</strong>
+@@End@@
+char[n], wchar[n] and byte[n] return all element data when index is omitted.
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	Data in the element of the struct.
+Failure:	0.
+@error:	1 = Struct not a valid struct returned by <a href="DllStructCreate.htm">DllStructCreate()</a>.
+	2 = Element out of range or unknown.
+	3 = Index out of range.
+	4 = Element data type is unknown
+	5 = Index &lt;= 0.
+@@End@@
+
+###Remarks###
+When the element is char or char[n], wchar or wchar[n] the data returned is always a <a href="String.htm">String()</a>,
+when the element is byte[n] and index is omitted the data returned is a binary type,
+otherwise it always returns the best fit AutoIt datatype corresponding to the type of the individual element (e.g. byte returns Int32, float returns Double).
+
+###Related###
+DllStructCreate, DllStructSetData
+
+###Example###
+@@IncludeExample@@ DllStructCreate

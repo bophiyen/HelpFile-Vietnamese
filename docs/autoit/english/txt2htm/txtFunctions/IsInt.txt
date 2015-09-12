@@ -1,0 +1,30 @@
+###Function###
+IsInt
+
+###Description###
+Checks if the value of a variable or expression has no fractional component.
+
+###Syntax###
+IsInt ( variable )
+
+###Parameters###
+@@ParamTable@@
+variable
+	The variable/expression to check.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1 - No fractional component
+Failure:	0 - Fractional component
+@@End@@
+
+###Remarks###
+The function will return 1 if the value is a float with no fractional component (e.g. 1.000).
+See <a href="../intro/lang_datatypes.htm">language datatypes</a> for a detailed description.
+
+###Related###
+IsArray, IsBinary, IsBool, IsFloat, IsHWnd, IsNumber, IsPtr, IsString, StringIsInt, VarGetType
+
+###Example###
+@@IncludeExample@@

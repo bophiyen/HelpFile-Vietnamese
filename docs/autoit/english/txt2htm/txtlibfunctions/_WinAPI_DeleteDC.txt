@@ -1,0 +1,31 @@
+###User Defined Function###
+_WinAPI_DeleteDC
+
+###Description###
+Deletes the specified device context
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_DeleteDC ( $hDC )
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Identifies the device context to be deleted
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False
+@@End@@
+
+###Remarks###
+An application must not delete a DC whose handle was obtained by calling the <a href="_WinAPI_GetDC.htm">_WinAPI_GetDC()</a> function.
+Instead, it must call the <a href="_WinAPI_ReleaseDC.htm">_WinAPI_ReleaseDC()</a> function to free the DC.
+
+###Related###
+_WinAPI_CreateCompatibleDC, _WinAPI_GetDC, _WinAPI_ReleaseDC
+
+###See Also###
+@@MsdnLink@@ DeleteDC

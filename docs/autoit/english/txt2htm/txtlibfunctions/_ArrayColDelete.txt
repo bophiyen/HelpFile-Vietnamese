@@ -1,0 +1,37 @@
+###User Defined Function###
+_ArrayColDelete
+
+###Description###
+Deletes a specified column from a 2D array
+
+###Syntax###
+#include <Array.au3>
+_ArrayColDelete ( ByRef $aArray, $iColumn [, $bConvert = False] )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Array to modify
+$iColumn
+	Column to delete
+$bConvert
+	[optional] If True then if only one column remains the array is converted to 1D
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the number of columns remaining.
+Failure:	-1 and sets the @error flag to non-zero.
+@error:	1 - $aArray is not an array
+	2 - $aArray is not a 2D array
+	3 - $iColumn is outside array bounds
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_ArrayColInsert
+
+###Example###
+@@IncludeExample@@

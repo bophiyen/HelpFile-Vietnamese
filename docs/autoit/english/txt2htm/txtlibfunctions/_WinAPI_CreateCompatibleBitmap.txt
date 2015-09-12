@@ -1,0 +1,34 @@
+###User Defined Function###
+_WinAPI_CreateCompatibleBitmap
+
+###Description###
+Creates a bitmap compatible with the specified device context
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CreateCompatibleBitmap ( $hDC, $iWidth, $iHeight )
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Identifies a device context
+$iWidth
+	Specifies the bitmap width, in pixels
+$iHeight
+	Specifies the bitmap height, in pixels
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The handle to the bitmap
+Failure:	0
+@@End@@
+
+###Remarks###
+When you no longer need the bitmap, call the <a href="_WinAPI_DeleteObject.htm">_WinAPI_DeleteObject()</a> function to delete it
+
+###Related###
+_WinAPI_CreateSolidBitmap, _WinAPI_DeleteObject
+
+###See Also###
+@@MsdnLink@@ CreateCompatibleBitmap

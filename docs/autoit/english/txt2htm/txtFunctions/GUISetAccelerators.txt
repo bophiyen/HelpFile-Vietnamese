@@ -1,0 +1,48 @@
+###Function###
+GUISetAccelerators
+
+###Description###
+Sets the accelerator table to be used in a GUI window.
+
+###Syntax###
+GUISetAccelerators ( accelerators [, winhandle] )
+
+###Parameters###
+@@ParamTable@@
+accelerators
+	A 2 dimensional array holding the accelerator table (See remarks).
+winhandle
+	[optional] Windows handle as returned by <a href="GUICreate.htm">GUICreate()</a> (default is the previously used window).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0.
+@@End@@
+
+###Remarks###
+Accelerator keys are similar to HotKeys, but there are 2 important differences:
+
+	- 1. They are only active when the GUI specified in the function is active which means that, unlike HotKeys, Accelerator keys will not interfere with other running applications.
+
+	- 2. They cannot fire a function directly - they action their associated control which then fires the function using <a href="GUIGetMsg.htm">GUIGetMsg()</a> or <a href="GUICtrlSetOnEvent.htm">GUICtrlSetOnEvent()</a>. If there is no suitable control available in the GUI then a dummy control can be created using <a href="../functions/GUICtrlCreateDummy.htm">GUICtrlCreateDummy</a>.
+
+The array passed as a parameter to this function contains the Accelerator keys and the ControlIDs of the associated controls. The array must be defined as Local/Global $aArray[n][2] - where n is the number of Accelerator keys to set:
+
+	$aArray[0][0] = 1st Accelerator key (in <a href="HotKeySet.htm">HotKeySet()</a> format)
+	$aArray[0][1] = Associated ControlID for 1st accelerator, as returned by <a href="../functions/GUICtrlCreate Management.htm">GUICtrlCreate...</a>
+	$aArray[1][0] = 2nd Accelerator key
+	$aArray[1][1] = Associated ControlID for 2nd accelerator
+	...
+	$aArray[n][0] = nth Accelerator key
+	$aArray[n][1] = Associated ControlID for the nth accelerator
+
+
+Passing this function a non-array parameter will unset all accelerators for the specified winhandle.
+
+###Related###
+GUICreate, HotKeySet
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,34 @@
+###Function###
+StringToBinary
+
+###Description###
+Converts a string into binary data.
+
+###Syntax###
+StringToBinary ( expression [, flag = 1] )
+
+###Parameters###
+@@ParamTable@@
+expression
+	An expression to convert into binary data.
+flag
+	[optional] Changes how the string is stored as binary:
+		$SB_ANSI (1) = string data is ANSI (default)
+		$SB_UTF16LE (2) = string data is UTF16 Little Endian
+		$SB_UTF16BE (3) = string data is UTF16 Big Endian
+		$SB_UTF8 (4) = string data is UTF8
+
+	Constants are defined in StringConstants.au3.
+@@End@@
+
+###ReturnValue###
+Returns a binary variant.
+
+###Remarks###
+See <a href="../intro/unicode.htm">"Unicode Support"</a> for a detailed description.
+
+###Related###
+Binary, BinaryToString, IsBinary, String
+
+###Example###
+@@IncludeExample@@ BinaryToString

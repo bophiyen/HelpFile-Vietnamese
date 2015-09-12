@@ -1,0 +1,35 @@
+###Function###
+FileGetLongName
+
+###Description###
+Returns the long path+name of the path+name passed.
+
+###Syntax###
+FileGetLongName ( "filename" [, flag = 0] )
+
+###Parameters###
+@@ParamTable@@
+filename
+	Full path and file name to convert
+flag
+	[optional]
+		$FN_FULLPATH (0) - Default
+		$FN_RELATIVEPATH (1) - file can have relative dir, e.g. "..\file.txt"
+
+	Constants are defined in FileConstants.au3.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the long path+name of the path+name passed.
+Failure:	the parameter and sets the @error flag to 1.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+FileGetShortName
+
+###Example###
+@@IncludeExample@@

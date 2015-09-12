@@ -1,0 +1,34 @@
+###User Defined Function###
+_Excel_BookSave
+
+###Description###
+Saves the specified workbook
+
+###Syntax###
+#include <Excel.au3>
+_Excel_BookSave ( $oWorkbook )
+
+###Parameters###
+@@ParamTable@@
+$oWorkbook
+	Object of the workbook to save
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1. Sets @extended to:
+		0 - File has not been saved because it has not been changed since the last save or file open
+		1 - File has been saved because it has been changed since the last save or file open
+Failure:	0 and sets @error.
+@error:	1 - $oWorkbook is not an object or not a workbook object
+	2 - Error occurred when saving the workbook. @extended is set to the COM error code
+@@End@@
+
+###Remarks###
+A newly created workbook has to be saved using _Excel_BookSaveAs() before.
+
+###Related###
+_Excel_BookSaveAs
+
+###Example###
+@@IncludeExample@@

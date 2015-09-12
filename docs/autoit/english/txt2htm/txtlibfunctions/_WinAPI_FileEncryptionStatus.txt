@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_FileEncryptionStatus
+
+###Description###
+Retrieves the encryption status of the specified file
+
+###Syntax###
+#include <WinAPIFiles.au3>
+_WinAPI_FileEncryptionStatus ( $sFilePath )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The name of the file to retrieve encryption status.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The encryption status ($FILE_*).
+Failure:	(-1) and sets the @error flag to non-zero, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended code information.
+@@End@@
+
+###Remarks###
+$FILE_* constants require #include <APIFilesConstants.au3>
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ FileEncryptionStatus
+
+###Example###
+@@IncludeExample@@ _WinAPI_EncryptFile

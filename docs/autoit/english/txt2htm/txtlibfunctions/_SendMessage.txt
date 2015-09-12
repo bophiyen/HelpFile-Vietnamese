@@ -1,0 +1,50 @@
+###User Defined Function###
+_SendMessage
+
+###Description###
+Wrapper for commonly used DLL Call
+
+###Syntax###
+#include <SendMessage.au3>
+_SendMessage ( $hWnd, $iMsg [, $wParam = 0 [, $lParam = 0 [, $iReturn = 0 [, $wParamType = "wparam" [, $lParamType = "lparam" [, $sReturnType = "lresult"]]]]]] )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Window/control handle
+$iMsg
+	Message to send to control (number)
+$wParam
+	[optional] Specifies additional message-specific information
+$lParam
+	[optional] Specifies additional message-specific information
+$iReturn
+	[optional] What to return:
+		0 - Return value from DLL call
+		1 - $ihWnd
+		2 - $iMsg
+		3 - $wParam
+		4 - $lParam
+		<0 or > 4 - array same as <a href="../functions/DllCall.htm">DllCall()</a>
+$wParamType
+	[optional] See <a href="../functions/DllCall.htm">DllCall</a> in Related
+$lParamType
+	[optional] See <a href="../functions/DllCall.htm">DllCall</a> in Related
+$sReturnType
+	[optional] See <a href="../functions/DllCall.htm">DllCall</a> in Related
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the user selected value from the <a href="../functions/DllCall.htm">DllCall()</a> result.
+Failure:	sets the @error flag to non-zero.
+@@End@@
+
+###Remarks###
+When a message is blocked by UIPI the last error, retrieved with <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a>, is set to 5 (access denied).
+
+###Related###
+.DllCall, _SendMessageA, _WinAPI_GetLastError
+
+###Example###
+@@IncludeExample@@

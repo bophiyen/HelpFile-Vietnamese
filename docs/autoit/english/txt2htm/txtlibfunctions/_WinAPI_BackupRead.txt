@@ -1,0 +1,58 @@
+###User Defined Function###
+_WinAPI_BackupRead
+
+###Description###
+Backs up a file or directory, including the security information
+
+###Syntax###
+#include <WinAPIFiles.au3>
+_WinAPI_BackupRead ( $hFile, $pBuffer, $iLength, ByRef $iBytes, ByRef $pContext [, $bSecurity = False] )
+
+###Parameters###
+@@ParamTable@@
+$hFile
+	Handle to the file or directory to be backed up.
+	To obtain the handle, call the <a href="_WinAPI_CreateFileEx.htm">_WinAPI_CreateFileEx()</a> function.
+	The SACLs are not read unless the file handle was created with the $ACCESS_SYSTEM_SECURITY access right.
+$pBuffer
+	A pointer to a buffer that receives the data.
+$iLength
+	The size of the buffer, in bytes.
+	The buffer size must be greater than the size of the $tagWIN32_STREAM_ID structure.
+	(see also MSDN for more information)
+$iBytes
+	The number of bytes read.
+$pContext
+	A pointer to an internal data structure used by this function to maintain context information during a backup operation.
+	You must set this variable to 0 before the first call to <a href="_WinAPI_BackupRead.htm">_WinAPI_BackupRead()</a> for the specified file or directory.
+	The function allocates memory for the data structure, and then sets the variable to point to that structure.
+	You must not change this variable or the variable that it points to between calls to <a href="_WinAPI_BackupRead.htm">_WinAPI_BackupRead()</a>.
+$bSecurity
+	[optional] Specifies whether the function will backup the access-control list (ACL) data, valid values:
+		True	 - The ACL data will be backed up.
+		False	 - The ACL data will be omitted (Default).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended error information.
+@@End@@
+
+###Remarks###
+The <a href="_WinAPI_BackupRead.htm">_WinAPI_BackupRead()</a> is not intended for use in backing up files encrypted under the Encrypted File System (EFS).
+
+If an error occurs during the data reading, the calling process can skip the bad data by calling the <a href="_WinAPI_BackupSeek.htm">_WinAPI_BackupSeek()</a> function.
+
+When you are done using <a href="_WinAPI_BackupRead.htm">_WinAPI_BackupRead()</a>, you must call <a href="_WinAPI_BackupReadAbort.htm">_WinAPI_BackupReadAbort()</a> function with the appropriate parameter to release the memory used by the internal data structure.
+
+The file or directory should be restored using the <a href="_WinAPI_BackupWrite.htm">_WinAPI_BackupWrite()</a> function.
+
+###Related###
+_WinAPI_BackupReadAbort, _WinAPI_BackupSeek, _WinAPI_BackupWrite
+
+###See Also###
+@@MsdnLink@@ BackupRead
+
+###Example###
+@@IncludeExample@@

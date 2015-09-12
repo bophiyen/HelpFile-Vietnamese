@@ -1,0 +1,40 @@
+###Function###
+ObjName
+
+###Description###
+Returns the name or interface description of an Object.
+
+###Syntax###
+ObjName ( $Objectvariable [, Flag = 1] )
+
+###Parameters###
+@@ParamTable@@
+$Objectvariable
+	A variable containing an Object whose name you want to retrieve
+Flag
+	[optional]
+		$OBJ_NAME (1) = (default) The name of the Object
+		$OBJ_STRING (2) = Description string of the Object
+		$OBJ_PROGID (3) = The ProgID of the Object
+		$OBJ_FILE (4) = The file that is associated with the object in the Registry
+		$OBJ_MODULE (5) = Module name in which the object runs (WIN XP And above). Marshaller for non-inproc objects.
+		$OBJ_CLSID (6) = CLSID of the object's coclass
+		$OBJ_IID (7) = IID of the object's interface
+
+	Constants are defined in "AutoItConstants.au3".
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	a string representing the name
+Failure:	"" (empty string) and sets the @error flag to non-zero.
+@@End@@
+
+###Remarks###
+Not all Objects support flags 2 to 7. Always test for @error in these cases.
+
+###Related###
+IsObj, ObjCreate, ObjGet
+
+###Example###
+@@IncludeExample@@

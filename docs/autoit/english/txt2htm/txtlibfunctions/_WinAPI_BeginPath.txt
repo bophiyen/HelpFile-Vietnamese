@@ -1,0 +1,36 @@
+###User Defined Function###
+_WinAPI_BeginPath
+
+###Description###
+Opens a path bracket in the specified device context
+
+###Syntax###
+#include <WinAPIGdi.au3>
+_WinAPI_BeginPath ( $hDC )
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	Handle to the device context.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False
+@@End@@
+
+###Remarks###
+After a path bracket is open, an application can begin calling GDI drawing functions to define the points that lie in the path.
+An application can close an open path bracket by calling the <a href="_WinAPI_EndPath.htm">_WinAPI_EndPath()</a> function.
+
+When an application calls <a href="_WinAPI_BeginPath.htm">_WinAPI_BeginPath()</a> for a device context, any previous paths are discarded from that device context.
+
+###Related###
+_WinAPI_EndPath
+
+###See Also###
+@@MsdnLink@@ BeginPath
+
+###Example###
+@@IncludeExample@@

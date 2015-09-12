@@ -1,0 +1,49 @@
+###User Defined Function###
+_WinAPI_LoadIcon
+
+###Description###
+Loads the specified icon resource from the executable (.exe) file associated with an application instance
+
+###Syntax###
+#include <WinAPIRes.au3>
+_WinAPI_LoadIcon ( $hInstance, $sName )
+
+###Parameters###
+@@ParamTable@@
+$hInstance
+	A handle to an instance of the module whose executable file contains the icon to be loaded.
+$sName
+	The name of the icon resource to be loaded. Alternatively, if $hInstance is 0, it can be
+	one of the following predefined values.
+	$IDI_APPLICATION
+	$IDI_HAND
+	$IDI_QUESTION
+	$IDI_EXCLAMATION
+	$IDI_ASTERISK
+	$IDI_WINLOGO
+	$IDI_SHIELD
+	$IDI_ERROR
+	$IDI_INFORMATION
+	$IDI_WARNING
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The icon handle.
+Failure:	0, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended error information.
+@@End@@
+
+###Remarks###
+<a href="_WinAPI_LoadIcon.htm">_WinAPI_LoadIcon()</a> loads the icon resource only if it has not been loaded; otherwise, it retrieves a
+handle to the existing resource.
+
+<a href="_WinAPI_LoadIcon.htm">_WinAPI_LoadIcon()</a> can only load an icon whose size conforms to the $SM_CXICON and $SM_CYICON system metric
+values. Use the <a href="_WinAPI_LoadImage.htm">_WinAPI_LoadImage()</a> function to load icons of other sizes.
+
+When you are finished using the icon, destroy it using the <a href="_WinAPI_DestroyIcon.htm">_WinAPI_DestroyIcon()</a> function.
+
+###Related###
+_WinAPI_DestroyIcon, _WinAPI_LoadImage
+
+###See Also###
+@@MsdnLink@@ LoadIcon

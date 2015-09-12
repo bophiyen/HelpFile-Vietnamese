@@ -1,0 +1,39 @@
+###User Defined Function###
+_Excel_BookAttach
+
+###Description###
+Attaches to the first instance of a workbook where the search string matches based on the selected mode
+
+###Syntax###
+#include <Excel.au3>
+_Excel_BookAttach ( $sString [, $sMode = "FilePath" [, $oInstance = Default]] )
+
+###Parameters###
+@@ParamTable@@
+$sString
+	String to search for
+$sMode
+	[optional] specifies search mode:
+		FileName - Name of the open workbook
+		FilePath - Full path to the open workbook (default)
+		Title - Title of the Excel window
+$oInstance
+	[optional] Object of the Excel instance to be searched (default = keyword Default = all instances)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the Excel workbook object.
+Failure:	0 and sets @error.
+@error:	1 - An error occurred or $sString can't be found in any of the open workbooks. @extended is set to the COM error code
+	2 - $sMode is invalid
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_Excel_BookClose, _Excel_BookNew, _Excel_BookOpen, _Excel_BookOpenText
+
+###Example###
+@@IncludeExample@@

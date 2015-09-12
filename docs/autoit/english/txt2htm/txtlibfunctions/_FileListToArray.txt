@@ -1,0 +1,51 @@
+###User Defined Function###
+_FileListToArray
+
+###Description###
+Lists files and\or folders in a specified folder (Similar to using Dir with the /B Switch)
+
+###Syntax###
+#include <File.au3>
+_FileListToArray ( $sFilePath [, $sFilter = "*" [, $iFlag = $FLTA_FILESFOLDERS [, $bReturnPath = False]]] )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	Folder to generate filelist for.
+$sFilter
+	[optional] the filter to use, default is *. (* and ? wildcards accepted - See Remarks)
+$iFlag
+	[optional] specifies whether to return files folders or both
+		$FLTA_FILESFOLDERS (0) = (Default) Return both files and folders
+		$FLTA_FILES (1) = Return files only
+		$FLTA_FOLDERS (2) = Return Folders only
+		Constants are defined in FileConstants.au3
+$bReturnPath
+	[optional] If True the full path is appended to the file\folder path, otherwise it is relative to the $sFilePath folder. Default is False.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	A one-dimensional array.
+		$aArray[0] = Number of Files\Folders returned
+		$aArray[1] = 1st File\Folder
+		$aArray[2] = 2nd File\Folder
+		$aArray[3] = 3rd File\Folder
+		$aArray[n] = nth File\Folder
+Failure:	sets the @error flag to non-zero.
+@error:	1 - Folder not found or invalid
+	2 - Invalid $sFilter
+	3 - Invalid $iFlag
+	4 - No File(s) Found
+@@End@@
+
+###Remarks###
+This function uses the Windows OS to return subfolders matching the specified filter. This works perfectly for simple filters, using a complex filter with multiple wildcards may return some unexpected results (for example *test*.* will match both testX and testX.X subfolders). If this occurs, the <a href="_FileListToArrayRec.htm">_FileListToArrayRec()</a> function might be better suited as it compares all subfolders to the specified filter using a RegEx, although the time taken to run the function can be noticeably greater
+
+See <a href="../functions/FileFindFirstFile.htm">FileFindFirstFile()</a> for a discussion about wildcards.
+
+###Related###
+_FileListToArrayRec
+
+###Example###
+@@IncludeExample@@

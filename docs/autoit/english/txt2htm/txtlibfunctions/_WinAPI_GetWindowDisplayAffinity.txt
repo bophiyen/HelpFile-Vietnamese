@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_GetWindowDisplayAffinity
+
+###Description###
+Retrieves the current display affinity setting, from any process, for a given window
+
+###Syntax###
+#include <WinAPISys.au3>
+_WinAPI_GetWindowDisplayAffinity ( $hWnd )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle to the window for which display affinity setting is retrieved.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The current window's display affinity setting ($WDA_*).
+Failure:	Sets the @error flag to non-zero, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended error information.
+@@End@@
+
+###Remarks###
+This function succeeds only when the window is layered and Desktop Windows Manager (DWM) is composing the desktop.
+For more information, see <a href="_WinAPI_SetWindowDisplayAffinity.htm">_WinAPI_SetWindowDisplayAffinity()</a>.
+
+This function requires <strong>Windows 7 or later</strong>.
+
+###Related###
+_WinAPI_SetWindowDisplayAffinity
+
+###See Also###
+@@MsdnLink@@ GetWindowDisplayAffinity

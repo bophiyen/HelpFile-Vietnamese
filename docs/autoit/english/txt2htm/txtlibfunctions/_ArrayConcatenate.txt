@@ -1,0 +1,40 @@
+###User Defined Function###
+_ArrayConcatenate
+
+###Description###
+Concatenate two arrays - either 1D or 2D with the same number of columns
+
+###Syntax###
+#include <Array.au3>
+_ArrayConcatenate ( Const ByRef $aArrayTarget, ByRef $aArraySource [, $iStart = 0] )
+
+###Parameters###
+@@ParamTable@@
+$aArrayTarget
+	The array to which the source array will be concatenated
+$aArraySource
+	The array to concatenate to the target array
+$iStart
+	[optional] index of the first Source array entry (Default = 0)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the number of elemets/rows in the new target array
+Failure:	-1 and sets the @error flag to non-zero.
+@error:	1 - $aArrayTarget is not an array
+	2 - $aArraySource is not an array
+	3 - $aArrayTarget is not a 1D or 2D array
+	4 - $aArrayTarget and $aArraySource 1D/2D mismatch
+	5 - $aArrayTarget and $aArraySource column number mismatch (2D only)
+	6 - $iStart outside array bounds
+@@End@@
+
+###Remarks###
+The $iStart parameter is useful when concatenating arrays which have a count in the [0] element.
+
+###Related###
+_ArrayAdd
+
+###Example###
+@@IncludeExample@@

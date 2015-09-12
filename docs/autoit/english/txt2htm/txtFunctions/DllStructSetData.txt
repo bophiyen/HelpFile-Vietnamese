@@ -1,0 +1,41 @@
+###Function###
+DllStructSetData
+
+###Description###
+Sets the data of an element in the struct.
+
+###Syntax###
+DllStructSetData ( Struct, Element, value [, index] )
+
+###Parameters###
+@@ParamTable@@
+Struct
+	The struct returned by <a href="DllStructCreate.htm">DllStructCreate()</a>.
+Element
+	Which element of the struct you want to access, starting at 1, or the element name as defined in <a href="DllStructCreate.htm">DllStructCreate()</a>.
+value
+	The new value to place in the struct element.
+index
+	[optional] For elements that are an array this specifies the 1-based index to set. If omitted or the Default keyword then as much of the value as possible will be set in element starting at index 1 (Useful for quickly setting strings). <strong>Not used for non-array elements.</strong>
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	value, which is read back from the struct.
+Failure:	0.
+@error:	1 = Struct not a valid struct returned by <a href="DllStructCreate.htm">DllStructCreate()</a>.
+	2 = Element out of range or unknown.
+	3 = Index out of range.
+	4 = Element data type is unknown
+	5 = Index &lt;=0.
+@@End@@
+
+###Remarks###
+When the element is char[n], wchar[n] or byte[n] the data can be a string. byte[n] also accepts binary data. Otherwise the data has to be either an AutoIt type compatible with the element type, or a number which will be converted to the required type.
+Native AutoIt strings are implicitely converted to ANSI prior to copy into a char[n] or byte[n] element. You need to convert native Unicode strings to UTF8 when the element is expecting this encoding (e.g. in DllCall).
+
+###Related###
+DllStructCreate, DllStructGetData, DllStructGetSize
+
+###Example###
+@@IncludeExample@@ DllStructCreate

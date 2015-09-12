@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_PathUndecorate
+
+###Description###
+Removes the decoration from a path string
+
+###Syntax###
+#include <WinAPIShPath.au3>
+_WinAPI_PathUndecorate ( $sFilePath )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The path.
+@@End@@
+
+###ReturnValue###
+Returns the undecorated string.
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ PathUndecorate
+
+###Example###
+@@IncludeExample@@

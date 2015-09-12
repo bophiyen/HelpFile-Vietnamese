@@ -1,0 +1,59 @@
+###User Defined Function###
+_Excel_RangeFind
+
+###Description###
+Finds matching cells in a range or workbook and returns an array with information about the found cells
+
+###Syntax###
+#include <Excel.au3>
+_Excel_RangeFind ( $oWorkbook, $sSearch [, $vRange = Default [, $iLookIn = $xlValues [, $iLookAt = $xlPart [, $bMatchcase = False]]]] )
+
+###Parameters###
+@@ParamTable@@
+$oWorkbook
+	Workbook object
+$sSearch
+	Search string. Can be a string (wildcards - *?~ - can be used) or any Excel data type. See Remarks
+$vRange
+	[optional] A range object, an A1 range (string) or keyword Default to search all sheets of the workbook (default = keyword Default)
+$iLookIn
+	[optional] Specifies where to search. Can be any of the XLFindLookIn enumeration (default = $xlValues)
+$iLookAt
+	[optional] Specifies whether the search text must match as a whole or any part. Can be any of the XLLookAt enumeration (default = $xlPart)
+$bMatchcase
+	[optional] True = case sensitive, False = case insensitive (default = False)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	a two-dimensional zero based array with the following information:
+		0 - Name of the worksheet
+		1 - Name of the cell
+		2 - Address of the cell
+		3 - Value of the cell
+		4 - Formula of the cell
+		5 - Comment of the cell
+Failure:	0 and sets @error.
+@error:	1 - $oWorkbook is not an object or not a workbook object
+	2 - $sSearch is empty
+	3 - $vRange is invalid. @extended is set to the COM error code
+	4 - Error returned by the Find method. @extended is set to the COM error code
+@@End@@
+
+###Remarks###
+This function mimics the Ctrl+F functionality of Excel, except that it adds the cells comment to the result.
+Excel recognizes the following wildcards:
+? (question mark) - Any single character
+* (asterisk) - Any number of characters
+~ (tilde) followed by ?, *, or ~ - A question mark, asterisk, or tilde
+
+When $vRange is specified as A1 range (string) then the active sheet of $oWorkbook is being searched.
+
+###Related###
+_Excel_RangeReplace
+
+###See Also###
+http://office.microsoft.com/en-us/excel-help/wildcard-characters-HP005203612.aspx
+
+###Example###
+@@IncludeExample@@

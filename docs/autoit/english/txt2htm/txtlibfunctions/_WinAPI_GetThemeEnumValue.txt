@@ -1,0 +1,36 @@
+###User Defined Function###
+_WinAPI_GetThemeEnumValue
+
+###Description###
+Retrieves the value of an enumerated type property
+
+###Syntax###
+#include <WinAPITheme.au3>
+_WinAPI_GetThemeEnumValue ( $hTheme, $iPartID, $iStateID, $iPropID )
+
+###Parameters###
+@@ParamTable@@
+$hTheme
+	Handle to a window's specified theme data.
+$iPartID
+	The part that contains the enumerated type property.
+$iStateID
+	The state of the part.
+$iPropID
+	The property to retrieve ($TMT_*).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The enumerated type value.
+Failure:	Sets the @error flag to non-zero, @extended flag may contain the HRESULT error code.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ GetThemeEnumValue

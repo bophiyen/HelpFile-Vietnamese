@@ -1,0 +1,35 @@
+###User Defined Function###
+_Excel_BookClose
+
+###Description###
+Closes the specified workbook
+
+###Syntax###
+#include <Excel.au3>
+_Excel_BookClose ( $oWorkbook [, $bSave = True] )
+
+###Parameters###
+@@ParamTable@@
+$oWorkbook
+	Workbook object
+$bSave
+	[optional] If True the workbook will be saved before closing (default = True)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 and sets @error.
+@error:	1 - $oWorkbook is not an object or not a workbook object
+	2 - Error occurred when saving the workbook. @extended is set to the COM error code returned by the Save method
+	3 - Error occurred when closing the workbook. @extended is set to the COM error code returned by the Close method
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_Excel_BookAttach, _Excel_BookNew, _Excel_BookOpen, _Excel_BookOpenText
+
+###Example###
+@@IncludeExample@@

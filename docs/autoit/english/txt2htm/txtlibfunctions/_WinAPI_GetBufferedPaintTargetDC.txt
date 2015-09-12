@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_GetBufferedPaintTargetDC
+
+###Description###
+Retrieves the target device context (DC)
+
+###Syntax###
+#include <WinAPITheme.au3>
+_WinAPI_GetBufferedPaintTargetDC ( $hBP )
+
+###Parameters###
+@@ParamTable@@
+$hBP
+	Handle of the buffered paint context.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	Handle of the requested DC. This is the same DC that was passed to <a href="_WinAPI_BeginBufferedPaint.htm">_WinAPI_BeginBufferedPaint()</a>.
+Failure:	0.
+@@End@@
+
+###Remarks###
+This function requires <strong>Windows Vista or later</strong>.
+
+###Related###
+_WinAPI_BeginBufferedPaint
+
+###See Also###
+@@MsdnLink@@ GetBufferedPaintTargetDC

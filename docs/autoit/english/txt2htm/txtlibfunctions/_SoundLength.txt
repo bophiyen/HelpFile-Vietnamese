@@ -1,0 +1,36 @@
+###User Defined Function###
+_SoundLength
+
+###Description###
+Returns the length of the soundfile
+
+###Syntax###
+#include <Sound.au3>
+_SoundLength ( $aSndID [, $iMode = 1] )
+
+###Parameters###
+@@ParamTable@@
+$aSndID
+	Sound ID array as returned by <a href="_SoundOpen.htm">_SoundOpen()</a> or a file name
+$iMode
+	[optional] This flag determines the format of the returned sound length
+		1 = (by default) hh:mm:ss where h = hours, m = minutes and s = seconds (default)
+		2 = milliseconds
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the sound length.
+Failure:	0 and sets the @error flag to non-zero.
+@error:	1 = $iMode is invalid
+	3 = Invalid Sound ID. Use return array from <a href="_SoundOpen.htm">_SoundOpen()</a> or valid file name.
+@@End@@
+
+###Remarks###
+This function will return the best available value for the length of the file regardless of encoding method or parameter type.
+
+###Related###
+_SoundOpen, _SoundPos
+
+###Example###
+@@IncludeExample@@

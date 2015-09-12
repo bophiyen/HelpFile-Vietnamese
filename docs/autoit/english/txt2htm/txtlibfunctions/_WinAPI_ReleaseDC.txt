@@ -1,0 +1,36 @@
+###User Defined Function###
+_WinAPI_ReleaseDC
+
+###Description###
+Releases a device context
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_ReleaseDC ( $hWnd, $hDC )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle of window
+$hDC
+	Identifies the device context to be released
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False
+@@End@@
+
+###Remarks###
+The application must call the <a href="_WinAPI_ReleaseDC.htm">_WinAPI_ReleaseDC()</a> function for each call to the <a href="_WinAPI_GetWindowDC.htm">_WinAPI_GetWindowDC()</a> function and for
+each call to the <a href="_WinAPI_GetDC.htm">_WinAPI_GetDC()</a> function that retrieves a common device context.
+
+###Related###
+_WinAPI_DeleteDC, _WinAPI_GetDC, _WinAPI_GetWindowDC
+
+###See Also###
+@@MsdnLink@@ ReleaseDC
+
+###Example###
+@@IncludeExample@@

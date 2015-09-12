@@ -1,0 +1,30 @@
+###Function###
+IsFloat
+
+###Description###
+Checks if the value of a variable or expression has a fractional component.
+
+###Syntax###
+IsFloat ( variable )
+
+###Parameters###
+@@ParamTable@@
+variable
+	The variable or expression to check.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1 - Fractional component
+Failure:	0 - No fractional component
+@@End@@
+
+###Remarks###
+The function will return 0 if the value is a float with no fractional component (e.g. 1.000).
+See <a href="../intro/lang_datatypes.htm">language datatypes</a> for a detailed description.
+
+###Related###
+IsArray, IsBinary, IsBool, IsHWnd, IsInt, IsNumber, IsPtr, IsString, StringIsFloat, VarGetType
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,24 @@
+###User Defined Function###
+_WinAPI_DwmGetColorizationParameters
+
+###Description###
+Retrieves the colorization parameters used for Desktop Window Manager (DWM)
+
+###Syntax###
+#include <WinAPIGdi.au3>
+_WinAPI_DwmGetColorizationParameters (  )
+
+###Parameters###
+None.
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	$tagDWM_COLORIZATION_PARAMETERS structure that contains the colorization parameters.
+Failure:	Sets the @error flag to non-zero.
+@@End@@
+
+###Remarks###
+This function requires <strong>Windows Vista or later</strong>.
+
+###Related###
+None.

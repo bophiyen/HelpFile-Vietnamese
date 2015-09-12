@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_IsProcessorFeaturePresent
+
+###Description###
+Determines whether the specified processor feature is supported by the current computer
+
+###Syntax###
+#include <WinAPISys.au3>
+_WinAPI_IsProcessorFeaturePresent ( $iFeature )
+
+###Parameters###
+@@ParamTable@@
+$iFeature
+	The processor feature to be tested. This parameter can be one of the $PF_* constants defined in APISysConstants.au3.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	the feature is supported.
+False:	 the feature is not supported.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ IsProcessorFeaturePresent

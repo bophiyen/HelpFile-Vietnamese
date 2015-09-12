@@ -1,0 +1,32 @@
+###Function###
+IsDeclared
+
+###Description###
+Check if a variable has been declared.
+
+###Syntax###
+IsDeclared ( expression )
+
+###Parameters###
+@@ParamTable@@
+expression
+	string representing name of the variable to be checked.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	$DECLARED_GLOBAL (1) for Global variable or variable declared outside functions.
+Special:	$DECLARED_LOCAL (-1) for Local variable.
+Failure:	$DECLARED_UNKNOWN (0) when no variable can be found.
+@@End@@
+
+Constants are defined in AutoItConstants.au3
+
+###Remarks###
+If there is a need to use <a href="IsDeclared.htm">IsDeclared()</a> to check that a variable exists, then in most situations <a href="Assign.htm">Assign()</a> should be used to create/write to the variable and <a href="Eval.htm">Eval()</a> should be used to read from the variable.
+
+###Related###
+Assign, Eval
+
+###Example###
+@@IncludeExample@@

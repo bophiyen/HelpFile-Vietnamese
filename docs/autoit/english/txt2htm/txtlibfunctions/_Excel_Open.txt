@@ -1,0 +1,47 @@
+###User Defined Function###
+_Excel_Open
+
+###Description###
+Connects to an existing Excel instance or creates a new one
+
+###Syntax###
+#include <Excel.au3>
+_Excel_Open ( [$bVisible = True [, $bDisplayAlerts = False [, $bScreenUpdating = True [, $bInteractive = True [, $bForceNew = False]]]]] )
+
+###Parameters###
+@@ParamTable@@
+$bVisible
+	[optional] True specifies that the application will be visible (default = True)
+$bDisplayAlerts
+	[optional] False suppresses all prompts and alert messages while opening a workbook (default = False)
+$bScreenUpdating
+	[optional] False suppresses screen updating to speed up your script (default = True)
+$bInteractive
+	[optional] If False, Excel blocks all keyboard and mouse input by the user (except input to dialog boxes) (default = True)
+$bForceNew
+	[optional] True forces to create a new Excel instance even if there is already a running instance (default = False)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the Excel application object.
+	Sets @extended to:
+		0 - Excel was already running
+		1 - Excel was not running or $bForceNew was set to True. A new Excel instance has been created
+Failure:	 0 and sets @error.
+@error:	1 - Error returned by ObjCreate. @extended is set to the COM error code.
+@@End@@
+
+###Remarks###
+If $bDisplayAlerts is set to False and a message requires a response, Excel chooses the default response.
+
+To enhance performance set $bScreenUpdating to False. The screen will not be updated until you set it back to true ($oExcel.ScreenUpdating = True).
+
+Blocking user input ($obInteractive = False) will prevent the user from interfering with the AutoIt script.
+If set to False, don't forget to set it back to True ($oExcel.Interactive = True)
+
+###Related###
+_Excel_Close
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetCurSel
+
+###Description###
+Retrieves the currently selected date
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetCurSel ( $hWnd )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control ID/Handle to the control
+@@End@@
+
+###ReturnValue###
+Returns a $tagSYSTEMTIME structure.
+
+###Remarks###
+None.
+
+###Related###
+$tagSYSTEMTIME, _GUICtrlMonthCal_GetCurSelStr, _GUICtrlMonthCal_SetCurSel
+
+###Example###
+@@IncludeExample@@

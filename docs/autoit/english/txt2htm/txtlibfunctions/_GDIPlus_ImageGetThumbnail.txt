@@ -1,0 +1,44 @@
+###User Defined Function###
+_GDIPlus_ImageGetThumbnail
+
+###Description###
+Gets a thumbnail image from this Image object
+
+###Syntax###
+#include <GDIPlus.au3>
+_GDIPlus_ImageGetThumbnail ( $hImage [, $iWidth = 0 [, $iHeight = 0 [, $bKeepRatio = True [, $hCallback = Null [, $hCallbackData = Null]]]]] )
+
+###Parameters###
+@@ParamTable@@
+$hImage
+	 A handle to image object
+$iWidth
+	 [optional] Width, in pixels, of the requested thumbnail image. Default is 0.
+$iHeight
+	 [optional] Height, in pixels, of the requested thumbnail image. Default is 0.
+$bKeepRatio
+	 [optional] If true destination width and height of the image will be recalculated to keep image aspect ratio. Default is True.
+$hCallback
+	 [optional] Callback function that you provide. During the process of creating or retrieving the thumbnail image, Microsoft Windows GDI+ calls this function to give you the opportunity to abort the process. The default value is NULL.
+$hCallbackData
+	 [optional] Pointer to a block of memory that contains data to be used by the callback function. The default value is NULL.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	Handle to an Image object that contains the thumbnail image.
+Failure:	0 and sets the @error flag to non-zero, @extended may contain GPSTATUS error code ($GPID_ERR*).
+@@End@@
+
+###Remarks###
+A thumbnail image is a small copy of an image. Some image files have a thumbnail image embedded in the file. In such cases, this method retrieves the embedded thumbnail image. If there is no embedded thumbnail image, this method creates a thumbnail image by scaling the main image to the size specified in the thumbWidth and thumbHeight parameters. If both of those parameters are 0, a system-defined size is used.
+Don't forget to dispose the thumbnail imgage using _GDIPlus_ImageDispose().
+
+###Related###
+_GDIPlus_GraphicsCreateFromHWND, _GDIPlus_ImageLoadFromFile, _GDIPlus_ImageDispose
+
+###See Also###
+@@MsdnLink@@ GdipGetImageThumbnail
+
+###Example###
+@@IncludeExample@@

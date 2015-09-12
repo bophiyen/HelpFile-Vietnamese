@@ -1,0 +1,52 @@
+###User Defined Function###
+_ChooseFont
+
+###Description###
+Creates a Font dialog box that enables the user to choose attributes for a logical font
+
+###Syntax###
+#include <Misc.au3>
+_ChooseFont ( [$sFontName = "Courier New" [, $iPointSize = 10 [, $iFontColorRef = 0 [, $iFontWeight = 0 [, $bItalic = False [, $bUnderline = False [, $bStrikethru = False [, $hWndOwner = 0]]]]]]]] )
+
+###Parameters###
+@@ParamTable@@
+$sFontName
+	[optional] Default font name
+$iPointSize
+	[optional] Pointsize of font
+$iFontColorRef
+	[optional] COLORREF rgbColors
+$iFontWeight
+	[optional] Font Weight
+$bItalic
+	[optional] Italic
+$bUnderline
+	[optional] Underline
+$bStrikethru
+	[optional] Strikethru
+$hWndOwner
+	[optional] Handle to the window that owns the dialog box
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	an array in the following format:
+		[0] - contains the number of elements
+		[1] - attributes = BitOR of italic:2, undeline:4, strikeout:8
+		[2] - fontname
+		[3] - font size = point size
+		[4] - font weight = = 0-1000
+		[5] - COLORREF rgbColors
+		[6] - Hex BGR Color
+		[7] - Hex RGB Color
+Failure:	sets the @error flag to non-zero.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

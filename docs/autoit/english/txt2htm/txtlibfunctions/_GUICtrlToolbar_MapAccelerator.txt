@@ -1,0 +1,29 @@
+###User Defined Function###
+_GUICtrlToolbar_MapAccelerator
+
+###Description###
+Determines the ID of the button that corresponds to the specified accelerator
+
+###Syntax###
+#include <GuiToolbar.au3>
+_GUICtrlToolbar_MapAccelerator ( $hWnd, $sAccelKey )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle to the control
+$sAccelKey
+	Accelerator character
+@@End@@
+
+###ReturnValue###
+Returns the command ID of the button that has $sAccelKey as its accelerator character.
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

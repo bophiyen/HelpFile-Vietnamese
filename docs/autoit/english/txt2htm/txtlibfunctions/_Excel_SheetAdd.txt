@@ -1,0 +1,46 @@
+###User Defined Function###
+_Excel_SheetAdd
+
+###Description###
+Adds new sheet(s) to a workbook and sets their names
+
+###Syntax###
+#include <Excel.au3>
+_Excel_SheetAdd ( $oWorkbook [, $vSheet = Default [, $bBefore = True [, $iCount = 1 [, $sName = ""]]]] )
+
+###Parameters###
+@@ParamTable@@
+$oWorkbook
+	A workbook object
+$vSheet
+	[optional] Object, index or name of the sheet before/after which the new sheet is inserted.
+		-1 = insert before/after the last worksheet (default = keyword Default = active worksheet)
+$bBefore
+	[optional] The new sheet will be inserted before $vSheet if True, after $vSheet if False (default = True)
+$iCount
+	[optional] Number of worksheets to be inserted (default = 1). Maximum is 255
+$sName
+	[optional] Name(s) of the sheet(s) to create (default = "" = follows standard Excel new sheet convention).
+		When $iCount > 1 multiple names can be provided separated by | (pipe character). Sheets are named from left to right
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	an object of the (first) added worksheet.
+Failure:	0 and sets @error.
+@error:	1 - $oWorkbook is not an object or not a workbook object
+	2 - $vSheet is invalid. Name or index does not exist. @extended is set to the COM error code
+	3 - Specified sheet already exists. @extended is set to the number of the name in $sName
+	4 - Error occurred when adding the sheet. @extended is set to the COM error code
+	5 - Error occurred when setting the name of the new sheet(s). @extended is set to the COM error code
+	6 - Parameter $iCount > 255
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_Excel_SheetDelete
+
+###Example###
+@@IncludeExample@@

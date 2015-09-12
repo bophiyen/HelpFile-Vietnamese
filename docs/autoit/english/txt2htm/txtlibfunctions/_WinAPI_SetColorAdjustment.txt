@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_SetColorAdjustment
+
+###Description###
+Sets the color adjustment for a device context (DC)
+
+###Syntax###
+#include <WinAPIGdi.au3>
+_WinAPI_SetColorAdjustment ( $hDC, $tAdjustment )
+
+###Parameters###
+@@ParamTable@@
+$hDC
+	A handle to the device context.
+$tAdjustment
+	$tagCOLORADJUSTMENT structure containing the color adjustment values.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True
+Failure:	False
+@@End@@
+
+###Remarks###
+The color adjustment are used to adjust the input color of the source bitmap for calls to the <a href="_WinAPI_StretchBlt.htm">_WinAPI_StretchBlt()</a>
+and <a href="_WinAPI_StretchDIBits.htm">_WinAPI_StretchDIBits()</a> functions when $HALFTONE ($STRETCH_HALFTONE) mode is set.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ SetColorAdjustment

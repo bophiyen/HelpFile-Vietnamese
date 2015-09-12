@@ -1,0 +1,27 @@
+###User Defined Function###
+_GUICtrlMonthCal_GetCalendarBorder
+
+###Description###
+Gets the size of the border, in pixels
+
+###Syntax###
+#include <GuiMonthCal.au3>
+_GUICtrlMonthCal_GetCalendarBorder ( $hWnd )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control ID/Handle to the control
+@@End@@
+
+###ReturnValue###
+Returns the border size, in pixels.
+
+###Remarks###
+<strong>Windows Vista or later</strong>.
+
+###Related###
+_GUICtrlMonthCal_SetCalendarBorder
+
+###Example###
+@@IncludeExample@@

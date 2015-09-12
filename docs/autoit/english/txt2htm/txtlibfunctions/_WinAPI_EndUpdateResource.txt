@@ -1,0 +1,37 @@
+###User Defined Function###
+_WinAPI_EndUpdateResource
+
+###Description###
+Commits or discards a changes of the resources within module
+
+###Syntax###
+#include <WinAPIRes.au3>
+_WinAPI_EndUpdateResource ( $hUpdate [, $bDiscard = False] )
+
+###Parameters###
+@@ParamTable@@
+$hUpdate
+	A module handle returned by the <a href="_WinAPI_BeginUpdateResource.htm">_WinAPI_BeginUpdateResource()</a>, and used by <a href="_WinAPI_UpdateResource.htm">_WinAPI_UpdateResource()</a>, referencing the file to be updated.
+$bDiscard
+	[optional] Specifies whether to write the resource updates to the file, valid values:
+		True	 - The changes are discarded.
+		False	- The changes are made: the resource updates will take effect (Default).
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False, call <a href="_WinAPI_GetLastError.htm">_WinAPI_GetLastError()</a> to get extended error information.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_WinAPI_BeginUpdateResource
+
+###See Also###
+@@MsdnLink@@ EndUpdateResource
+
+###Example###
+@@IncludeExample@@ _WinAPI_BeginUpdateResource

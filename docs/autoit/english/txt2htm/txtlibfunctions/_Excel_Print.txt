@@ -1,0 +1,51 @@
+###User Defined Function###
+_Excel_Print
+
+###Description###
+Prints a workbook, worksheet, chart or range
+
+###Syntax###
+#include <Excel.au3>
+_Excel_Print ( $oExcel, $vObject [, $iCopies = Default [, $sPrinter = Default [, $bPreview = Default [, $iFrom = Default [, $iTo = Default [, $bPrintToFile = Default [, $bCollate = Default [, $sPrToFileName = ""]]]]]]]] )
+
+###Parameters###
+@@ParamTable@@
+$oExcel
+	Excel application object
+$vObject
+	Workbook, worksheet, chart or range object to print. Range can be specified as A1 range too
+$iCopies
+	[optional] Number of copies to print (default = keyword Default = 1)
+$sPrinter
+	[optional] Name of the printer to be used. Defaults to active printer (default = keyword Default)
+$bPreview
+	[optional] True to invoke print preview before printing (default = keyword Default = False)
+$iFrom
+	[optional] Page number where to start printing (default = keyword Default = first page)
+$iTo
+	[optional] Page number where to stop printing (default = keyword Default = last page)
+$bPrintToFile
+	[optional] True to print to a file. See parameter $sPrToFileName (default = keyword Default = False)
+$bCollate
+	[optional] True to collate multiple copies (default = keyword Default = False)
+$sPrToFileName
+	[optional] If $bPrintToFile is set to True, this argument specifies the name of the file you want to print to.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the object of the printed range.
+Failure:	0 and sets @error.
+@error:	1 - $oExcel is not an object or not an application object
+	2 - $vObject is not an object or an invalid A1 range. @error is set to the COM error code
+	3 - Error printing the object. @extended is set to the COM error code
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_Excel_Export
+
+###Example###
+@@IncludeExample@@

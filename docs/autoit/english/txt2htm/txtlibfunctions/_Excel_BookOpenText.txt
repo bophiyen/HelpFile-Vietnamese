@@ -1,0 +1,67 @@
+###User Defined Function###
+_Excel_BookOpenText
+
+###Description###
+Opens a text file and parses the content to a new workbook with a single sheet
+
+###Syntax###
+#include <Excel.au3>
+_Excel_BookOpenText ( $oExcel, $sFilePath [, $iStartRow = 1 [, $iDataType = Default [, $sTextQualifier = $xlTextQualifierDoubleQuote [, $bConsecutiveDelimiter = False [, $sDelimiter = "," [, $aFieldInfo = "" [, $sDecimalSeparator = Default [, $sThousandsSeparator = Default [, $bTrailingMinusNumbers = True [, $iOrigin = Default]]]]]]]]]] )
+
+###Parameters###
+@@ParamTable@@
+$oExcel
+	Excel application object where you want to open the new workbook
+$sFilePath
+	Path and filename of the file to be opened
+$iStartRow
+	[optional] The row at which to start parsing the file (default = 1)
+$iDataType
+	[optional] Specifies the column format of the data in the file. Can be any of the XlTextParsingType enumeration.
+		If set to keyword Default Excel attempts to determine the column format (default = keyword Default)
+$sTextQualifier
+	[optional] Specifies the text qualifier (default = $xlTextQualifierDoubleQuote)
+$bConsecutiveDelimiter
+	[optional] True will consider consecutive delimiters as one delimiter (default = False)
+$sDelimiter
+	[optional] One or multiple characters to be used as delimiter (default = ",")
+$aFieldInfo
+	[optional] An array containing parse information for individual columns of data.
+		The interpretation depends on the value of DataType.
+		When the data is delimited, this argument is an array of two-element arrays, with each two-element array
+		specifying the conversion options for a particular column.
+		The first element is the column number (1-based), and the second element is one of the XlColumnDataType
+		constants specifying how the column is parsed (default = keyword Default)
+$sDecimalSeparator
+	[optional] Decimal separator that Excel uses when recognizing numbers.
+		Default setting is the system setting (default = keyword Default)
+$sThousandsSeparator
+	[optional] Thousands separator that Excel uses when recognizing numbers.
+		Default setting is the system setting (default = keyword Default)
+$bTrailingMinusNumbers
+	[optional] True treats numbers with a minus character at the end as negative numbers.
+		False treats such numbers as text (default = True)
+$iOrigin
+	[optional] Origin of the text file. Can be one of the XlPlatform constants.
+		Additionally, this could be an integer representing the code page number of the desired code page.
+		For example, "1256" would specify that the encoding is Arabic (Windows).
+		If this argument is omitted, the method uses the current setting of the File Origin option in the Text Import Wizard.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	 an workbook object.
+Failure:	0 and sets @error.
+@error:	1: $oExcel is not an object or not an application object
+	2: Specified $sFilePatch does not exist
+	3: Unable to open or parse $sFilePath. @extended is set to the COM error code returned by the OpenText method
+@@End@@
+
+###Remarks###
+Parameter $aFieldInfo has to be an array containing arrays, not a 2D array. Please see example 2.
+
+###Related###
+_Excel_BookAttach, _Excel_BookClose, _Excel_BookNew, _Excel_BookOpen
+
+###Example###
+@@IncludeExample@@

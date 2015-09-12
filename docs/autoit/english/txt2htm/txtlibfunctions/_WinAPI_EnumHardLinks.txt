@@ -1,0 +1,35 @@
+###User Defined Function###
+_WinAPI_EnumHardLinks
+
+###Description###
+Enumerates all the hard links to the specified file
+
+###Syntax###
+#include <WinAPIFiles.au3>
+_WinAPI_EnumHardLinks ( $sFilePath )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The path to the file whose links are to be enumerated.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The array of the full paths to the links. The zeroth array element contains the number of links.
+Failure:	Sets the @error flag to non-zero, @extended flag may contain the NTSTATUS error code.
+@@End@@
+
+###Remarks###
+The <a href="_WinAPI_CreateHardLink.htm">_WinAPI_CreateHardLink()</a> function is only supported on the NTFS file system.
+
+This function requires <strong>Windows Vista or later</strong>.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ ZwQueryInformationFile
+
+###Example###
+@@IncludeExample@@ _WinAPI_CreateHardLink

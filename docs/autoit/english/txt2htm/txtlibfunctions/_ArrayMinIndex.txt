@@ -1,0 +1,46 @@
+###User Defined Function###
+_ArrayMinIndex
+
+###Description###
+Returns the index where the lowest value occurs in a 1D or 2D array
+
+###Syntax###
+#include <Array.au3>
+_ArrayMinIndex ( Const ByRef $aArray [, $iCompNumeric = 0 [, $iStart = -1 [, $iEnd = -1 [, $iSubItem = 0]]]] )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Array to search
+$iCompNumeric
+	[optional] Comparison method:
+		0 - compare alphanumerically
+		1 - compare numerically
+$iStart
+	[optional] Index of array to start search
+$iEnd
+	[optional] Index of array to end search
+$iSubItem
+	[optional] Column of array to search
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the index of the minimum value in the array.
+Failure:	-1 and sets the @error flag to non-zero.
+@error:	1 - $aArray is not an array or is empty
+	2 - $aArray is not a 1D or 2D array
+	3 - $iStart or $iEnd outside array bounds
+	4 - $iStart is greater than $iEnd
+	5 - $aArray is empty
+	6 - $iSubItem outside array bounds
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_ArrayMax, _ArrayMaxIndex, _ArrayMin
+
+###Example###
+@@IncludeExample@@

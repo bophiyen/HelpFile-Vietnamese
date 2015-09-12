@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_CreateSolidBrush
+
+###Description###
+Creates a logical brush that has the specified solid color
+
+###Syntax###
+#include <WinAPI.au3>
+_WinAPI_CreateSolidBrush ( $iColor )
+
+###Parameters###
+@@ParamTable@@
+$iColor
+	Specifies the color of the brush
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	HBRUSH Value that identifies a logical brush
+Failure:	0
+@@End@@
+
+###Remarks###
+When you no longer need the HBRUSH object call the <a href="_WinAPI_DeleteObject.htm">_WinAPI_DeleteObject()</a> function to delete it
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ CreateSolidBrush

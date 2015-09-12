@@ -1,0 +1,45 @@
+###User Defined Function###
+_SQLite_SQLiteExe
+
+###Description###
+Executes commands in sqlite3.exe
+
+###Syntax###
+#include <SQLite.au3>
+_SQLite_SQLiteExe ( $sDatabaseFile, $sInput, ByRef $sOutput [, $sSQLiteExeFilename = "sqlite3.exe" [, $bDebug = False]] )
+
+###Parameters###
+@@ParamTable@@
+$sDatabaseFile
+	Database filename
+$sInput
+	Commands for sqlite3.exe
+$sOutput
+	Raw output from sqlite3.exe
+$sSQLiteExeFilename
+	[optional] Path to sqlite3.exe
+$bDebug
+	[optional] Write sqlite3.exe exitcode through the callback function specified in <a href="_SQLite_Startup.htm">_SQLite_Startup()</a> (default is don't print)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	$SQLITE_OK.
+Failure:	a value that can be compared against $SQLITE_* constants.
+@error:	1 - Can't create new Database
+	2 - sqlite3.exe not Found
+	3 - SQL error / incomplete SQL
+	4 - Can't open input file
+@@End@@
+
+###Remarks###
+Run sqlite3.exe, press enter and type .Help for more info about the SQLite3.exe Commands.
+
+If it not can be found, sqlite3.exe is downloaded in the @TempDir.
+Other versions can be found at the <a href="http://www.sqlite.org/download.html">SQLite Web site</a>.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

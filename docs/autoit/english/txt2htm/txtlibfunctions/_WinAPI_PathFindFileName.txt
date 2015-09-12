@@ -1,0 +1,31 @@
+###User Defined Function###
+_WinAPI_PathFindFileName
+
+###Description###
+Searches a path for a file name
+
+###Syntax###
+#include <WinAPIShPath.au3>
+_WinAPI_PathFindFileName ( $sFilePath )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The path to search.
+@@End@@
+
+###ReturnValue###
+Returns the string that contains the filename.
+Otherwise the original $sFilePath.
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ PathFindFileName
+
+###Example###
+@@IncludeExample@@

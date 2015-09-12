@@ -1,0 +1,48 @@
+###User Defined Function###
+_DateAdd
+
+###Description###
+Calculates a new date/time by adding/subtracting a specified number of time intervals from an initial date/time
+
+###Syntax###
+#include <Date.au3>
+_DateAdd ( $sType, $iNumber, $sDate )
+
+###Parameters###
+@@ParamTable@@
+$sType
+	Time interval to be used:
+	D - Add/subtract days to/from the specified date
+	M - Add/subtract months to/from the specified date
+	Y - Add/subtract years to/from the specified date
+	w - Add/subtract Weeks to/from the specified date
+	h - Add/subtract hours to/from the specified date
+	n - Add/subtract minutes to/from the specified en date
+	s - Add/subtract seconds to/from the specified date
+$iNumber
+	Number of intervals to be added/subtracted (use unary minus for subtraction)
+$sDate
+	Initial date in the format YYYY/MM/DD[ HH:MM:SS]
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	Calculated date.
+Failure:	0 and sets the @error flag to non-zero.
+@error:	1 - Invalid $sType
+	2 - Invalid $iNumber
+	3 - Invalid $sDate
+@@End@@
+
+###Remarks###
+Valid initial date must be between "2000/01/01 00:00:00". and "3000/12/31 23:59:59".
+
+The function will not return an invalid date. For example, if 3 months are added to '2004/1/31' then the result will be '2004/04/30'.
+
+See <a href="_DateTimeSplit.htm">_DateTimeSplit()</a> for other possible variations of the input date format.
+
+###Related###
+_DateDiff, _DateTimeSplit, _DateToDayOfWeek, _DateToDayOfWeekISO, _DateToDayValue, _DayValueToDate
+
+###Example###
+@@IncludeExample@@

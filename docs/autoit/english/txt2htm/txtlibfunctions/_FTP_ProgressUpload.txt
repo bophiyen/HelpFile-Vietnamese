@@ -1,0 +1,46 @@
+###User Defined Function###
+_FTP_ProgressUpload
+
+###Description###
+Uploads a file in Binary Mode and shows a Progress window or by Calling a User defined Function
+
+###Syntax###
+#include <FTPEx.au3>
+_FTP_ProgressUpload ( $hFTPSession, $sLocalFile, $sRemoteFile [, $hFunctionToCall = 0] )
+
+###Parameters###
+@@ParamTable@@
+$hFTPSession
+	as returned by <a href="_FTP_Connect.htm">_FTP_Connect()</a>.
+$sLocalFile
+	The local file to create.
+$sRemoteFile
+	The remote source file.
+$hFunctionToCall
+	[optional] A variable assigned to the user defined function to update a progress bar or react on user interation, such as aborting or exiting the process. Default = none. See remarks.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 and sets the @error flag to non-zero.
+@error:	-1 - Local file couldn't be opened
+	-3 - Create File failed
+	-4 - Write to file failed
+	-5 - Close File failed
+	-6 - Download aborted by PercentageFunc and Return of Called Function
+@@End@@
+
+###Remarks###
+Information about $hFunctionToCall:
+	Parameter: $iPercentage - The Percentage of Progress
+	Return Values:
+		Continue Download - 1
+		Abort Download	- zero or less than zero e.g. 0 or -1
+	These Return Values are returned by <a href="_FTP_ProgressUpload.htm">_FTP_ProgressUpload()</a>, too, so you can react on different Actions like Aborting by User, closing App or TimeOut of the process.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

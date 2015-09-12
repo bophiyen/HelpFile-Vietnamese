@@ -1,0 +1,35 @@
+###Function###
+MouseWheel
+
+###Description###
+Moves the mouse wheel up or down.
+
+###Syntax###
+MouseWheel ( "direction" [, clicks = 1] )
+
+###Parameters###
+@@ParamTable@@
+direction
+	The direction to move the wheel:
+		$MOUSE_WHEEL_UP ("up")
+		$MOUSE_WHEEL_DOWN ("down")
+
+	Constants are defined in "AuoItConstants.au3".
+clicks
+	[optional] The number of times to move the wheel. Default is 1.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0, the direction is not recognized.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+MouseClick, MouseClickDrag, MouseCoordMode (Option), MouseGetPos, MouseMove
+
+###Example###
+@@IncludeExample@@

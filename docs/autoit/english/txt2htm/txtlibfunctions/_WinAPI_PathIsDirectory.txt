@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_PathIsDirectory
+
+###Description###
+Verifies that a path is a valid directory
+
+###Syntax###
+#include <WinAPIFiles.au3>
+_WinAPI_PathIsDirectory ( $sFilePath )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The path to verify.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	$FILE_ATTRIBUTE_DIRECTORY if the path is a valid directory.
+False:	is not a valid directory.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ PathIsDirectory
+
+###Example###
+@@IncludeExample@@

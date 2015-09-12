@@ -1,0 +1,34 @@
+###User Defined Function###
+_GUICtrlToolbar_SetIndeterminate
+
+###Description###
+Sets or clears the indeterminate state of the specified button
+
+###Syntax###
+#include <GuiToolbar.au3>
+_GUICtrlToolbar_SetIndeterminate ( $hWnd, $iCommandID [, $bState = True] )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle to the control
+$iCommandID
+	Button command ID
+$bState
+	[optional] True if indeterminate, otherwise False
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

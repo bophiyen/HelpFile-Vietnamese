@@ -1,0 +1,21 @@
+###Keyword###
+False / True
+
+###Description###
+Boolean values for use in logical expressions.
+
+###Syntax###
+	$var = <strong>False</strong>
+	$var = <strong>True</strong>
+
+###Parameters###
+None.
+
+###Remarks###
+These keywords should not be used in expressions as AutoIt will not detect this 'misuse' and the results will be unpredictable.
+
+###Related###
+IsBool
+
+###Example###
+@@IncludeExample@@

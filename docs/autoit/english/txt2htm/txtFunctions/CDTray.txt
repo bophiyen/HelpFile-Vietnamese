@@ -1,0 +1,37 @@
+###Function###
+CDTray
+
+###Description###
+Opens or closes the CD tray.
+
+###Syntax###
+CDTray ( "drive", "status" )
+
+###Parameters###
+@@ParamTable@@
+drive
+	The drive letter of the CD tray to control, in the format <strong>D:</strong>, <strong>E:</strong>, etc.
+status
+	Specifies if you want the CD tray to be open or closed:
+		$CDTRAY_OPEN ("open") 	- to be open
+		$CDTRAY_CLOSED ("closed") 	- to be closed on cd tray (not laptop-style)
+
+	Constants are defined in AutoItConstants.au3
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 if drive is locked via CD burning software or if the drive letter is not a CD drive.
+@@End@@
+
+###Remarks###
+<a href="CDTray.htm">CDTray()</a> works as expected with virtual CD drives such as DAEMON Tools.
+<a href="CDTray.htm">CDTray()</a> does not work on non-local/mapped CD drives; <a href="CDTray.htm">CDTray()</a> must be run from the computer whose drive it affects.
+<a href="CDTray.htm">CDTray</a>("X:", "close") returns 1 on laptop-style cd trays that can only be closed manually.
+
+###Related###
+DriveGetType, DriveStatus
+
+###Example###
+@@IncludeExample@@

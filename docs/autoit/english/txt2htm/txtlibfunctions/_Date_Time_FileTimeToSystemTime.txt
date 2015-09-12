@@ -1,0 +1,27 @@
+###User Defined Function###
+_Date_Time_FileTimeToSystemTime
+
+###Description###
+Converts a file time to system time format
+
+###Syntax###
+#include <Date.au3>
+_Date_Time_FileTimeToSystemTime ( $tFileTime )
+
+###Parameters###
+@@ParamTable@@
+$tFileTime
+	a $tagFILETIME structure containing the file time to convert to system date and time format or a pointer to it.
+@@End@@
+
+###ReturnValue###
+Returns a $tagSYSTEMTIME structure that contains the converted file time.
+
+###Remarks###
+None.
+
+###Related###
+$tagFILETIME, $tagSYSTEMTIME, _Date_Time_FileTimeToDOSDateTime, _Date_Time_FileTimeToLocalFileTime
+
+###Example###
+@@IncludeExample@@

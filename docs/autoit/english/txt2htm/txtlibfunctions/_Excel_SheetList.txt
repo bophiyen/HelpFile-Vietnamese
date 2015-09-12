@@ -1,0 +1,33 @@
+###User Defined Function###
+_Excel_SheetList
+
+###Description###
+Returns a list of all sheets in the specified workbook
+
+###Syntax###
+#include <Excel.au3>
+_Excel_SheetList ( $oWorkbook )
+
+###Parameters###
+@@ParamTable@@
+$oWorkbook
+	A workbook object
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	a two-dimensional zero based array with the following information:
+		0 - Name of the worksheet
+		1 - Object of the worksheet
+Failure:	0 and sets @error.
+@error:	1 - $oWorkbook is not an object or not a workbook object
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###Example###
+@@IncludeExample@@

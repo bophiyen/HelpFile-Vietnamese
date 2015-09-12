@@ -1,0 +1,36 @@
+###Keyword###
+Volatile
+
+###Description###
+Function qualifier.
+
+###Syntax###
+	<strong>Volatile</strong> Func functioname(...)
+	...
+	EndFunc
+
+###Experimental###
+
+
+###Parameters###
+None.
+
+###Remarks###
+Use <strong>Volatile</strong> qualifier to modify certain aspects of function execution.
+
+The following rules apply to functions that are declared with this qualifier:
+@@ParamTable@@
+Callback function
+	During function execution the main AutoIt's message pump is not blocked as it normally is for non-Volatile callbacks.
+COM event function
+	The execution is synchronous (see example).
+@@End@@
+
+SetTimer callbacks are not safe as Volatile so be sure to avoid them.
+For all other cases there is no difference in execution of Volatile functions compared to <em>regular</em> functions.
+
+###Related###
+Func
+
+###Example###
+@@IncludeExample@@

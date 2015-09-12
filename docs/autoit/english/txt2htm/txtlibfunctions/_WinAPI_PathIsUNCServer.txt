@@ -1,0 +1,30 @@
+###User Defined Function###
+_WinAPI_PathIsUNCServer
+
+###Description###
+Determines if a string is a valid Universal Naming Convention (UNC) for a server path only
+
+###Syntax###
+#include <WinAPIShPath.au3>
+_WinAPI_PathIsUNCServer ( $sFilePath )
+
+###Parameters###
+@@ParamTable@@
+$sFilePath
+	The path to validate.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+True:	the path is a valid UNC path for a server only (no share name).
+False:	the path is not a valid UNC path.
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+None.
+
+###See Also###
+@@MsdnLink@@ PathIsUNCServer

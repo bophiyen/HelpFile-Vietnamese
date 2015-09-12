@@ -1,0 +1,30 @@
+###User Defined Function###
+_GUICtrlListView_DeleteItemsSelected
+
+###Description###
+Deletes item(s) selected
+
+###Syntax###
+#include <GuiListView.au3>
+_GUICtrlListView_DeleteItemsSelected ( $hWnd )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Control ID/Handle to the control
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False.
+@@End@@
+
+###Remarks###
+Deleting multiple items from a native-created ListView can take some time - it is recommended to enclose this command in a _GUICtrlListView_Begin/EndUpdate pairing if this is the case.
+
+###Related###
+_GUICtrlListView_DeleteAllItems, _GUICtrlListView_DeleteItem
+
+###Example###
+@@IncludeExample@@

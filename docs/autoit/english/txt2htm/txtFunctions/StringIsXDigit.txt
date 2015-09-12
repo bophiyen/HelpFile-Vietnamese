@@ -1,0 +1,30 @@
+###Function###
+StringIsXDigit
+
+###Description###
+Checks if a string contains only hexadecimal digit (0-9, A-F) characters.
+
+###Syntax###
+StringIsXDigit ( "string" )
+
+###Parameters###
+@@ParamTable@@
+string
+	The string to check
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 if string contains non-hexadecimal characters.
+@@End@@
+
+###Remarks###
+Valid characters are <strong>0123456789abcdefABCDEF</strong>.
+Note that a string containing whitespace or the "0x" prefix will cause <a href="StringIsXDigit.htm">StringIsXDigit()</a> to return 0.
+
+###Related###
+StringIsAlNum, StringIsAlpha, StringIsASCII, StringIsDigit, StringIsLower, StringIsSpace, StringIsUpper, StringLower, StringUpper
+
+###Example###
+@@IncludeExample@@

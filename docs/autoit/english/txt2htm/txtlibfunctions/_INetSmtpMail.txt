@@ -1,0 +1,57 @@
+###User Defined Function###
+_INetSmtpMail
+
+###Description###
+Sends an email without using an external email program
+
+###Syntax###
+#include <Inet.au3>
+_INetSmtpMail ( $sSMTPServer, $sFromName, $sFromAddress, $sToAddress [, $sSubject = "" [, $aBody = "" [, $sEHLO = "" [, $sFirst = "" [, $bTrace = 0]]]]] )
+
+###Parameters###
+@@ParamTable@@
+$sSMTPServer
+	Smtp server the eMail is to be sent though May be either alpha or a numeric IP address. In order to fight spam, many ISPs require this to be their server.
+	eg "smtp.ispdomain.com", "mail.ispdomain.com" or "192.168.1.1"
+$sFromName
+	The name you wish the message to appear to be sent from.
+	eg "Bob Smith"
+$sFromAddress
+	The email address you wish the message to appear to be sent from.
+	eg "bob.smith@mydomain.com".
+$sToAddress
+	The email address the message is to go to.
+	eg "jane.brown@yourdomain.com"
+$sSubject
+	[optional] The subject of the email.
+$aBody
+	[optional] The body of the email as a single dimensional array of strings. Each value in the array will be terminated with a @CRLF in the email.
+$sEHLO
+	[optional] identifier for the smtp server connection (by default @ComputerName). If Smtp server require a "EHLO" string just set the string to "EHLO " & @ComputerName.
+$sFirst
+	[optional] string sent before helo for the smtp server connection (by default {SPACE}). To not send any character this parameter must equal -1, some SMTP server required it.
+$bTrace
+	[optional] trace the dialog in a splash window
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 and sets the @error flag to non-zero.
+@error:	1	- Invalid Parameters
+	2	- Unable to start TCP
+	3	- Unable to resolve IP
+	4	- Unable to create socket
+	5x - Cannot open SMTP session. x indicates the index number of last command issued to the SMTP server.
+	50x - Cannot send body. x indicates the line number of $aBody (first line is 0).
+	5000 - Cannot close SMTP session
+@@End@@
+
+###Remarks###
+This function sends an email directly through an SMTP server without the use of a third party email client.
+
+###Related###
+_INetMail
+
+###Example###
+@@IncludeExample@@

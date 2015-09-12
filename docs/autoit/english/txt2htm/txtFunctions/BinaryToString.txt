@@ -1,0 +1,40 @@
+###Function###
+BinaryToString
+
+###Description###
+Converts a binary variant into a string.
+
+###Syntax###
+BinaryToString ( expression [, flag = 1] )
+
+###Parameters###
+@@ParamTable@@
+expression
+	An expression to convert into a string.
+flag
+	[optional] Changes how the binary data is converted:
+		$SB_ANSI (1) = binary data is ANSI (default)
+		$SB_UTF16LE (2) = binary data is UTF16 Little Endian
+		$SB_UTF16BE (3) = binary data is UTF16 Big Endian
+		$SB_UTF8 (4) = binary data is UTF8
+
+	Constants are defined in StringConstants.au3.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	the string representation of the binary data.
+Failure:	an empty string and sets the @error flag to non-zero.
+@error:	1 = Input string had zero length.
+	2 = Input string had an odd number of bytes but was supposed to be UTF16 (must contain an even number of bytes to be valid UTF16).
+@@End@@
+
+###Remarks###
+Unlike <a href="String.htm">String()</a> which returns a hexadecimal representation of binary data, this function will assume the binary data is a string value and convert it appropriately.
+See <a href="../intro/unicode.htm">"Unicode Support"</a> for a detailed description.
+
+###Related###
+Binary, IsBinary, String, StringToASCIIArray, StringToBinary
+
+###Example###
+@@IncludeExample@@

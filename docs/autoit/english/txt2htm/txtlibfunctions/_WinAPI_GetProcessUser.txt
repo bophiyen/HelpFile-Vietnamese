@@ -1,0 +1,33 @@
+###User Defined Function###
+_WinAPI_GetProcessUser
+
+###Description###
+Retrieves the user and domain name for the specified process
+
+###Syntax###
+#include <WinAPIProc.au3>
+_WinAPI_GetProcessUser ( [$iPID = 0] )
+
+###Parameters###
+@@ParamTable@@
+$iPID
+	[optional] [optional] The PID of the process. Default (0) is the current process.
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	The array that contains the following information:
+	[0] - The user (account) name.
+	[1] - The domain name.
+Failure:	Sets the @error flag to non-zero.
+@@End@@
+
+###Remarks###
+Using this function for some processes may require full access rights. Use <a href="_WinAPI_AdjustTokenPrivileges.htm">_WinAPI_AdjustTokenPrivileges()</a>
+function to enable $SE_DEBUG_NAME privilege before calling this function.
+
+###Related###
+_WinAPI_AdjustTokenPrivileges
+
+###Example###
+@@IncludeExample@@

@@ -1,0 +1,39 @@
+###User Defined Function###
+_GUICtrlRichEdit_SetBkColor
+
+###Description###
+Sets the background color of the control
+
+###Syntax###
+#include <GuiRichEdit.au3>
+_GUICtrlRichEdit_SetBkColor ( $hWnd [, $iBngColor = Default] )
+
+###Parameters###
+@@ParamTable@@
+$hWnd
+	Handle to the control
+$iBngColor
+	[optional] one of the following:
+	a number - a COLORREF value
+	Default keyword - the system color (default)
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	True.
+Failure:	False and sets the @error flag to non-zero.
+@error:	101 - $hWnd is not a handle
+	1022 - $iBngColor is invalid
+@@End@@
+
+###Remarks###
+If you need to create a COLORREF value from an color array use <a href="_ColorSetCOLORREF.htm">_ColorSetCOLORREF()</a> not <a href="_ColorSetRGB.htm">_ColorSetRGB()</a>.
+
+###Related###
+_GUICtrlRichEdit_GetBkColor
+
+###See Also###
+@@MsdnLink@@ EM_SETBKGNDCOLOR
+
+###Example###
+@@IncludeExample@@ _GUICtrlRichEdit_GetBkColor

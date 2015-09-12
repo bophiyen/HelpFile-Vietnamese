@@ -1,0 +1,32 @@
+###User Defined Function###
+_ArrayTranspose
+
+###Description###
+Transposes a 1D or 2D array (swaps rows and columns)
+
+###Syntax###
+#include <Array.au3>
+_ArrayTranspose ( ByRef $aArray )
+
+###Parameters###
+@@ParamTable@@
+$aArray
+	Array to modify
+@@End@@
+
+###ReturnValue###
+@@ReturnTable@@
+Success:	1.
+Failure:	0 and sets the @error flag to non-zero.
+@error:	1 - $aArray is not a 1D or 2D array
+	2 - $aArray is not an array
+@@End@@
+
+###Remarks###
+None.
+
+###Related###
+_ArraySwap
+
+###Example###
+@@IncludeExample@@

@@ -2,7 +2,7 @@
 Exit
 
 ###Description###
-Terminates the script.
+Kết thúc kịch bản.
 
 ###Syntax###
 <strong>Exit</strong> [return code]
@@ -14,9 +14,9 @@ return code
 @@End@@
 
 ###Remarks###
-The parameter, if included, can be enclosed in parentheses. Thus, the following are equivalent: <strong>Exit</strong>, <strong>Exit 0</strong>, and<strong> Exit(0)</strong>. However, <strong>Exit()</strong> is invalid.
+Tham số (nếu có) có thể đặt trong dấu ngoặc đơn. Như vậy, các cách viết sau là tương đương: <strong>Exit</strong>, <strong>Exit 0</strong>, và <strong>Exit(0)</strong>. Tuy nhiên, <strong>Exit()</strong> là không hợp lệ.
 
-The code can be retrieved in an OnAutoItExitRegister function by @exitCode.
+Mã này có thể nhận được trong một hàm OnAutoItExitRegister bởi @exitCode.
 
 ###Related###
 ExitLoop, OnAutoItExitRegister

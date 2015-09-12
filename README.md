@@ -14,6 +14,15 @@ Nếu bạn có khả năng về tiếng Anh và muốn đóng góp cho dự án
 2. Thực hiện dịch các tập tin TXT.
 3. Gửi một `pull request` :D
 
+### Lưu ý khi dịch
+
+- Giữ nguyên định dạng (xuống dòng, khoảng trắng, tab,...).
+- Không dịch từ khóa, tên hàm và tham số.
+- Không thêm bớt, làm thay đổi số dòng (sẽ ảnh hướng khi build sang CHM).
+
+Ví dụ về các phần nên dịch (được khoanh đỏ):
+
+![Phần cần dịch](http://i.imgur.com/6mUYo86.png)
 
 ### Tác giả
 
